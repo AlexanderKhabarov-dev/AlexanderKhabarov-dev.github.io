@@ -94,10 +94,12 @@ ul{
 }
 .item-link{
     color: #26272d;
+    transition:300ms;
 }
 .item-link:hover{
     opacity: 0.4;
     color: #1b1c1e;
+    transition:300ms;
 }
 .item-btn{
     padding: 14px 25px 14px 50px;
