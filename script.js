@@ -46,3 +46,12 @@ dotsArea.onclick = function (e){
         }
     }
 }
+
+// ==== POP-UP ===
+    function show(state)
+    {
+    document.getElementById('window').style.display = state;	
+    document.getElementById('close').style.display = state; 		
+}	
+
+// === /POP-up ===

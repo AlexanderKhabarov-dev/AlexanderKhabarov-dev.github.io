@@ -15,8 +15,13 @@
         <div class="section-inner inner-header">
             <div class="section-header-nav">
                 <ul class="header-nav__list">
-                    <li class="header-nav__item">
-                        <a class="item-link" href="#"><img class="header-menu-icon" src="./img/Menu_Icon.svg" alt=""></a>
+                    <li class="header-nav__item"><a class="item-link submenu-link " href="#"><img class="header-menu-icon" src="./img/Menu_Icon.svg" alt=""></a>
+                        <ul class="header-submenu__list">
+                            <li class="header-submenu__list-item"><a class="item-link" href="#">Tour</a></li>
+                            <li class="header-submenu__list-item"><a class="item-link" href="#">Features</a></li>
+                            <li class="header-submenu__list-item"><a class="item-link" href="#">Pricing</a></li>
+                        </ul>
+
                     </li>
                     <li class="header-nav__item nav-link"><a class="item-link" href="#">Tour</a></li>
                     <li class="header-nav__item nav-link"><a class="item-link" href="#">Features</a></li>
@@ -27,7 +32,7 @@
                     <ul class="header-contact__list">
                         <li class="header-contact__item nav-link"><a class="item-link" href="#">Help</a></li>
                         <li class="header-contact__item nav-link"><a class="item-link" href="#">Contacts</a></li>
-                        <li class="header-contact__item"><button class="item-btn">Get App</button></li>
+                        <li class="header-contact__item"><button class="item-btn" onclick="show('block')">Sign In</button></li>
                     </ul>
                 </div>
             </div>
@@ -302,6 +307,34 @@
         </div>
     </div>
     <!--/footer-->
+
+     <!--POP-UP-->
+     <div id="close" onclick="show('none')"></div>
+     <div id="window">
+         <div class="close-window" onclick="show('none')" ><img src="./img/cross.svg" alt="" width="12" height="12"></div>
+        <form class="form" action="#">
+            <div class="form-title">Sign in</div>
+            <div>
+                <input class="form-modal-input" type="text" name="email" placeholder="E-mail">
+            </div>
+            <div>
+                <input class="form-modal-input" type="password" name="password" placeholder="Password">
+            </div>
+            <label class="form-label">
+                <input class="form-modal-checkbox" type="checkbox">
+                <span class="form-modal-checkbox-text form-text">Remember me</span>
+            </label>
+            <div class="form-modal-button"><button class="item-btn modal-btn">Sign in</button></div>
+        </form>
+        <div class="modal-forgot-link"><a class="form-text"href="#">Forgot your password?</a></div>
+        <div class="modal-wrapper">
+            <div class="modal-register form-text">Don’t have an account?</div>
+            <div class="modal-signup"><button class="signup-btn">Sign Up</button></div>
+        </div>
+    </div>
+      <!--/POP-UP-->
+
+
     <script src="script.js"></script>
 </body>
 </html>
