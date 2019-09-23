@@ -1002,7 +1002,8 @@ ul{
 }
 .modal-btn{
     margin-top: 20px;
-    padding: 14px 65px 15px 90px;
+    padding: 14px 0px 15px 0px;
+    width:100%;
 }
 .signup-btn{
     color: #267df4;
@@ -1040,6 +1041,10 @@ ul{
     flex-wrap:wrap;
     padding-bottom: 40px;
 }
+.form-modal-button{
+    width:40%;
+    margin: auto;
+}
 .close-window{
     cursor: pointer;
     position: absolute;
@@ -1049,5 +1054,11 @@ ul{
 .close-window:hover{
     opacity: 0.7;
 }
-
+@media (min-width:541px) and (max-width:960px){
+    #window{
+        width:50%;
+        top:20%;
+        margin-left: -25%;
+    }
+}
 /* === /pop-up=== */
