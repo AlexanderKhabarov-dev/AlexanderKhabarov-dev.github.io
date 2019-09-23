@@ -378,8 +378,9 @@ ul {
     right: -15px;
     top: 7px; }
 
-.geolocation-link {
-  color: #37373F; }а
+.geolocation a {
+  color: #37373F; 
+}
 
 .section-outer {
   padding-right: 20px;
