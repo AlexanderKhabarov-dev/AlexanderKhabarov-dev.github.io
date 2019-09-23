@@ -379,7 +379,7 @@ ul {
     top: 7px; }
 
 .geolocation-link {
-  color: #37373F; }
+  color: #37373F; }а
 
 .section-outer {
   padding-right: 20px;
@@ -476,6 +476,9 @@ ul {
 @media (max-width: 540px) {
   .hidden-nav {
     display: flex; }
+  .geolocation a{
+   color: #FFFFFF;
+   }
   .item-link {
     display: none; } }
 
