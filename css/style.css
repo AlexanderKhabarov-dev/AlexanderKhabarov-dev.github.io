@@ -319,7 +319,7 @@ ul{
 }
 .inner-promo{
     border-bottom: solid 1px#F4F4F4;
-    z-index: 10;
+    z-index: 100;
 }
 .section-promo-wrapper{
     display: flex;
