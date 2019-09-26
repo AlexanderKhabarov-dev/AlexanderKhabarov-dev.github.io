@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+    <!--header-->
+    <div class="section-outer section-header">
+        <div class="section-inner">
+            <div class="section-header-wrapper">
+                <ul class="section-header-nav flex-container">
+                    <li class="section-header-nav__menu">
+                        <button class="hidden-button" onclick="show('block')" ></button>
+                    </li>
+                    <li class="section-header-nav__item"><a class="item-link" href="#">Для мужчин</a></li>
+                    <li class="section-header-nav__item"><a class="item-link" href="#">Для женщин</a></li>
+                    <li class="section-header-nav__item"><a class="item-link" href="#">Для детей</a></li>
+                </ul>
+                <div class="section-header-logo">
+                    <img src="./img/logo.svg" alt="">
+                </div>
+                <div class="flex-container">
+                    <ul class="section-header-nav second-nav">
+                        <li class="section-header-nav__item"><a class="item-link" href="#">Оплата</a></li>
+                        <li class="section-header-nav__item"><a class="item-link" href="#">Доставка</a></li>
+                    </ul>
+                    <div class="section-header-cart">
+                        <div class="section-header-cart__icon"><img src="./img/cart.svg" alt=""></div>
+                        <div class="section-header-cart__value">5</div>
+                    </div>
+                </div>
+                <!--hidden menu-->
+    <div id="close" onclick="show('none')" ></div>
+        <div id="window">
+            <div class="menu-wrapper">  
+                <div class="hidden-menu-logo"><img src="./img/logo.svg" alt=""></div>
+                <div class="section-footer-nav  hidden-menu-nav">
+                    <div class="section-footer-nav__title hidden-menu-nav__title">Основные ссылки</div>
+                    <ul class="section-footer-nav__list hidden-menu-nav__list">
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">О компании</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Каталог</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Доставка</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Оплата</a></li>
+                    </ul>
+                </div>
+                 <div class="section-footer-nav hidden-menu-nav">
+                    <div class="section-footer-nav__title hidden-menu-nav__title" >Категории</div>
+                    <ul class="section-footer-nav__list hidden-menu-nav__list">
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Мужская одежда</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Женская одежда</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Детская одежда</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Для животных</a></li>
+                    </ul>
+                </div>
+                 <div class="section-footer-nav hidden-menu-nav">
+                    <div class="section-footer-nav__title hidden-menu-nav__title">Полезные ссылки</div>
+                    <ul class="section-footer-nav__list hidden-menu-nav__list">
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Таблица размеров</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Блог о моде</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Наша миссия</a></li>
+                    </ul>
+                </div>
+            </div>
+                <!--/hidden menu-->
+        </div>
+    </div>
+</div>
+    <!--/header-->
+
+    <!--intro-->
+    <div class="section-outer section-intro">
+        <div class="section-inner">
+            <div class="section-intro-wrapper">
+                <div class="section-intro-content">
+                    <div class="section-intro-content__subtitle">Зимняя распродажа</div>
+                    <div class="section-intro-content__title">Скидки до 90%</div>
+                    <div class="section-intro-content__button">
+                        <button class="btn-intro btn">Смотреть модели </button>
+                    </div>
+                </div>
+                <div class="section-intro-sld"></div>
+                    <div class="slides-item">
+                        <div class="section-intro-sld__image"><img class="image" src="./img/slides-image.png" alt="">
+                            <div class="section-intro-sld__price">9 900 ₽</div>
+                            <div class="section-intro-sld__sale">1 900 ₽</div>
+                        </div>
+                    </div>
+                    <div class="slides-item"> 
+                        <div class="section-intro-sld__image"><img class="image" src="./img/slides-image.png" alt="">
+                            <div class="section-intro-sld__price">7 300 ₽</div>
+                            <div class="section-intro-sld__sale">2 100 ₽</div>
+                        </div>
+                    </div>
+                    <div class="slides-item">
+                        <div class="section-intro-sld__image"><img class="image" src="./img/slides-image.png" alt="">
+                            <div class="section-intro-sld__price">4 900 ₽</div>
+                            <div class="section-intro-sld__sale">1 500 ₽</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dots-block">
+                <div class="dots-item"> </div>
+                <div class="dots-item active"> </div>
+                <div class="dots-item"> </div>
+            </div>
+            <div class="buttons-block">
+                <div id="left-button"></div>
+                <div id="right-button"></div>
+                
+            </div>
+        </div>
+    </div>
+    <!--/intro-->
+
+    <!--freeship-->
+    <div class="section-freeship">
+        <div class="section-freeship-wrapper">
+            <div class="section-freeship-title">Бесплатная доставка<span class="section-freeship-title__price">от 3000 ₽</span></div>
+            <div class="section-freeship-subtitle">Сделайте заказ и получите подарок!</div>
+        </div>
+    </div>
+    <!--/freesheep-->
+
+    <!--collection-->
+    <div class="section-outer section-collection">
+        <div class="section-inner">
+            <div class="section-collection-wrapper">
+                <div class="section-collection-gender">
+                    <div class="section-collection-gender__title"><b>МУЖСКАЯ</b> КОЛЛЕКЦИЯ</div>
+                    <div class="section-collection-gender__subtitle">Обувь, полуверы, костюмы</div>
+                    <div class="section-collection-gender__btn">
+                        <button class="gender-btn btn"></button>
+                    </div>
+                    <div class="section-collection-gender__image"><img src="./img/male.png" alt=""></div>
+                </div>
+                <div class="section-collection-gender">
+                    <div class="section-collection-gender__title"><b>ЖЕНСКАЯ</b> КОЛЛЕКЦИЯ</div>
+                    <div class="section-collection-gender__subtitle">Обувь, полуверы, костюмы</div>
+                    <div class="section-collection-gender__btn">
+                        <button class="gender-btn btn"></button>
+                    </div>
+                    <div class="section-collection-gender__image"><img src="./img/female.png" alt=""></div>
+                </div>
+            </div>
+            <div class="section-collection-catalog">
+                <div class="section-collection-catalog__item">
+                    <div class="section-collection-catalog__item-image"><img class="img-zoom-in"src="./img/catalog-image-1.png" alt=""></div>
+                    <div class="section-collection-catalog__item-text">Платья</div>
+                    <div class="section-collection-catalog__item-btn"><button class="btn catalog-btn">Перейти</button></div>
+                </div>
+                <div class="section-collection-catalog__item">
+                    <div class="section-collection-catalog__item-image"><img src="./img/catalog-image-2.png" alt=""></div>
+                    <div class="section-collection-catalog__item-text">Платья</div>
+                    <div class="section-collection-catalog__item-btn"><button class="btn catalog-btn">Перейти</button></div>
+                </div>
+                <div class="section-collection-catalog__item">
+                    <div class="section-collection-catalog__item-image"><img src="./img/catalog-image-1.png" alt=""></div>
+                    <div class="section-collection-catalog__item-text">Платья</div>
+                    <div class="section-collection-catalog__item-btn"><button class="btn catalog-btn">Перейти</button></div>
+                </div>
+                <div class="section-collection-catalog__item">
+                    <div class="section-collection-catalog__item-image"><img src="./img/catalog-image-2.png" alt=""></div>
+                    <div class="section-collection-catalog__item-text">Платья</div>
+                    <div class="section-collection-catalog__item-btn"><button class="btn catalog-btn">Перейти</button></div>
+                </div>
+                <div class="section-collection-catalog__item">
+                    <div class="section-collection-catalog__item-image"><img src="./img/catalog-image-2.png" alt=""></div>
+                    <div class="section-collection-catalog__item-text">Платья</div>
+                    <div class="section-collection-catalog__item-btn"><button class="btn catalog-btn">Перейти</button></div>
+                </div>
+                <div class="section-collection-catalog__item">
+                    <div class="section-collection-catalog__item-image"><img src="./img/catalog-image-1.png" alt=""></div>
+                    <div class="section-collection-catalog__item-text">Платья</div>
+                    <div class="section-collection-catalog__item-btn"><button class="btn catalog-btn">Перейти</button></div>
+                </div>
+                <div class="section-collection-catalog__item">
+                    <div class="section-collection-catalog__item-image"><img src="./img/catalog-image-2.png" alt=""></div>
+                    <div class="section-collection-catalog__item-text">Платья</div>
+                    <div class="section-collection-catalog__item-btn"><button class="btn catalog-btn">Перейти</button></div>
+                </div>
+                <div class="section-collection-catalog__item">
+                    <div class="section-collection-catalog__item-image"><img src="./img/catalog-image-1.png" alt=""></div>
+                    <div class="section-collection-catalog__item-text">Платья</div>
+                    <div class="section-collection-catalog__item-btn"><button class="btn catalog-btn">Перейти</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/collection-->
+
+    <!--models-->
+    <div class="section-outer section-models">
+        <div class="section-inner">
+            <div class="section-models-title">Новые модели</div>
+            <div class="section-models-wrapper">
+                <div class="section-models-item item-1">
+                    <div class="section-models-item__image"><img src="./img/models-image.png" alt=""></div>
+                    <div class="section-models-item__name">Коктейльное платье</div>
+                    <div class="section-models-item__price">₽ 40 000</div>
+                </div>
+                 <div class="section-models-item">
+                    <div class="section-models-item__image"><img src="./img/models-image.png" alt=""></div>
+                    <div class="section-models-item__name">Коктейльное платье</div>
+                    <div class="section-models-item__price">₽ 40 000</div>
+                </div>
+                 <div class="section-models-item">
+                    <div class="section-models-item__image"><img src="./img/models-image.png" alt=""></div>
+                    <div class="section-models-item__name">Коктейльное платье</div>
+                    <div class="section-models-item__price">₽ 40 000</div>
+                </div>
+                 <div class="section-models-item">
+                    <div class="section-models-item__image"><img src="./img/models-image.png" alt=""></div>
+                    <div class="section-models-item__name">Коктейльное платье</div>
+                    <div class="section-models-item__price">₽ 40 000</div>
+                </div>
+            </div>
+            <div class="section-models-btn">
+                <button class="models-btn btn">Все модели</button>
+            </div>
+        </div>
+    </div>
+    <!--/models-->
+
+    <div class="section-discont ">
+        <div class="section-inner">
+            <div class="section-discont-title">Получайте скидки и подарки</div>
+            <form class="section-discont-form"action="#">
+                    <input class="form-input" type="text" name="email" placeholder="Ваш e-mail">
+                    <button class="btn discont-btn">Подписаться </button>
+            </form>
+        </div>
+    </div>
+
+    <!--sale-->
+     <div class="section-outer section-models">
+        <div class="section-inner">
+            <div class="section-models-title">Скидка 90%</div>
+            <div class="section-models-wrapper">
+                <div class="section-models-item item-1">
+                    <div class="section-models-item__image"><img src="./img/models-image.png" alt=""></div>
+                    <div class="section-models-item__name">Коктейльное платье</div>
+                    <div class="section-models-item__price">₽ 40 000</div>
+                </div>
+                 <div class="section-models-item">
+                    <div class="section-models-item__image"><img src="./img/models-image.png" alt=""></div>
+                    <div class="section-models-item__name">Коктейльное платье</div>
+                    <div class="section-models-item__price">₽ 40 000</div>
+                </div>
+                 <div class="section-models-item">
+                    <div class="section-models-item__image"><img src="./img/models-image.png" alt=""></div>
+                    <div class="section-models-item__name">Коктейльное платье</div>
+                    <div class="section-models-item__price">₽ 40 000</div>
+                </div>
+                 <div class="section-models-item">
+                    <div class="section-models-item__image"><img src="./img/models-image.png" alt=""></div>
+                    <div class="section-models-item__name">Коктейльное платье</div>
+                    <div class="section-models-item__price">₽ 40 000</div>
+                </div>
+            </div>
+            <div class="section-models-btn">
+                <button class="models-btn btn">Все модели</button>
+            </div>
+        </div>
+    </div>
+    <!--/sale-->
+
+    <!--footer-->
+    <div class="section-outer section-footer">
+        <div class="section-inner">
+            <div class="section-footer-content">
+                <div class="section-footer-content__logo"><img src="./img/logo-footer.svg" alt=""></div>
+                <div class="section-footer-content__text">
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Nulla faucibus egestas
+                     elit, at eleifend elit ornare ut.
+                </div>
+            </div>
+            <div class="section-footer-wrapper">
+                <div class="section-footer-nav">
+                    <div class="section-footer-nav__title">Основные ссылки</div>
+                    <ul class="section-footer-nav__list">
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">О компании</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Каталог</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Доставка</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Оплата</a></li>
+                    </ul>
+                </div>
+                 <div class="section-footer-nav category-hidden">
+                    <div class="section-footer-nav__title">Категории</div>
+                    <ul class="section-footer-nav__list">
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Мужская одежда</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Женская одежда</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Детская одежда</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Для животных</a></li>
+                    </ul>
+                </div>
+                 <div class="section-footer-nav">
+                    <div class="section-footer-nav__title">Полезные ссылки</div>
+                    <ul class="section-footer-nav__list">
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Таблица размеров</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Блог о моде</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link" href="#">Наша миссия</a></li>
+                    </ul>
+                </div>
+                 <div class="section-footer-nav">
+                    <div class="section-footer-nav__title">Соц сети</div>
+                    <ul class="section-footer-nav__list">
+                        <li class="section-footer-nav__list-item"><a class="footer-link vk" href="#">VK.com</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link fb" href="#">Facebook</a></li>
+                        <li class="section-footer-nav__list-item"><a class="footer-link inst" href="#">Instagramm</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/footer-->
+
+    <!--copyright-->
+        <div class="section-copyright section-inner">
+            <div class="section-copiright-text">Copyright © 2019. Все права защищены </div>
+            <div class="section-copiright-privat">Политика приватности </div>
+        </div>
+    <!--copyright-->
+
+    <script src="./script.js"></script>
+</body>
+</html>
