@@ -170,6 +170,11 @@ ul{
         left:0;
     }
 }
+@media(max-width:540px){
+    #window{
+        width: 60%;
+    }
+}
 // <<< /HIDDEN MENU >>>
 
 @media(max-width:960px){
@@ -182,6 +187,11 @@ ul{
    .hidden-button{
        display: block;
    }
+}
+@media (max-width:380px){
+    .value-hidden{
+        display: none;
+    }
 }
 //=== /header ===
 
@@ -310,6 +320,44 @@ ul{
         top:40px;
     }
 }
+@media(max-width:540px){
+    .section-intro-wrapper{
+        flex-direction: column;
+    }
+    .section-intro-content{
+        
+    }
+    .section-intro .dots-block{
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .section-intro-content__subtitle{
+        margin-top: 0px;
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
+    .section-intro-content__title{
+        margin-bottom: 20px;
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .section-intro-content__button .btn-intro{
+        font-size: 10px;
+        padding: 7px 7px 7px 7px;
+    }
+    .price-hidden{
+        display: none;
+    }
+    .section-intro-sld{
+        margin-top: 20px;
+    }
+    .section-intro-sld__sale{
+        top:10px;
+        right:-10px;
+        font-size: 30px;
+    }
+}
+
 //=== /intro ===
 
 //=== freeship ===
@@ -339,6 +387,19 @@ ul{
         font-weight: 300;
         font-size: 21px;
         margin-bottom: 23px;
+    }
+}
+@media (max-width:540px){
+    .section-freeship{
+        height: 140px;
+    }
+    .section-freeship-title{
+        font-size:20px;
+        margin-bottom: 10px;
+    }
+    .section-freeship-subtitle{
+        font-size: 16px;
+        margin: 0;
     }
 }
 //=== /freeship ===
@@ -469,6 +530,32 @@ ul{
         width:100px;
     }
 }
+@media (max-width:540px){
+    .section-collection{
+    }
+    .section-collection-wrapper{
+        flex-direction: column;
+        height: auto;
+    }
+    .section-collection-gender{
+        padding: 0;
+        padding-top: 30px;
+    }
+    .section-collection-gender__image{
+        top:100px;
+        right:0;
+    }
+    .section-collection-gender__image img{
+        width:120px;
+    }
+    .male{
+        background-color:#F9F6F1;
+    }
+    .female{
+        background-color:#F4F4F4
+    }
+    .section-collection-catalog__item{}
+}
 //=== /collection ===
 
 //=== models ===
@@ -554,6 +641,20 @@ ul{
         margin-top: 0px;
         margin-bottom: 50px;
     }
+
+}
+@media (max-width:540px){
+    .item-1, .item-2, .item-3{
+        display: none;
+    }
+    .models-btn{
+        margin-top: 30px;
+    }
+    .section-models-title{
+        margin-top: 30px;
+        margin-bottom:10px;
+        font-size: 24px;
+    }
 }
 //=== /models ===
 
@@ -574,12 +675,13 @@ ul{
         letter-spacing: 0.02em;
         text-transform: uppercase;
         color:#fff;
+        margin-right: 15px;
     }
     &-form{
         display: flex;
        .form-input{
            width: 70%;
-           height: 50px;
+           height:30px;
            padding-left: 15px;
            margin-right: 15px;
        }
@@ -595,18 +697,37 @@ ul{
         margin-right: 15px;
         text-align: center;
     }
+    .section-discont{
+        height: 100px;
+    }
+    .section-discont-form{
+         
+    }
+    
+}
+@media(max-width:540px){
+    .form-input{
+        display: none;
+    }
+    .section-discont-form .discont-btn{
+        width:100%;
+        height: 40px;
+    }
+    .section-discont-title{
+        font-size: 14px;
+    }
 }
 //=== /discont ===
 
 //=== footer ===
 .section-footer{
     background-color: $color-main;
-    
+    height: 311px;
     .section-inner{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 311px;
+        
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -658,6 +779,28 @@ ul{
         font-size:12px;
     }
 }
+@media (max-width:540px){
+    .section-footer{
+        height:180px;
+    }
+    .footer-inner{
+       padding-top: 20px;
+    }
+    .section-footer-wrapper{
+        display: none;
+    }
+    .footer-iner{
+        text-align:center;
+    }
+    .section-footer-content{
+        text-align: center;
+    }
+    .section-footer-content__text{
+        max-width:100%;
+    }
+   
+}
+
 //=== /footer ===
 
 
@@ -670,5 +813,13 @@ ul{
 
     font-size: 14px;
     color:#212121;
+}
+@media (max-width:540px){
+    .section-copyright{
+        justify-content: center;
+    }
+    .section-copiright-privat{
+        display: none;
+    }
 }
 //=== /copyright ===
