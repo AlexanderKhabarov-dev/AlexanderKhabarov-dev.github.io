@@ -793,8 +793,16 @@ ul {
     margin-bottom: 50px; } }
 
 @media (max-width: 540px) {
-  .item-1 .item-2 .item-3 {
-    display: none; }
+  .item-1 {
+    display: none; 
+  }
+    .item-2{
+      display: none; 
+    }
+    .item-3{
+      display: none; 
+    }
+
   .models-btn {
     margin-top: 30px; }
   .section-models-title {
