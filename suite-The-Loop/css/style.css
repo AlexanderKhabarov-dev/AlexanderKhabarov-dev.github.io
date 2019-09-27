@@ -855,6 +855,9 @@ ul {
     font-size: 14px; } }
 
 .section-footer {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   background-color: #212121;
   height: 311px; }
   .section-footer .section-inner {
