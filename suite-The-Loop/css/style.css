@@ -855,11 +855,10 @@ ul {
     font-size: 14px; } }
 
 .section-footer {
-  display:flex;
-  justify-content: center;
-  align-items: center;
+ 
   background-color: #212121;
-  height: 311px; }
+  height: 311px;
+  padding-top: 70px; }
   .section-footer .section-inner {
     display: flex;
     justify-content: space-between;
