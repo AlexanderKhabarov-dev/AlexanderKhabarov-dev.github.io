@@ -262,7 +262,7 @@ ul{
           background-color: aliceblue;
           
           transition: 300ms;
-
+          cursor: pointer;
           animation: picture 2s 1;
           animation-timing-function: linear;
       }
