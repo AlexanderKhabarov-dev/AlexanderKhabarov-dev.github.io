@@ -37,6 +37,13 @@ function moveUp() {
     fly.play();
 }
 
+document.addEventListener("touchstart", moveUp);
+
+function moveUp() {
+    yPos -= 25;
+    fly.play();
+}
+
 //Блоки 
 let pipe = [];
 
