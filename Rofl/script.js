@@ -18,7 +18,7 @@ let fly = new Audio();
 let score_audio = new Audio();
 
 fly.src = "audio/fly.mp3";
-score_audio.src = "audio/score.mp3";
+score_audio.src = "audio/de.mp3";
 
 let gap = 90;
 
