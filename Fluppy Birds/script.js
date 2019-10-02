@@ -7,7 +7,7 @@ let fg = new Image();
 let pipeUp = new Image();
 let pipeBottom = new Image();
 
-bird.src = "image/max.png";
+bird.src = "image/bird.png";
 bg.src = "image/bg.png";
 fg.src = "image/fg.png";
 pipeUp.src = "image/pipeUp.png";
