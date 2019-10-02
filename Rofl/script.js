@@ -17,7 +17,7 @@ pipeBottom.src = "image/pipeBottom.png";
 let fly = new Audio();
 let score_audio = new Audio();
 
-fly.src = "audio/fly.mp3";
+fly.src = "audio/rig.mp3";
 score_audio.src = "audio/de.mp3";
 
 let gap = 120;
