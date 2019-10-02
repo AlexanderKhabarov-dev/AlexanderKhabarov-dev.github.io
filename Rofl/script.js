@@ -20,7 +20,7 @@ let score_audio = new Audio();
 fly.src = "audio/fly.mp3";
 score_audio.src = "audio/de.mp3";
 
-let gap = 90;
+let gap = 120;
 
 //При нажатии на какую либо кнопку
 document.addEventListener("click", moveUp);
