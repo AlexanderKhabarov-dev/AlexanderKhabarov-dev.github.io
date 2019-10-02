@@ -7,7 +7,7 @@ let fg = new Image();
 let pipeUp = new Image();
 let pipeBottom = new Image();
 
-bird.src = "image/bird.png";
+bird.src = "image/max.png";
 bg.src = "image/bg.png";
 fg.src = "image/fg.png";
 pipeUp.src = "image/pipeUp.png";
@@ -28,6 +28,7 @@ document.addEventListener("click", moveUp);
 function moveUp() {
     yPos -= 25;
     fly.play();
+    
 }
 
 document.addEventListener("keydown", moveUp);
