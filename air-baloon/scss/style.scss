@@ -1,0 +1,301 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster|Montserrat:400,500,600,700&display=swap&subset=cyrillic);
+
+
+
+$font-Montserrat: 'Montserrat', sans-serif;
+$font-Lobster: 'Lobster', cursive;
+
+$transition: .2s;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.section-inner{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+    max-width: 1140px;
+    margin: auto;
+    position: relative;
+    &-logo{
+        position: absolute;
+        left: 0px;
+        top:10px;
+    }
+    &-sign{
+        position: absolute;
+        right:0;
+        top:15px; 
+    }
+    
+}
+.section-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    
+}
+// ==== PARALLAX ====
+.scene{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.layer{
+    position: absolute;
+    top:0;
+    width: 100%;
+    min-height: 100%;
+    &-bg{
+        background-image: url(../img/bg.png);
+        background-position: 50% 25%;
+        background-size: cover;  
+    }
+    &-bg-2{
+        background-image: url(../img/bg-2.png);
+        background-position: 50% 50%;
+        background-repeat: repeat;
+        background-size: cover;
+        z-index: -10;
+    }
+    &-ball{
+        background-image: url(../img/air-baloon.png);
+        background-repeat: no-repeat;
+        background-position: 85% 37%;
+        background-size: 24%; 
+        z-index:0;
+    }
+    &-shadow{
+        background-image: url(../img/air-baloon-shadow.png);
+        background-repeat: no-repeat;
+        background-position: 84% 43%;
+        background-size: 23%; 
+        z-index:-5;
+    }
+}
+
+
+// ==== /PARALLAX ====
+.section-nav{
+    width: 100%;
+
+}
+.section-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: flex-end;
+    width: 100%;
+    margin-bottom: 20px;
+    &-social{
+        width: 270px;
+        &__list{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+            &::before{
+                content: "";
+                position:absolute;
+                background-image: url(../img/Line.svg);
+                background-repeat: no-repeat;
+                left:0;
+                top:22px;
+                width: 62px;
+                height: 2px;
+            }
+            &-item{
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .buttons-block{
+        display: flex;
+        justify-content: space-around;
+        width: 140px;
+        .arrow-btn{
+            width: 51px;
+            height: 51px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+    }
+    &-price{
+        font-family:$font-Montserrat;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.2em;
+        width: 270px;
+        color: #FFFFFF;
+        position: relative;
+        text-align: right;
+        &::before{
+            content: "";
+            position:absolute;
+            background-image: url(../img/Line.svg);
+            background-repeat: no-repeat;
+            left:0;
+            top:12px;
+            width: 62px;
+            height: 2px;
+        }
+    }
+    .line-decoration{
+        position: relative;
+      
+    }
+    
+}
+.section-content{
+    align-self: flex-start;
+}
+//* ===== SLIDER ====//
+.dots-block{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width:400px;
+    margin: auto;
+    cursor: pointer;
+}
+.dots-item{
+    font-family: $font-Montserrat;
+    font-size:18px;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+    opacity: 1;
+    padding:6px;
+    &:hover:before, &:hover:after{
+        opacity: 0.9;
+        width: 100%;
+    }
+    &:before, &:after{ 
+        position: absolute;
+        opacity: 0;
+        width: 0%;
+        height: 1px;
+        content: '';
+        background: #fff;
+        transition: all $transition;
+    }
+    &:before{
+        left:0px;
+        top:0px;
+    }
+    &:after{
+        right:0;
+        bottom:0;
+    }
+
+}
+.active{
+    color: #fff;
+    position: relative;
+    z-index: 0;
+    opacity: 1;
+
+    font-weight: 500;
+    
+}
+.slides-item{
+    animation: slides 1.7s 1;
+    animation-timing-function: ease;
+   
+    &-title{
+        color:#fff;
+        font-family: $font-Lobster;
+        font-size: 65px;
+        line-height: 90px;
+        letter-spacing: 0.05em;
+        
+    }
+    .title-1{
+        padding-top: 50px;
+    }
+    .title-2{
+        padding-left: 150px;
+    }
+    &-button{
+        margin-left: auto;
+        width: 330px;
+        margin-top: 50px;
+        .btn{
+            color:#fff;
+            border: 2px solid #FFFFFF;
+            padding: 17px 75px 17px 75px;
+    
+            font-family: $font-Montserrat;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 40px;
+            background: none;
+            cursor: pointer;
+        }
+    }
+    //  =========== 3D cards
+    .wrapper-card{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .slides-card{
+        width:100%;
+    }
+    .container-center{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        img{
+            width: 99%;
+        }
+    }
+    .card{
+        perspective: 1000px;
+        transform-style: preserve-3d;
+
+        &-item{
+            width: 100%;
+            margin-bottom: 30px;
+            transition: $transition;
+            cursor: pointer;
+        }
+    }
+}
+//  =========== 3D cards
+@keyframes slides {
+    from{
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+//* ===== /SLIDER ====//
