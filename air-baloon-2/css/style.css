@@ -219,7 +219,7 @@ a {
       margin-bottom: 20px;
       position: relative;
       cursor: pointer;
-      border-radius: 40px;
+      border-radius: 50px;
       overflow: hidden;
       transition: all 0.35s ease; }
       .section-main__card-item:active {

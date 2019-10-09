@@ -274,16 +274,14 @@ a{
     }
     &__card{ 
         width:20%;
-        
         & img{
             width:100%;
-            
         }
         &-item{
             margin-bottom: 20px;
             position: relative;
             cursor: pointer;
-            border-radius: 40px;
+            border-radius: 50px;
             overflow: hidden;
             transition: all $transition ease;
             &:active{
