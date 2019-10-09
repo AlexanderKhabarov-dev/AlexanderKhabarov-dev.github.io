@@ -8,125 +8,143 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
     <div class="section-outer scene">
-        <div data-speed="20" class="layer layer-bg"></div>
-        <div data-speed="10" class="layer layer-ball"></div>
-        <div data-speed="16" class="layer layer-shadow"></div>
-        <div class="layer layer-bg-2"></div>
-
+        <div data-speed="20" class="layer scene-decoration"></div>
+        <div data-speed="10" class="layer scene-baloon"></div>
+        <div data-speed="16" class="layer scene-shadow"></div>
+        <div class="layer scene-bg"></div>
+        
         <div class="section-inner">
             <div class="section-inner-logo"><img src="./img/Logo.svg" alt=""></div>
             <div class="section-inner-sign"><img src="./img/sign.svg" alt=""></div>
-            <div class="section-wrapper">
-                <div class="section-nav">
-                    <div class="dots-block">         
-                        <div class="dots-item active">Главная</div>
-                        <div class="dots-item">О нас</div>
-                        <div class="dots-item">Галерея </div>
-                        <div class="dots-item">Контакты </div>
+            <div class="flex-container">
+            <!-- navigation -->
+            <div class="section-nav">
+                <div class="section-nav__dots dots-block"> <!--class for js-->
+                    <div class="dots-item active">Главная</div>
+                    <div class="dots-item">О нас</div>
+                    <div class="dots-item">Галерея </div>
+                    <div class="dots-item">Контакты </div>
+                </div>
+            </div>
+            <!-- /navigation -->
+
+            <!-- main -->
+            <div class="section-main">
+                <!-- SLIDER-1 -->
+                <div class="slides-item">
+                    <div class="section-main__title title-top">Полеты</div>
+                    <div class="section-main__title title-bottom">на воздушном шаре</div>
+                    <div class="section-main__button">
+                        <button class="btn"> Заказать </button>
+                    </div>
+                </div> 
+                <!-- /SLIDER-1 -->
+                 <!-- SLIDER-2 -->
+                 <div class="slides-item">
+                    <div class="section-main__about">
+                        <div class="section-main__about-wrapper">
+                            <div class="section-main__about-title">О нас</div>
+                            <div class="section-main__about-text">
+                                Весеннее равноденствие непрерывно. Натуральный дождь
+                                логарифм колеблет случайный метеорный дождь. Hатpиевые
+                                атомы предварительно были замечены близко с центром
+                                других комет, но звезда ничтожно ищет центральный годовой параллакс.
+                            </div>
+                            <div class="section-main__about-text">
+                                Метеорит меняет космический мусор. Комета
+                                представляет собой зенит, Плутон не входит
+                                в эту классификацию. Прямое восхождение оценивает
+                                аргумент перигелия. Терминатор, оценивая блеск
+                                освещенного металического шарика, выбирает астероидный Ганимед. 
+                            </div>
+                        </div>
+                        <div class="section-main__about-image">
+                            <img src="./img/slider-item-about.png" alt="">
+                        </div>
                     </div>
                 </div>
-
-                <div class="section-content">
-                    <!--=== SLIDER-1 ===-->
-                    <div class="slides-item">
-                        <div class="slides-item-title title-1">Полеты</div>
-                        <div class="slides-item-title title-2">на воздушном шаре</div>
-                        <div class="slides-item-button">
-                            <button class="btn"> Зкаказать </button>
+                <!-- /SLIDER-2 -->
+                <!-- SLIDER-3 -->
+                <div class="slides-item">
+                    <div class="card-wrapper">
+                        <div class="section-main__card">
+                            <div class="section-main__card-item vertical-card"><img src="./img/card-item_left-1.png" alt=""></div>
+                            <div class="section-main__card-item small-card"><img src="./img/card-item_left-2.png" alt=""></div>
                         </div>
-                    </div> 
-                    <!--=== /SLIDER-1 ===-->
-
-                    <!--=== SLIDER-2 ===-->
-                    <div class="slides-item">
-                        <div class="slides-item-title title-1">Полеты</div>
-                        <div class="slides-item-title title-2">на воздушном шаре</div>
-                        <div class="slides-item-button">
-                            <button class="btn"> Зкаказать </button>
+                       
+                        <div class="section-main__card  card-center">
+                            <div class="card_center-wrapper">
+                            <div class="section-main__card-item"><img class="fade" src="img/img_1.png" alt=""></div>
+                            <div class="section-main__card-item"><img class="fade" src="img/img_2.png" alt=""></div>
                         </div>
-                    </div>
-                    <!--=== /SLIDER-2 ===-->
-
-                    <!--=== SLIDER-3 ===-->
-                    <div class="slides-item slides-card">
-                        <div class="wrapper-card">
-                        <!--LEFT CARDS-->
-                            <div class="container">
-                                <div class="card">
-                                    <div class="card-item"><img src="./img/card-item_left-1.png" alt=""></div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-item"><img src="./img/card-item_left-2.png" alt=""></div>
-                                </div>
-                            </div>
-                            <!--LEFT CARDS-->
-
-                            <!--CENTER CARDS-->
-                            <div class="container container-center">
-                                <div class="card">
-                                    <div class="card-item"><img src="./img/card-item-1.png" alt=""></div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-item"><img src="./img/card-item-2.png" alt=""></div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-item"><img src="./img/card-item-3.png" alt=""></div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-item"><img src="./img/card-item-4.png" alt=""></div>
-                                </div>
-                            </div>
-                            <!--CENTER CARDS-->
-
-                            <!--RIGHT CARDS-->
-                            <div class="container">
-                                <div class="card">
-                                    <div class="card-item"><img src="./img/card-item_right-1.png" alt=""></div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-item"><img src="./img/card-item_right-2.png" alt=""></div>
-                                </div>
-                            </div>
+                            <div class="card_center-wrapper">
+                            <div class="section-main__card-item"><img class="fade" src="img/img_3.png" alt=""></div>
+                            <div class="section-main__card-item"><img class="fade" src="img/img_4.png" alt=""></div>
                         </div>
-                        <!--RIGHT CARDS-->
-                    </div>
-                    <!--=== /SLIDER-3 ===-->
-
-                    <!--=== SLIDER-4 ===-->
-                    <div class="slides-item">
-                        <div class="slides-item-title title-1">Полеты</div>
-                        <div class="slides-item-title title-2">на воздушном шаре</div>
-                        <div class="slides-item-button">
-                            <button class="btn"> Зкаказать </button>
                         </div>
-                    </div> 
-                    <!--=== SLIDER-4 ===-->
+                        
+                        <div class="section-main__card">
+                            <div class="section-main__card-item vertical-card"><img src="./img/card-item_right-1.png" alt=""></div>
+                            <div class="section-main__card-item small-card"><img src="./img/card-item_right-2.png" alt=""></div>
+                        </div>
+                    </div>  
                 </div>
+                <!-- /SLIDER-3 -->
+                <!-- SLIDER-4 -->
+                <div class="slides-item slides-contact">
+                    <div class="section-main__contact">
+                        <div class="section-main__contact-content">
+                            <div class="section-main__contact-wrapper">
+                                <div class="section-main__contact-title">Остались вопросы?</div>
+                                <form class="section-main__contact-form" action="#">
+                                    <div class="section-main__contact-input">
+                                        <input class="input-name" type="text" name="name" placeholder="Имя">
+                                    </div>
+                                    <div class="section-main__contact-input">  
+                                        <input class="input-phone" type="text" name="phone" placeholder="Телефон">
+                                    </div >
+                                    <div class="section-main__contact-button">
+                                        <button class="btn">Перезвоните мне</button>
+                                    </div>
+                                </form>
+                                <div class="section-main__contact-data">Наш телефон: +7 927 854 61 32</div>
+                                <div class="section-main__contact-data">Наш E-mail: Balloon73@mail.ru</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- /SLIDER-4 -->
+            </div>
+            <!-- /main -->
+
+            <!-- footer -->
                 <div class="section-footer">
-                    <div class="section-footer-social">
-                        <ul class="section-footer-social__list">
-                            <li class="section-footer-social__list-item"><a  class="social-button" href="#"><img src="./img/Vector.svg" alt=""></a></li>
-                            <li class="section-footer-social__list-item"><a  class="social-button" href="#"><img src="./img/instagram.svg" alt=""></a></li>
-                            <li class="section-footer-social__list-item"><a  class="social-button" href="#"><img src="./img/Vector (2).svg" alt=""></a></li>
+                    <div class="section-footer__social">
+                        <ul class="section-footer__social-list">
+                            <li class="section-footer__social-item"><a class="social-button" href="https://vk.com/alexanderkhabarovdev" target="_blank"><img src="./img/Vector.svg" alt=""></a></li>
+                            <li class="section-footer__social-item"><a class="social-button" href="#"><img src="./img/instagram.svg" target="_blank" alt=""></a></li>
+                            <li class="section-footer__social-item"><a class="social-button" href="#"><img src="./img/Vector (2).svg" target="_blank" alt=""></a></li>
                         </ul>
                     </div>
-                    <div class="section-footer-arrow">
-                        <div class="buttons-block ">      <!-- arrow slider-->
-                            <div  class="arrow-btn" id="left-button"> <img src="./img/arrow-left.svg" alt=""> </div>
-                            <div  class="arrow-btn" id="right-button"> <img src="./img/arrow-right.svg" alt=""></div>
+                    <div class="section-footer__arrow">
+                        <div class="buttons-block section-footer__arrow-wrapper">      <!-- arrow slider-->
+                            <div  class="section-footer__arrow-btn" id="left-button">
+                                <img src="./img/arrow-left.svg" alt=""> 
+                            </div>
+                            <div  class="section-footer__arrow-btn" id="right-button">
+                                <img src="./img/arrow-right.svg" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="section-footer-price line-decoration">
+                    <div class="section-footer__price line-decoration">
                         Cтоимость
                     </div>
                 </div>
+            <!-- /footer -->
             </div>
         </div>
     </div>
-
-    <script src="script.js"> </script>
-    <script src="card.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
