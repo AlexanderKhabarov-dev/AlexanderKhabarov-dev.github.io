@@ -353,21 +353,28 @@ a{
     }
 
     &__contact{ //slider-4
-        background-image: url(../img/map.png);
         color:$text-color;
-        width: 100%;
+        width:100%;
+        height: auto;
+        position: relative;
         
         &-content{
+            position: absolute;
+            top:0;
+            right:0;
             font-family: $font-Montserrat;
             width:40%;
             background-color: $main-color;
             border-radius: 40px;
+            height:100%;
             text-align: center;
-            height: 511px;
             margin-left: auto;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        & img{
+            width:100%;
         }
         &-wrapper{
             width: 100%;
