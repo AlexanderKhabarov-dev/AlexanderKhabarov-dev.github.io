@@ -93,6 +93,7 @@ overflow: hidden;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: $transition;
     .section-inner{
         height: 100vh;
     }
@@ -313,10 +314,6 @@ overflow: hidden;
     &__card{
         margin-bottom: 30px;
         transition: $transition;
-        &:hover{
-            transform: scale(1.05);
-            box-shadow: $shadow;
-        }
         &-image{
             position: relative;
         }
@@ -327,6 +324,10 @@ overflow: hidden;
             font-size: 24px;
             bottom:12%;
             left:8%;
+            transition: $transition;
+        &:hover{
+            color:$color-hover;
+        }
         }
     }
 }

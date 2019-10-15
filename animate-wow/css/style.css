@@ -340,7 +340,8 @@ ul {
   background-image: url(../image/header-background__image.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  transition: all 0.3s ease; }
   .section-header .section-inner {
     height: 100vh; }
   .section-header__wrapper {
@@ -520,9 +521,6 @@ ul {
 .section-appartaments__card {
   margin-bottom: 30px;
   transition: all 0.3s ease; }
-  .section-appartaments__card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.2); }
   .section-appartaments__card-image {
     position: relative; }
   .section-appartaments__card-text {
@@ -531,7 +529,10 @@ ul {
     font-family: "Raleway", sans-serif;
     font-size: 24px;
     bottom: 12%;
-    left: 8%; }
+    left: 8%;
+    transition: all 0.3s ease; }
+    .section-appartaments__card-text:hover {
+      color: rgba(255, 255, 255, 0.5); }
 
 @media (max-width: 768px) {
   .section-appartaments__title {
