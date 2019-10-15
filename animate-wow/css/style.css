@@ -672,6 +672,7 @@ ul {
     margin-bottom: 50px; } }
 
 .section-geolocation {
+   display:none;
   margin-bottom: 150px; }
   .section-geolocation__title {
     font-family: "Playfair Display", serif;
