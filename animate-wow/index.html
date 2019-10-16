@@ -342,6 +342,12 @@
     <script>
         new WOW().init();
     </script>
-    <script src="script.js"></script>
+    <script>
+        function show(state)
+        {
+        document.getElementById('window').style.display = state;	
+        document.getElementById('close').style.display = state; 		
+        }	
+    </script>
 </body>
 </html>
