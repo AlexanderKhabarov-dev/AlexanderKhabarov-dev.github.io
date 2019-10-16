@@ -14,7 +14,7 @@
     <div class="section-outer section-header">
         <div class="section-inner">
             <div class="section-header__wrapper">
-                <div class="section-header__logo wow fadeIn" data-wow-delay=".9s" data-wow-duration="2s"  ><img src="./image/header-logo.svg" alt=""></div>
+                <div class="section-header__logo wow fadeIn" data-wow-delay=".9s" data-wow-duration="2s"><img src="./image/header-logo.svg" alt=""></div>
                 <div class="section-header__nav">
                     <ul class="section-header__nav-list" >
                         <li class="section-header__nav-item wow fadeInDown" data-wow-delay=".5s"><a class="section-header__nav-link" href="#">О комплексе</a></li>
@@ -23,6 +23,41 @@
                         <li class="section-header__nav-item wow fadeInDown" data-wow-delay=".8s"><a class="section-header__nav-link" href="#">Ипотека</a></li>
                         <li class="section-header__nav-item wow fadeInDown" data-wow-delay=".9s"><a class="section-header__nav-link" href="#">Контакты</a></li>
                     </ul>
+                    <!--hidden-menu-->
+                    <div class="section-header__hidden-menu" onclick="show('block')">
+                        <button class="section-header__hidden-button  wow fadeInLeft"></button>
+                    </div> 
+                    <div id="close" onclick="show('none')"></div>
+                    <div id="window">
+                        <div class="section-header__hidden-nav">
+                            <ul class="section-header__hidden-nav-list" >
+                                <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">О комплексе</a></li>
+                                <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">Район</a></li>
+                                <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">Каталог квартир</a></li>
+                                <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">Ипотека</a></li>
+                                <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                         <div class="section-header__hidden-nav">
+                            <ul class="section-header__hidden-nav-list" >
+                                <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">О комплексе</a></li>
+                                <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">Район</a></li>
+                                <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">Каталог квартир</a></li>
+                                <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">Ипотека</a></li>
+                                <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="section-header__hidden-nav">
+                                <ul class="section-header__hidden-nav-list" >
+                                    <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">О комплексе</a></li>
+                                    <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">Район</a></li>
+                                    <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">Каталог квартир</a></li>
+                                    <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">Ипотека</a></li>
+                                    <li class="section-header__hidden-nav-item"><a class="section-header__nav-link" href="#">Контакты</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                <!--hidden-menu-->
                 </div>
             </div>
             <div class="section-header__content wow fadeIn" data-wow-delay=".5s" data-wow-duration="2s">Жилой комплекс в историческом центре</div>
@@ -38,15 +73,15 @@
      <div class="section-outer section-aside">
         <div class="section-inner">
             <div class="section-aside__content">
-                <div class="section-aside__content-item wow fadeInRight" data-wow-delay=".4s">
+                <div class="section-aside__content-item wow fadeInRight" data-wow-delay=".1s">
                     <div class="section-aside__content-image"><img src="./image/bench.svg" alt=""></div>
                     <div class="section-aside__content-text">Рядом парки и скверы</div>
                 </div>
-                <div class="section-aside__content-item wow fadeInRight" data-wow-delay=".3s">
+                <div class="section-aside__content-item wow fadeInRight" data-wow-delay=".1s">
                     <div class="section-aside__content-image"><img src="./image/building.svg" alt=""></div>
                     <div class="section-aside__content-text">Полностью обустроенный</div>
                 </div>
-                <div class="section-aside__content-item wow fadeInRight" data-wow-delay=".2s">
+                <div class="section-aside__content-item wow fadeInRight" data-wow-delay=".1s">
                     <div class="section-aside__content-image"><img src="./image/fountain.svg" alt=""></div>
                     <div class="section-aside__content-text">10 фонтанов на территории</div>
                 </div>
@@ -147,14 +182,16 @@
     </div>
     <!--/video-->
 
-     <!--geolocation-->
-     <!--<div class="section-outer section-geolocation">
+     <!--geolocation
+     <div class="section-outer section-geolocation">
         <div class="section-inner">
             <div class="section-geolocation__title wow fadeIn"data-wow-delay=".2s" data-wow-duration="2s">Район на карте</div>
-            <iframe class="section-geolocation__title wow fadeIn"data-wow-delay="0s" data-wow-duration="2s" src="https://yandex.ru/map-widget/v1/?um=constructor%3A233953379e302f2bb521227657552c524aa490729513651aca5f20baa3415aa6&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe>
+            <div class="section-geolocation__map">
+                <a href="https://yandex.ru/maps/?um=constructor%3A17bce14737af5bc021df6e21b2355042fa8e796b55af29a27fd9af0390c73f20&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A17bce14737af5bc021df6e21b2355042fa8e796b55af29a27fd9af0390c73f20&amp;width=600&amp;height=350&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+            </div>
         </div>
     </div>
-    <!--/geolocation-->
+    /geolocation-->
 
      <!--questions-->
      <div class="section-outer section-questions">
@@ -223,7 +260,7 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="section-footer__social-button wow fadeInRight" data-wow-delay="1.1s">
+                        <div class="section-footer__social-button wow fadeInRight" data-wow-delay=".7s">
                             <a href="#">
                                 <svg width="36" height="20" viewBox="0 0 36 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M34.8684 18.0622C34.8259 17.9707 34.7864 17.8948 34.7496 17.834C34.1414 16.7387 32.9792
@@ -267,7 +304,7 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="section-footer__social-button wow fadeInRight" data-wow-delay="1.2s">
+                        <div class="section-footer__social-button wow fadeInRight" data-wow-delay=".8s">
                             <a href="#">
                                 <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.9995 0.00416134L8.40594 0C5.49217 0 3.60917 1.9319 3.60917 4.92203V7.19141H1.00147C0.776133
@@ -279,7 +316,7 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="section-footer__social-button wow fadeInRight" data-wow-delay="1.3s">
+                        <div class="section-footer__social-button wow fadeInRight" data-wow-delay=".9s">
                             <a href="#">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.75 0H6.25C2.79875 0 0 2.79875 0 6.25V13.75C0 17.2013 2.79875 20 6.25 20H13.75C17.2013
@@ -305,5 +342,6 @@
     <script>
         new WOW().init();
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
