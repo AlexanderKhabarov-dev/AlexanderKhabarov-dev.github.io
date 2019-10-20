@@ -321,6 +321,7 @@ ul {
   margin: auto; }
 
 .section-calc {
+  margin-top:50px;
   font-family: "PT Sans", sans-serif; }
   .section-calc__title {
     font-weight: bold;
