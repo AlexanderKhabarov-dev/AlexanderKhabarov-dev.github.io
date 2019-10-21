@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -321,7 +322,6 @@ ul {
   margin: auto; }
 
 .section-calc {
-  margin-top:50px;
   font-family: "PT Sans", sans-serif; }
   .section-calc__title {
     font-weight: bold;
