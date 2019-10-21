@@ -543,13 +543,15 @@ ul {
   .section-calc__title {
     width: 100%;
     margin: auto;
-    margin-bottom: 50px; } }
+    margin-bottom: 50px;
+   margin-top:50px;} }
 
 @media (max-width: 768px) {
   .section-calc__title {
     width: 90%;
     margin: auto;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+   margin-top:50px;}
   .section-calc__dropdown {
     width: 55%; }
     .section-calc__dropdown-subtitle {
@@ -594,7 +596,8 @@ ul {
   .section-calc__title {
     font-size: 20px;
     width: 100%;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+   margin-top:50px;}
   .section-calc__output {
     margin-top: 0px; }
     .section-calc__output-wrapper {
