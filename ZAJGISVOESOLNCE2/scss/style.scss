@@ -1,0 +1,729 @@
+@import '../swiper/css/swiper.min.css';
+@import '../css/normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Poppins:300,400,500,600&display=swap&subset=cyrillic');
+
+@font-face {
+    font-family: modernist_oneregular;
+    font-weight: normal;
+    font-style: normal;
+    src:url('../fonts/modernist_one_regular.ttf');
+}
+@font-face {
+    font-family: Helvetica;
+    font-weight: normal;
+    font-style: normal;
+    src:url('../fonts/HelveticaMedium/HelveticaMedium.ttf');
+}
+@font-face {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-style: normal;
+    src:url('../fonts/HelveticaBold/HelveticaBold.ttf');
+}
+@font-face {
+    font-family: Helvetica;
+    font-weight: 300;
+    font-style: normal;
+    src:url('../fonts/HelveticaLight/HelveticaLight.ttf');
+}
+
+// === variable ===
+$font-modernist_oneregular: "modernist_oneregular";
+$font-Montserrat: 'Montserrat', sans-serif;
+$font-Poppins:'Poppins', sans-serif;
+$font-Helvetica: 'Helvetica', sans-serif;
+
+$color-text:#1E252C;
+$color-btn: #D6B999;
+$color-text: #fff;
+$color-secondary:#1E252C;
+$color-dots: #373131;
+
+$transition: .3s ease;
+// === /variable ===
+
+// === mixins ===
+@mixin background-cover{  
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size:cover;
+}
+@mixin title{
+    font-family: $font-modernist_oneregular;
+    font-size: 50px;
+    line-height: 52px;
+}
+@mixin background-filter{
+    background: rgba(30, 37, 44, 0.5);
+    backdrop-filter: blur(27px); 
+}
+@mixin advantages-works{
+    color:$color-secondary;
+    &__title{
+        @include title;
+        text-align: center;
+        padding-top: 91px;
+        padding-bottom: 100px;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 150px;
+    }
+    &__content{
+        text-align: center;
+        width: 32%;
+        height: 285px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        &-text{
+            font-family: $font-Helvetica;
+            font-weight: 300;   
+            font-size: 18px;
+            line-height: 25px;
+            max-width:320px;
+            padding-top: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        &_clock{
+            padding-right: 17px;
+        }
+        &_math{
+            padding-left: 27px;
+        }
+    }
+}
+
+// === /mixins ===
+body{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.section-outer{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.section-inner{
+  max-width: 1100px;
+  margin: auto;
+}
+.btn{
+    background-color: $color-btn;
+    color:$color-text;
+    font-family: $font-Montserrat;
+    font-weight: bold;
+    font-size: 14px;
+    width: 276px;
+    height: 55px;
+    border:none;
+    border-radius: 5px;
+    transition: $transition;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0px 2px 10px #D6B999;
+    }
+}
+
+// === navigation bar ===
+.section-nav__bar{
+    position: absolute;
+    top:50%;
+    margin-top: -63px;
+    right:30px;
+    width: 8px;
+    &-item{
+        width: 6px;
+        height: 6px;
+        background: none;
+        border: 1px solid $color-text;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        
+    }
+    &-link{
+        display: block;
+        padding: 3px;
+    }
+}
+@media (max-width:960px){
+    .section-nav__bar{
+        display: none;
+    }
+}
+// === /navigation bar ===
+
+// === header ===
+.section-header{
+    background-image: url(../img/image.png);
+    @include background-cover;
+    height: 100vh;
+    position: relative;
+    color:$color-text;
+    &__social{
+        position: absolute;
+        left:7%;
+        bottom: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:90px;
+        &-button{
+            cursor: pointer;
+        }
+    }
+    &__nav{
+        max-width: 400px;
+        margin: auto;
+        &-list{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 10vh;
+        }
+        &-link{
+            font-family: $font-Poppins;
+            color: $color-text;
+            font-size: 12px;
+            line-height: 19px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+        
+    }
+    &__content{
+        max-width: 619px;
+        margin: auto;
+        text-align: center;
+        &-title{
+            @include title;
+            padding-bottom: 40px;
+        }
+        &-subtitle{
+            font-family: $font-Helvetica;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 31px;
+            max-width:538px;
+            margin: auto;
+            padding-bottom: 36px;
+        }
+        &-button{}
+    }
+    &__scroll{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__scroll a:nth-child(1){
+        font-family: $font-Poppins;
+        color: $color-text;
+        font-size: 12px;
+        line-height: 19px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 75px;
+        position: relative;
+        cursor: pointer;
+    }
+    &__scroll a:nth-child(2){
+        margin-top: -50px;
+    }
+    .section-nav__bar-item:nth-child(1){
+        background: $color-text;
+    }
+}
+@media (max-width:540px){
+    .section-header__nav-list{
+        display: none;
+    }
+    .section-header__wrapper{
+        height: 90vh;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+    .section-header__content{
+       margin: 0;
+    }
+    .section-header__content-title{
+        font-size: 32px;
+        line-height: 34px;
+        text-align: left;
+        max-width: 310px;
+       
+    }
+    .section-header__content-subtitle{
+        font-size: 16px;
+        line-height: 31px;
+        max-width:291px;
+        text-align: left;
+    }
+    .section-header__content-button{
+        text-align: left;
+    }
+    .section-header__social{
+        margin-left: 10px;
+        bottom: 7%;
+    }
+}
+// === /header ===
+
+// === advantages ===
+.section-advantages{
+    @include advantages-works;
+    position: relative;
+    &__content{
+        box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+        border-radius: 10px; 
+    }
+.section-nav__bar-item{
+    border: 1px solid $color-dots;
+    &:nth-child(2){
+        background: $color-dots;
+    }
+}
+}
+// === /advantages ===
+
+// === about ===
+.section-about{
+    background-image: url(../img/about-background.png);
+    @include background-cover;
+    position: relative;
+    color:$color-text;
+    &__wrapper{
+        max-width: 659px;
+        min-height: 767px;
+        padding-left: 30px;
+        @include background-filter;
+    }
+    &__title{
+        @include title;
+        max-width:413px;
+        padding-top: 76px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            border-bottom: 4px solid $color-btn;
+            width: 86px;
+            height: 5px;
+            bottom: -60px;
+            left:0;
+        }
+    }
+    &__content{
+        &-subtitle{ 
+            font-family: $font-Helvetica;
+            font-weight: 500;
+            padding-top: 100px;   
+            font-size: 38px;
+            line-height: 52px;
+            padding-bottom: 30px;
+        }
+        &-text{
+            font-family: $font-Helvetica;
+            font-weight: 300;
+            max-width: 527px;
+            padding-bottom: 30px;
+            font-size: 20px;
+            line-height: 34px;
+        }
+    }
+    .section-nav__bar-item:nth-child(3){
+        background: $color-text;
+    }
+}
+// === /about ===
+
+// === works ===
+.section-works{
+    position: relative;
+    @include advantages-works;
+    .section-nav__bar-item{
+        border: 1px solid $color-dots;
+        &:nth-child(4){
+            background: $color-dots;
+        }
+    }
+}
+// === /works ===
+
+// === necessity ===
+.section-necessity{
+    position: relative;
+    background-image: url(../img/necessity-background.png);
+    height: 714px;
+    @include background-cover;
+    color:$color-text;
+    &__title{
+        @include title;
+        padding-top: 96px;
+        padding-bottom: 76px;
+        max-width: 400px;
+    }
+    &__wrapper{
+        font-family: $font-Helvetica;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item{
+        font-size: 20px;
+        line-height: 25px;
+        padding-bottom: 30px;
+        position: relative;
+        padding-left: 70px;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url(../img/arrow-check.svg);
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 50px;
+            left: 0;
+            bottom: 30px;
+        }
+    }
+    &__subtext{
+        font-family: $font-Helvetica;
+        font-weight: 300;
+        max-width: 610px;
+        font-size: 20px;
+        line-height: 31px;
+    }
+    &__button{
+        text-align: center;
+        padding-top: 40px;
+    }
+    .section-nav__bar-item:nth-child(5){
+        background: $color-text;
+    }
+}
+// === /necessity ===
+
+// === getting ===
+.section-getting{
+    font-family: $font-Helvetica;
+    font-weight: 300;
+    &__title{
+        @include title;
+        padding-top: 70px;
+        padding-bottom: 103px;
+        text-align: center;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-bottom: 136px;
+    }
+    &__content{
+        width: 49%;
+        height: 352px;
+        margin-bottom: 21px;
+        color: $color-text;
+        border-radius: 20px;
+        &-wrapper{
+            display: flex;
+            align-items: center;
+        }
+        &-text{
+            font-size: 25px;
+            line-height: 37px;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding-left: 150px;
+            position: relative;
+            padding-top: 20px;
+            z-index: 10;
+            &::before{
+                position: absolute;
+                content: '';
+                background: rgba(39, 54, 69, 0.75);
+                backdrop-filter: blur(3px); 
+                left:0;
+                right:0;
+                top:119px;
+                bottom:67px;
+                z-index: -1;
+            }
+            &::after{
+                position: absolute;
+                content: '1';
+                font-family: $font-Montserrat;
+                font-weight: bold;
+                font-size: 198px;
+                color:#91B7DC;
+                opacity: .2;
+                bottom:140px;
+                left:20px;
+            }
+            &_number-2::after{
+                content: '2';
+                left:15px;
+            }
+            &_number-3::after{
+                content: '3';
+                left:5px;
+            }
+            &_number-4::after{
+                content: '4';
+                left:2px;
+            }
+        }
+        &-image-1{
+            background-image: url(../img/getting-image-1.png);
+        }
+        &-image-2{
+            background-image: url(../img/getting-image-2.png);
+        }
+        &-image-3{
+            background-image: url(../img/getting-image-3.png);
+        }
+        &-image-4{
+            background-image: url(../img/getting-image-4.png);
+        }
+    }
+}
+// === /getting ===
+
+// === use ===
+.section-use{
+    background-image: url(../img/use-background.png);
+    @include background-cover;
+    color:$color-text;
+    &__wrapper{
+        @include background-filter;
+        max-width: 607px;
+        height: 710px;
+    }
+    &__title{
+        @include title;
+        padding-left: 33px;
+        padding-top: 92px;
+        padding-bottom: 67px;
+    }
+    &__list{
+        font-family: $font-Helvetica;
+        padding-left: 100px;
+    }
+    &__item{
+        padding-bottom: 40px;
+        width:80%;
+        font-size: 20px;
+        line-height: 26px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content:'';
+            background-repeat: no-repeat;
+            width: 54px;
+            height: 54px;
+            left:-70px;
+            top:2px;
+        }
+        &-print::before{
+            background-image: url('../img/print.svg');
+        }
+        &-put::before{
+            background-image: url('../img/put.svg');
+        }
+        &-execute::before{
+            background-image: url('../img/execute.svg');
+        }
+        &-fast::before{
+            background-image: url('../img/fast.png');
+        }
+    }
+    &__button{
+        text-align: center;
+    }
+
+}
+// === /use ===
+
+// === change ===
+.section-change{
+    background-image: url(../img/change-background.png);
+    @include background-cover;
+    background-position: 50% 150px;
+    &__title{
+        @include title;
+        text-align: center;
+        padding-top: 110px;
+        padding-bottom: 127px;
+        max-width:413px;
+        margin: auto;
+    }
+    &__wrapper{
+        font-family: $font-Helvetica;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__content{
+        width: 32%;
+        height: 407px;
+        padding-top: 60px;
+        text-align: center;
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+        border-radius: 13px;
+        margin-bottom: 26px;
+        background: #fff;
+        &-image{
+            padding-bottom: 40px;
+        }
+        &-title{
+            font-size: 20px;
+            line-height: 25px;
+            max-width:295px;
+            margin: auto;
+            padding-bottom: 24px;
+        }
+        &-text{
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 31px;
+            max-width:295px;
+            margin: auto;
+        }
+    }
+}
+// === /change ===
+
+// === others ===
+.section-others{
+    position: relative;
+    padding-bottom: 100px;
+    &__title{
+        @include title;
+        margin-top: 100px;
+        padding-bottom: 0px;
+        text-align: center;
+    }
+    &__container{
+        position: relative;
+        transform: scale(.9);
+       
+    }
+    &__content img{
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after{
+        color: black;
+        transform: scale(.4);
+    }
+    .swiper-button-next, .swiper-button-prev{
+        top:98%;
+        
+        font-weight: bold;
+    }
+    .swiper-button-next{
+        right:40%;
+    }
+    .swiper-button-prev{
+        left:40%;
+    }
+    .swiper-pagination-bullet{
+        width: 15px;
+        height: 3px;
+        transition: $transition;
+        border-radius: 0;
+        background: #37373F;
+    }
+    .swiper-container-horizontal>
+    .swiper-pagination-bullets
+    .swiper-pagination-bullet{
+        margin: 0 10px;
+    }
+    .swiper-pagination-bullet-active{
+        width: 31px;
+        background: #65B4A1;
+    }
+    .section-nav__bar-item{
+        border: 1px solid $color-dots;
+        &:nth-child(6){
+            background: $color-dots;
+        }
+    }
+}
+// === /others ===
+
+// === footer ===
+.section-footer{
+    position: relative;
+    height: 566px;
+    background-color: $color-secondary;
+    
+    &__wrapper{
+        font-family: $font-Helvetica;
+        color: $color-text;
+        text-align: center;
+        max-width:450px;
+        margin: auto;
+    }
+    &__title{
+        @include title;
+        padding-top: 96px;
+        padding-bottom: 50px;
+    }
+    &__subtitle{
+        @include title;
+        font-size: 38px;
+        padding-bottom: 25px;
+    }
+    &__text{
+        font-size: 20px;
+        line-height: 31px;
+        padding-bottom: 25px;
+        font-weight: 300;
+    }
+    &__email{
+        font-size: 20px;
+        line-height: 31px;
+        font-weight: bold;
+        padding-bottom: 37px;
+    }
+    &__rules{
+        font-size: 18px;
+        font-weight: 300;
+        text-decoration: underline;
+        padding-bottom: 5px;
+        line-height: 32px;
+        padding-bottom: 30px;
+        opacity: .8;
+    }
+    &__copyright{
+        font-size: 16px;
+        opacity: 0.5;
+        font-weight: 300;
+    }
+    .section-nav__bar-item:nth-child(7){
+        background: $color-text;
+    }
+}
+// === /footer ===
+
