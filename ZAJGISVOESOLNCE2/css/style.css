@@ -55,7 +55,8 @@ a {
   border: none;
   border-radius: 5px;
   transition: 0.3s ease;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none;}
   .btn:hover {
     box-shadow: 0px 2px 10px #D6B999; }
 
