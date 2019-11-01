@@ -611,3 +611,80 @@ a {
     font-weight: 300; }
   .section-footer .section-nav__bar-item:nth-child(7) {
     background: #fff; }
+
+.section-popUp {
+  background-image: url(../img/popUp-background.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  padding-top: 20px;
+  position: fixed;
+  overflow-y: scroll;
+  left: 0;
+  top: 0%;
+  bottom: 0%;
+  right: 0;
+  height: 100%;
+  z-index: 50;
+  display: none; }
+  .section-popUp__nav {
+    max-width: 400px;
+    margin: auto; }
+    .section-popUp__nav-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 10vh; }
+    .section-popUp__nav-link {
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      font-size: 12px;
+      line-height: 19px;
+      letter-spacing: 3px;
+      text-transform: uppercase; }
+  .section-popUp__nav a {
+    color: #1E252C; }
+  .section-popUp__wrapper {
+    text-align: center; }
+  .section-popUp__title {
+    font-family: "modernist_oneregular";
+    font-size: 50px;
+    line-height: 52px;
+    padding-top: 60px;
+    padding-bottom: 30px; }
+  .section-popUp__subtitle {
+    font-family: "Helvetica", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    padding-bottom: 26px;
+    max-width: 320px;
+    margin: auto; }
+  .section-popUp__form {
+    max-width: 350px;
+    margin: auto;
+    font-family: "Helvetica", sans-serif;
+    font-size: 16px;
+    font-weight: 300; }
+  .section-popUp__input {
+    margin-bottom: 30px; }
+    .section-popUp__input-title {
+      text-align: left;
+      margin-bottom: 10px;
+      position: relative; }
+      .section-popUp__input-title_decoration {
+        color: red; }
+  .section-popUp__input input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 43px;
+    padding-left: 20px;
+    font-weight: 300;
+    border: 1px solid #C7C7C7;
+    border-radius: 2px; }
+  .section-popUp__checkbox {
+    text-align: left;
+    padding-left: 35px;
+    padding-bottom: 29px; }
+  .section-popUp__button {
+    padding-bottom: 50px; }

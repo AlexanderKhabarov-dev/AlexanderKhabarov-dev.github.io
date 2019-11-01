@@ -123,7 +123,7 @@
                         и ощутите нескончаемый поток изобилия. 
                     </div>
                     <div class="section-header__content-button">
-                        <button class="btn">Хочу зажечь свое солнце!</button>
+                        <button class="btn" onclick="show('block')">Хочу зажечь свое солнце!</button>
                     </div>
                 </div>
             </div>
@@ -292,7 +292,7 @@
                 тем сильнее эмоциональное выгорание, упадок сил.
             </div>
             <div class="section-necessity__button">
-                <button class="btn">Хочу зажечь свое солнце!</button>
+                <button class="btn" onclick="show('block')">Хочу зажечь свое солнце!</button>
             </div>
         </div>
          <!--navigation bar-->
@@ -371,7 +371,7 @@
                     </li>
                 </ul>
                 <div class="section-use__button">
-                    <button class="btn">Хочу зажечь свое солнце!</button>
+                    <button class="btn" onclick="show('block')">Хочу зажечь свое солнце!</button>
                 </div>
             </div>
         </div>
@@ -481,6 +481,58 @@
         <!--/navigation bar-->
     </div>
         <!--/section footer-->
+
+         <!--pop up-->
+    <div class="section-outer section-popUp" id="popUp">
+        <div class="section-inner">
+             <div class="section-popUp__nav">
+                <ul class="section-popUp__nav-list">
+                    <li class="section-popUp__nav-item"><a class="section-popUp__nav-link close" href="#header" onclick="show('none')">Главная</a></li>
+                    <li class="section-popUp__nav-item"><a class="section-popUp__nav-link close" href="#about" onclick="show('none')">О нас</a></li>
+                    <li class="section-popUp__nav-item"><a class="section-popUp__nav-link close" href="#others" onclick="show('none')">Отзывы</a></li>
+                    <li class="section-popUp__nav-item"><a class="section-popUp__nav-link close" href="#footer" onclick="show('none')">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="section-popUp__wrapper">
+                <div class="section-popUp__title">Зажги свое солнце!</div>
+                <div class="section-popUp__subtitle">Пожалуйста, заполните формы которые указаны ниже</div>
+                <form class="section-popUp__form" action="">
+                    <div class="section-popUp__input">
+                        <div class="section-popUp__input-title">Имя<span class="section-popUp__input-title_decoration">*</span></div>
+                        <input type="text" name="" placeholder="Имя">
+                    </div>
+                    <div class="section-popUp__input">
+                        <div class="section-popUp__input-title">E-mail<span class="section-popUp__input-title_decoration">*</span></div>
+                        <input type="text" name="" placeholder="E-mail">
+                    </div>
+                    <div class="section-popUp__input">
+                        <div class="section-popUp__input-title">Место рождения<span class="section-popUp__input-title_decoration">*</span></div>
+                        <input type="text" name="" placeholder="Место рождения">
+                    </div>
+                    <div class="section-popUp__input">
+                        <div class="section-popUp__input-title">Дата рождения<span class="section-popUp__input-title_decoration">*</span></div>
+                        <input type="text" name="" placeholder="Дата рождения">
+                    </div>
+                    <div class="section-popUp__input">
+                        <div class="section-popUp__input-title">Время рождения<span class="section-popUp__input-title_decoration">*</span></div>
+                        <input type="text" name="" placeholder="Время рождения">
+                    </div>
+                    <div class="section-popUp__checkbox">
+                        <label class="section-popUp__checkbox-text">
+                            Я согласен(a) на обработку 
+                            персональных данных
+                            <input type="checkbox" name="check">
+                        </label>
+                    </div>
+                    <div class="section-popUp__button">
+                        <button class="btn" onclick="show('block')">Зажечь свое солнце!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+        <!--/pop up-->
+        <script src="scripts/script-popUp.js"></script>
         <script src="swiper/js/swiper.min.js"></script>
         <script src="./scripts/swiper-animation.js"></script>
         <script src="scripts/scroll-animation.js"></script>
