@@ -685,6 +685,27 @@ a {
   .section-popUp__checkbox {
     text-align: left;
     padding-left: 35px;
-    padding-bottom: 29px; }
+    padding-bottom: 29px;
+    position: relative; }
+    .section-popUp__checkbox-text {
+      cursor: pointer; }
+    .section-popUp__checkbox input {
+      position: absolute;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none; }
+    .section-popUp__checkbox input:checked + .custom-checkbox {
+      background-image: url(../img/custom-checkbox.svg);
+      background-position: center;
+      background-repeat: no-repeat; }
+    .section-popUp__checkbox .custom-checkbox {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      background-color: #D6B999;
+      border-radius: 2px;
+      cursor: pointer; }
   .section-popUp__button {
     padding-bottom: 50px; }
