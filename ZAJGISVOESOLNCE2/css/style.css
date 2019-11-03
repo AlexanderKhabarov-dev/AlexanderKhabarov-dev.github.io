@@ -989,7 +989,8 @@ a {
     font-size: 32px;
     line-height: 36px;
     padding-top: 69px;
-    padding-bottom: 67px; }
+    padding-bottom: 67px;
+    padding-left: 0; }
   .section-use__wrapper {
     height: 798px; }
   .section-use__item {
