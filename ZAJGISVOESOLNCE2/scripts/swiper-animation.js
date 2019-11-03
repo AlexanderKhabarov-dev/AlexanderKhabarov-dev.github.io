@@ -10,7 +10,7 @@ let swiper = new Swiper('.swiper-container', {
     coverflowEffect: {
       rotate: 0,
       stretch: -75,
-      depth: 170,
+      depth: 150,
       modifier: 1,
       slideShadows : 0,
     },
@@ -42,6 +42,15 @@ if (document.body.clientWidth<540){
       el: '.swiper-pagination',
     },
   });
+
+  let changeSwiper = new Swiper('.swiper-container4',{
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
 }
 
 else if(document.body.clientWidth>540){
@@ -66,7 +75,7 @@ else if(document.body.clientWidth>540){
   element5.forEach(function(item) {
     item.classList.remove("swiper-container3");
   })
-  element5.forEach(function(item) {
+  element6.forEach(function(item) {
     item.classList.remove("swiper-wrapper");
   })
   
