@@ -1082,13 +1082,16 @@ a {
     font-size: 50px;
     line-height: 52px;
     margin-top: 100px;
-    padding-bottom: 0px;
+    padding-bottom: 50px;
     text-align: center; }
   .section-others__container {
     overflow: hidden;
     position: relative; }
   .section-others__content img {
-    width: 100%;
+    display: block;
+    margin: auto;
+    width: 323px;
+    height: 666px;
     padding-bottom: 30px; }
   .section-others .swiper-button-next:after,
   .section-others .swiper-button-prev:after {

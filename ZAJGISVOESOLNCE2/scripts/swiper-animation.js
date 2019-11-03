@@ -1,6 +1,12 @@
 let othersSwiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
-    slidesPerView: 3,
+    slidesPerView: 1,
+    breakpoints: {
+      // when window width is >= 320px
+      640: {
+        slidesPerView: 3,
+      }
+    },
     initialSlide: 1,
     loop: true,
     autoplay: {
