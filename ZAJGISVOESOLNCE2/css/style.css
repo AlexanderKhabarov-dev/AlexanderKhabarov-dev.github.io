@@ -795,7 +795,9 @@ a {
   .section-necessity__item {
     font-size: 18px; }
   .section-necessity__subtext {
-    display: none; } }
+    display: none; }
+  .section-necessity__button {
+    transform: translateX(-20px); } }
 
 .section-getting {
   font-family: "Helvetica", sans-serif;
@@ -1205,7 +1207,7 @@ a {
   .section-footer__copyright {
     font-size: 14px; } }
 
-.section-popUp {
+.section-popUpForm {
   background-image: url(../img/popUp-background.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -1220,15 +1222,15 @@ a {
   height: 100%;
   z-index: 50;
   display: none; }
-  .section-popUp__nav {
+  .section-popUpForm__nav {
     max-width: 400px;
     margin: auto; }
-    .section-popUp__nav-list {
+    .section-popUpForm__nav-list {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 10vh; }
-    .section-popUp__nav-link {
+    .section-popUpForm__nav-link {
       font-family: "Poppins", sans-serif;
       color: #fff;
       font-size: 12px;
@@ -1236,19 +1238,19 @@ a {
       letter-spacing: 3px;
       text-transform: uppercase;
       transition: 0.3s ease; }
-      .section-popUp__nav-link:hover {
+      .section-popUpForm__nav-link:hover {
         opacity: 0.6; }
-  .section-popUp__nav a {
+  .section-popUpForm__nav a {
     color: #1E252C; }
-  .section-popUp__wrapper {
+  .section-popUpForm__wrapper {
     text-align: center; }
-  .section-popUp__title {
+  .section-popUpForm__title {
     font-family: "modernist_oneregular";
     font-size: 50px;
     line-height: 52px;
     padding-top: 60px;
     padding-bottom: 30px; }
-  .section-popUp__subtitle {
+  .section-popUpForm__subtitle {
     font-family: "Helvetica", sans-serif;
     font-size: 18px;
     font-weight: 300;
@@ -1256,21 +1258,21 @@ a {
     padding-bottom: 26px;
     max-width: 320px;
     margin: auto; }
-  .section-popUp__form {
+  .section-popUpForm__form {
     max-width: 350px;
     margin: auto;
     font-family: "Helvetica", sans-serif;
     font-size: 16px;
     font-weight: 300; }
-  .section-popUp__input {
+  .section-popUpForm__input {
     margin-bottom: 30px; }
-    .section-popUp__input-title {
+    .section-popUpForm__input-title {
       text-align: left;
       margin-bottom: 10px;
       position: relative; }
-      .section-popUp__input-title_decoration {
+      .section-popUpForm__input-title_decoration {
         color: red; }
-  .section-popUp__input input {
+  .section-popUpForm__input input {
     box-sizing: border-box;
     width: 100%;
     height: 43px;
@@ -1278,23 +1280,23 @@ a {
     font-weight: 300;
     border: 1px solid #C7C7C7;
     border-radius: 2px; }
-  .section-popUp__checkbox {
+  .section-popUpForm__checkbox {
     text-align: left;
     padding-left: 35px;
     padding-bottom: 29px;
     position: relative; }
-    .section-popUp__checkbox-text {
+    .section-popUpForm__checkbox-text {
       cursor: pointer; }
-    .section-popUp__checkbox input {
+    .section-popUpForm__checkbox input {
       position: absolute;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none; }
-    .section-popUp__checkbox input:checked + .custom-checkbox {
+    .section-popUpForm__checkbox input:checked + .custom-checkbox {
       background-image: url(../img/custom-checkbox.svg);
       background-position: center;
       background-repeat: no-repeat; }
-    .section-popUp__checkbox .custom-checkbox {
+    .section-popUpForm__checkbox .custom-checkbox {
       position: absolute;
       left: 0;
       top: 0;
@@ -1303,7 +1305,7 @@ a {
       background-color: #D6B999;
       border-radius: 2px;
       cursor: pointer; }
-  .section-popUp__button {
+  .section-popUpForm__button {
     padding-bottom: 50px; }
 
 @media (max-width: 540px) {
@@ -1319,6 +1321,72 @@ a {
     line-height: 34px;
     text-align: left;
     padding-top: 30px; } }
+
+.section-popUpPayment {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -216px;
+  margin-top: -265px;
+  z-index: 100; }
+  .section-popUpPayment__close {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .5;
+    z-index: -1; }
+  .section-popUpPayment__wrapper {
+    position: relative;
+    width: 410px;
+    height: 540px;
+    background-color: #fff;
+    border-radius: 7px; }
+  .section-popUpPayment__wrapper .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    transition: 0.3s ease; }
+    .section-popUpPayment__wrapper .close:hover {
+      opacity: 0.6; }
+  .section-popUpPayment__content {
+    text-align: center;
+    font-family: "Helvetica", sans-serif; }
+    .section-popUpPayment__content-image {
+      padding-top: 107px; }
+      .section-popUpPayment__content-image_Failed {
+        padding-top: 70px; }
+    .section-popUpPayment__content-text {
+      font-size: 18px;
+      line-height: 24px;
+      padding-top: 35px;
+      max-width: 330px;
+      margin: auto; }
+    .section-popUpPayment__content-check {
+      max-width: 262px;
+      margin: auto;
+      padding-top: 17px;
+      font-size: 16px;
+      color: #5C6979;
+      font-weight: 300;
+      padding-bottom: 20px; }
+      .section-popUpPayment__content-check_Failed {
+        padding-bottom: 17px; }
+    .section-popUpPayment__content-button {
+      padding-top: 20px; }
+    .section-popUpPayment__content .btn-secondary {
+      background-color: #fff;
+      border: 1px solid #D6B999;
+      color: #D6B999; }
+
+@media (max-width: 540px) {
+  .section-popUpPayment {
+    margin-left: -173px; }
+  .section-popUpPayment__wrapper {
+    width: 326px; } }
 
 @media screen and (orientation: landscape) and (max-device-width: 900px) {
   html {

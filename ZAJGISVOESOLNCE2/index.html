@@ -491,60 +491,112 @@
     </div>
         <!--/section footer-->
 
-         <!--pop up-->
-    <div class="section-outer section-popUp" id="popUp">
+         <!--popUpForm-->
+    <div class="section-outer section-popUpForm" id="popUpForm">
         <div class="section-inner">
-             <div class="section-popUp__nav">
-                <ul class="section-popUp__nav-list">
-                    <li class="section-popUp__nav-item"><a class="section-popUp__nav-link close" href="#header" onclick="show('none')" >Главная</a></li>
-                    <li class="section-popUp__nav-item"><a class="section-popUp__nav-link close" href="#about" onclick="show('none')">О нас</a></li>
-                    <li class="section-popUp__nav-item"><a class="section-popUp__nav-link close" href="#others" onclick="show('none')">Отзывы</a></li>
-                    <li class="section-popUp__nav-item"><a class="section-popUp__nav-link close" href="#footer" onclick="show('none')">Контакты</a></li>
+             <div class="section-popUpForm__nav">
+                <ul class="section-popUpForm__nav-list">
+                    <li class="section-popUpForm__nav-item"><a class="section-popUpForm__nav-link close" href="#header" onclick="show('none')" >Главная</a></li>
+                    <li class="section-popUpForm__nav-item"><a class="section-popUpForm__nav-link close" href="#about" onclick="show('none')">О нас</a></li>
+                    <li class="section-popUpForm__nav-item"><a class="section-popUpForm__nav-link close" href="#others" onclick="show('none')">Отзывы</a></li>
+                    <li class="section-popUpForm__nav-item"><a class="section-popUpForm__nav-link close" href="#footer" onclick="show('none')">Контакты</a></li>
                 </ul>
             </div>
-            <div class="section-popUp__wrapper">
-                <div class="section-popUp__title">Зажги свое солнце!</div>
-                <div class="section-popUp__subtitle">Пожалуйста, заполните формы которые указаны ниже</div>
-                <form class="section-popUp__form" action="">
-                    <div class="section-popUp__input">
-                        <div class="section-popUp__input-title">Имя<span class="section-popUp__input-title_decoration">*</span></div>
+            <div class="section-popUpForm__wrapper">
+                <div class="section-popUpForm__title">Зажги свое солнце!</div>
+                <div class="section-popUpForm__subtitle">Пожалуйста, заполните формы которые указаны ниже</div>
+                <form class="section-popUpForm__form" action="">
+                    <div class="section-popUpForm__input">
+                        <div class="section-popUpForm__input-title">Имя<span class="section-popUpForm__input-title_decoration">*</span></div>
                         <input type="text" name="" placeholder="Имя">
                     </div>
-                    <div class="section-popUp__input">
-                        <div class="section-popUp__input-title">E-mail<span class="section-popUp__input-title_decoration">*</span></div>
+                    <div class="section-popUpForm__input">
+                        <div class="section-popUpForm__input-title">E-mail<span class="section-popUpForm__input-title_decoration">*</span></div>
                         <input type="text" name="" placeholder="E-mail">
                     </div>
-                    <div class="section-popUp__input">
-                        <div class="section-popUp__input-title">Место рождения<span class="section-popUp__input-title_decoration">*</span></div>
+                    <div class="section-popUpForm__input">
+                        <div class="section-popUpForm__input-title">Место рождения<span class="section-popUpForm__input-title_decoration">*</span></div>
                         <input type="text" name="" placeholder="Место рождения">
                     </div>
-                    <div class="section-popUp__input">
-                        <div class="section-popUp__input-title">Дата рождения<span class="section-popUp__input-title_decoration">*</span></div>
+                    <div class="section-popUpForm__input">
+                        <div class="section-popUpForm__input-title">Дата рождения<span class="section-popUpForm__input-title_decoration">*</span></div>
                         <input type="text" name="" placeholder="Дата рождения">
                     </div>
-                    <div class="section-popUp__input">
-                        <div class="section-popUp__input-title">Время рождения<span class="section-popUp__input-title_decoration">*</span></div>
+                    <div class="section-popUpForm__input">
+                        <div class="section-popUpForm__input-title">Время рождения<span class="section-popUpForm__input-title_decoration">*</span></div>
                         <input type="text" name="" placeholder="Время рождения">
                     </div>
-                    <div class="section-popUp__checkbox">
-                        <label class="section-popUp__checkbox-text">
+                    <div class="section-popUpForm__checkbox">
+                        <label class="section-popUpForm__checkbox-text">
                             Я согласен(a) на обработку 
                             персональных данных
                             <input type="checkbox" name="check">
                             <span class="custom-checkbox"></span>
                         </label>
                     </div>
-                    <div class="section-popUp__button">
+                    <div class="section-popUpForm__button">
                         <button class="btn" onclick="show('block')">Зажечь свое солнце!</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-        <!--/pop up-->
-        <script src="scripts/script-popUp.js"></script>
-        <script src="swiper/js/swiper.min.js"></script>
-        <script src="./scripts/swiper-animation.js"></script>
-        <script src="scripts/scroll-animation.js"></script>
+        <!--/popUpForm-->
+
+        <!--popUpSuccessfulPayment
+    <div class="section-outer section-popUpPayment" id="popUpSuccessfulPayment">
+        <div class="section-inner">
+            <div class="section-popUpPayment__close" onclick="show('none')"></div>
+            <div class="section-popUpPayment__wrapper">
+                <img class="close" src="./img/popUp-close.svg" onclick="show('none')" alt="">
+                <div class="section-popUpPayment__content">
+                    <div class="section-popUpPayment__content-image">
+                        <img src="./img/popUpSuccessfulPayment-image.svg" alt="">
+                    </div>
+                    <div class="section-popUpPayment__content-text">
+                            Оплата прошла успешно!
+                            Информация о заказе отправлена 
+                            вам на почту
+                    </div>
+                    <div class="section-popUpPayment__content-check">Проверьте свой e-mail</div>
+                    <div class="section-popUpPayment__content-button">
+                        <button class="btn">На главную</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        /popUpSuccessfulPayment-->
+
+        <!--popUpFailedPayment--
+    <div class="section-outer section-popUpPayment" id="popUpFailedPayment">
+            <div class="section-inner">
+                <div class="section-popUpPayment__close" onclick="show('none')"></div>
+                <div class="section-popUpPayment__wrapper section-popUpPayment__wrapper_popUpFailedPayment">
+                    <img class="close" src="./img/popUp-close.svg" onclick="show('none')" alt="">
+                    <div class="section-popUpPayment__content">
+                        <div class="section-popUpPayment__content-image section-popUpPayment__content-image_Failed">
+                            <img src="./img/popUpFailedPayment-image.svg" alt="">
+                        </div>
+                        <div class="section-popUpPayment__content-text ">
+                            Что-то пошло не так!
+                        </div>
+                        <div class="section-popUpPayment__content-check section-popUpPayment__content-check_Failed">Возможно на карте недостаточно средств или произошел сбой.</div>
+                        <div class="section-popUpPayment__content-button">
+                            <button class="btn">Попробовать еще раз</button>
+                        </div>
+                        <div class="section-popUpPayment__content-button">
+                            <button class="btn btn-secondary">На главную</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            /popUpFailedPayment-->
+
+    <script src="scripts/script-popUp.js"></script>
+    <script src="swiper/js/swiper.min.js"></script>
+    <script src="./scripts/swiper-animation.js"></script>
+    <script src="scripts/scroll-animation.js"></script>
 </body>
 </html>
