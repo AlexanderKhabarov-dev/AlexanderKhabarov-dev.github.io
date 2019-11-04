@@ -364,6 +364,15 @@ a {
   .btn:hover {
     box-shadow: 0px 2px 10px #D6B999; }
 
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  transition: 0.3s ease; }
+  .close:hover {
+    opacity: 0.6; }
+
 .section-nav__bar {
   position: absolute;
   top: 50%;
@@ -1209,56 +1218,40 @@ a {
     font-size: 14px; } }
 
 .section-popUpForm {
-  background-image: url(../img/popUp-background.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
   padding-top: 20px;
   position: fixed;
-  overflow-y: scroll;
-  left: 0;
-  top: 0%;
-  bottom: 0%;
-  right: 0;
-  height: 100%;
-  z-index: 50;
+  top: 50%;
+  left: 50%;
+  margin-left: -219px;
+  margin-top: -335px;
   display: none; }
-  .section-popUpForm__nav {
-    max-width: 400px;
-    margin: auto; }
-    .section-popUpForm__nav-list {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 10vh; }
-    .section-popUpForm__nav-link {
-      font-family: "Poppins", sans-serif;
-      color: #fff;
-      font-size: 12px;
-      line-height: 19px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      transition: 0.3s ease; }
-      .section-popUpForm__nav-link:hover {
-        opacity: 0.6; }
+  .section-popUpForm__close {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .5;
+    z-index: -1; }
   .section-popUpForm__nav a {
     color: #1E252C; }
   .section-popUpForm__wrapper {
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    z-index: 100;
+    border-radius: 7px;
+    width: 438px;
+    height: 630px; }
   .section-popUpForm__title {
     font-family: "modernist_oneregular";
     font-size: 50px;
     line-height: 52px;
-    padding-top: 60px;
-    padding-bottom: 30px; }
-  .section-popUpForm__subtitle {
-    font-family: "Helvetica", sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 25px;
-    padding-bottom: 26px;
-    max-width: 320px;
-    margin: auto; }
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px; }
   .section-popUpForm__form {
     max-width: 350px;
     margin: auto;
@@ -1266,8 +1259,9 @@ a {
     font-size: 16px;
     font-weight: 300; }
   .section-popUpForm__input {
-    margin-bottom: 30px; }
+    margin-bottom: 15px; }
     .section-popUpForm__input-title {
+      font-size: 14px;
       text-align: left;
       margin-bottom: 10px;
       position: relative; }
@@ -1284,7 +1278,7 @@ a {
   .section-popUpForm__checkbox {
     text-align: left;
     padding-left: 35px;
-    padding-bottom: 29px;
+    padding-bottom: 10px;
     position: relative; }
     .section-popUpForm__checkbox-text {
       cursor: pointer; }
@@ -1310,18 +1304,28 @@ a {
     padding-bottom: 50px; }
 
 @media (max-width: 540px) {
-  .section-popUp__wrapper {
-    max-width: 300px;
-    margin: auto; }
-  .section-popUp__subtitle {
+  .section-popUpForm {
+    margin-left: -230px;
+    margin-top: -320px; }
+  .section-popUpForm__wrapper {
+    box-sizing: border-box;
+    width: 320px;
+    height: 600px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px; }
+  .section-popUpForm__form {
+    font-size: 12px; }
+  .section-popUpForm__subtitle {
     font-size: 16px;
     line-height: 27px;
     text-align: left; }
-  .section-popUp__title {
-    font-size: 32px;
+  .section-popUpForm__title {
+    font-size: 25px;
     line-height: 34px;
     text-align: left;
-    padding-top: 30px; } }
+    padding-top: 15px;
+    padding-bottom: 15px; } }
 
 .section-popUpPayment {
   position: fixed;
@@ -1345,14 +1349,6 @@ a {
     height: 540px;
     background-color: #fff;
     border-radius: 7px; }
-  .section-popUpPayment__wrapper .close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    cursor: pointer;
-    transition: 0.3s ease; }
-    .section-popUpPayment__wrapper .close:hover {
-      opacity: 0.6; }
   .section-popUpPayment__content {
     text-align: center;
     font-family: "Helvetica", sans-serif; }
@@ -1388,6 +1384,12 @@ a {
     margin-left: -173px; }
   .section-popUpPayment__wrapper {
     width: 326px; } }
+
+@keyframes popUp {
+  from {
+    transform: scale(0.1); }
+  to {
+    transform: scale(1); } }
 
 @media screen and (orientation: landscape) and (max-device-width: 900px) {
   html {
