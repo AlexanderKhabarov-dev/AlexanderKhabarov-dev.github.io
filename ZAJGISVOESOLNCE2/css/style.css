@@ -1305,7 +1305,7 @@ a {
 
 @media (max-width: 540px) {
   .section-popUpForm {
-    margin-left: -230px;
+    margin-left: -160px;
     margin-top: -320px; }
   .section-popUpForm__wrapper {
     box-sizing: border-box;
