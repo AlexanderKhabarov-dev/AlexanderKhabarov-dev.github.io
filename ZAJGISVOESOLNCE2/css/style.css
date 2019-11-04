@@ -1102,8 +1102,6 @@ a {
   .section-others__content img {
     display: block;
     margin: auto;
-    width: 323px;
-    height: 666px;
     padding-bottom: 30px; }
   .section-others .swiper-button-next:after,
   .section-others .swiper-button-prev:after {
@@ -1224,7 +1222,8 @@ a {
   left: 50%;
   margin-left: -219px;
   margin-top: -335px;
-  display: none; }
+  display: none;
+  z-index: 1000; }
   .section-popUpForm__close {
     position: fixed;
     top: 0;
