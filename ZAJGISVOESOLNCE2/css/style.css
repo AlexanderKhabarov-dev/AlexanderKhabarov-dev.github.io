@@ -948,6 +948,7 @@ a {
     padding-top: 60px;
     padding-bottom: 40px; }
   .section-getting__wrapper {
+    justify-content: space-between;
     flex-wrap: nowrap; }
   .section-getting__content {
     width: 100%;
