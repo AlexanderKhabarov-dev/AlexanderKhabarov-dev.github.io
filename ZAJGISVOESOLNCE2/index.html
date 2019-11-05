@@ -83,7 +83,7 @@
                         и ощутите нескончаемый поток изобилия. 
                     </div>
                     <div class="section-header__content-button">
-                        <button class="btn" onclick="show('block')">Хочу зажечь свое солнце!</button>
+                        <button class="btn" id="btn1">Хочу зажечь свое солнце!</button>
                     </div>
                 </div>
             </div>
@@ -205,7 +205,7 @@
                     </div>
                     <div class="section-works__content swiper-slide">
                         <div class="section-works__content-wrapper">
-                            <div class="section-works__content-image"><img src="./img/chip.svg" alt=""></div>
+                            <div class="section-works__content-image section-works__content-decoration"><img src="./img/chip.svg" alt=""></div>
                             <div class="section-works__content-text">
                                 В сердце сервиса лежит искусственный интеллект.  
                             </div>
@@ -258,7 +258,7 @@
                 тем сильнее эмоциональное выгорание, упадок сил.
             </div>
             <div class="section-necessity__button">
-                <button class="btn" onclick="show('block')">Хочу зажечь свое солнце!</button>
+                <button class="btn" id="btn2">Хочу зажечь свое солнце!</button>
             </div>
         </div>
          <!--navigation bar-->
@@ -339,7 +339,7 @@
                     </li>
                 </ul>
                 <div class="section-use__button">
-                    <button class="btn" onclick="show('block')">Хочу зажечь свое солнце!</button>
+                    <button class="btn" id="btn3">Хочу зажечь свое солнце!</button>
                 </div>
             </div>
         </div>
@@ -453,11 +453,11 @@
 
          <!--popUpForm-->
     <div class="section-outer section-popUpForm" id="popUpForm">
-        <div class="section-popUpForm__close" onclick="show('none')"></div>
+        <div class="section-popUpForm__close"></div>
         <div class="section-inner">
-            <div class="section-popUpForm__close" onclick="show('none')"></div>
+            <div class="section-popUpForm__close"></div>
             <div class="section-popUpForm__wrapper">
-                <img class="close" src="./img/popUp-close.svg" onclick="show('none')" alt="">
+                <img id="close" class="close" src="./img/popUp-close.svg"alt="">
                 <div class="section-popUpForm__title">Зажги свое солнце!</div>
                 <form class="section-popUpForm__form" action="">
                     <div class="section-popUpForm__input">
@@ -489,7 +489,7 @@
                         </label>
                     </div>
                     <div class="section-popUpForm__button">
-                        <button class="btn" onclick="show('block')">Зажечь свое солнце!</button>
+                        <button class="btn" id="btn4" >Зажечь свое солнце!</button>
                     </div>
                 </form>
             </div>
@@ -497,12 +497,12 @@
     </div>
         <!--/popUpForm-->
 
-        <!--popUpSuccessfulPayment
+        <!--popUpSuccessfulPayment-->
     <div class="section-outer section-popUpPayment" id="popUpSuccessfulPayment">
         <div class="section-inner">
-            <div class="section-popUpPayment__close" onclick="show('none')"></div>
+            <div class="section-popUpPayment__close" id="closeOuter"></div>
             <div class="section-popUpPayment__wrapper">
-                <img class="close" src="./img/popUp-close.svg" onclick="show('none')" alt="">
+                <img class="close" id="close1" src="./img/popUp-close.svg" alt="">
                 <div class="section-popUpPayment__content">
                     <div class="section-popUpPayment__content-image">
                         <img src="./img/popUpSuccessfulPayment-image.svg" alt="">
@@ -520,14 +520,14 @@
             </div>
         </div>
     </div>
-        /popUpSuccessfulPayment-->
+<!--/popUpSuccessfulPayment-->
 
-        <!--popUpFailedPayment--
+        <!--popUpFailedPayment-->
     <div class="section-outer section-popUpPayment" id="popUpFailedPayment">
             <div class="section-inner">
-                <div class="section-popUpPayment__close" onclick="show('none')"></div>
+                <div class="section-popUpPayment__close"></div>
                 <div class="section-popUpPayment__wrapper section-popUpPayment__wrapper_popUpFailedPayment">
-                    <img class="close" src="./img/popUp-close.svg" onclick="show('none')" alt="">
+                    <img class="close" id="close2"  src="./img/popUp-close.svg" alt="">
                     <div class="section-popUpPayment__content">
                         <div class="section-popUpPayment__content-image section-popUpPayment__content-image_Failed">
                             <img src="./img/popUpFailedPayment-image.svg" alt="">
@@ -546,8 +546,9 @@
                 </div>
             </div>
         </div>
-            /popUpFailedPayment-->
-
+           <!--/popUpFailedPayment-->
+        <button id="popUp-1"> Успешная оплата</button>
+        <button id="popUp-2"> Оплата не прошла</button>
     <script src="scripts/script-popUp.js"></script>
     <script src="swiper/js/swiper.min.js"></script>
     <script src="./scripts/swiper-animation.js"></script>
