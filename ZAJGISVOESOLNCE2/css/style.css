@@ -1294,6 +1294,7 @@ a {
       .section-popUpForm__input-title_decoration {
         color: red; }
   .section-popUpForm__input input {
+    line-height: 15px;
     box-sizing: border-box;
     width: 100%;
     padding-left: 15px;
@@ -1354,7 +1355,9 @@ a {
     padding-top: 30px;
     padding-bottom: 15px; }
   .section-popUpForm__checkbox {
-    padding-bottom: 20px; } }
+    padding-bottom: 20px; }
+  .section-popUpForm__input input {
+    line-height: 14px; } }
 
 .section-popUpPayment {
   display: none;
