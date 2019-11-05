@@ -850,7 +850,7 @@ a {
     justify-content: center; }
   .section-getting__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 136px;
@@ -858,7 +858,7 @@ a {
   .section-getting__content {
     width: 540px;
     height: 352px;
-    margin-bottom: 21px;
+    margin-bottom: 31px;
     color: #fff;
     border-radius: 20px;
     background-repeat: no-repeat;
