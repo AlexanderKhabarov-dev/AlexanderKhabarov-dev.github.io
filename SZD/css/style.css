@@ -1305,6 +1305,7 @@ a {
     border-radius: 2px; }
     input[type='date'], input[type='time'] {
       -webkit-appearance: none;
+      height: 39px;
   }
   
   .section-popUpForm__checkbox {
@@ -1359,7 +1360,11 @@ a {
   .section-popUpForm__checkbox {
     padding-bottom: 20px; }
   .section-popUpForm__input input {
-    line-height: 16px; } }
+    line-height: 16px; } 
+    input[type='date'], input[type='time'] {
+      -webkit-appearance: none;
+      height: 38px;
+  }}
 
 .section-popUpPayment {
   display: none;
