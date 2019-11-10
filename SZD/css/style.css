@@ -1302,7 +1302,8 @@ a {
     padding-bottom: 10px;
     font-weight: 300;
     border: 1px solid #C7C7C7;
-    border-radius: 2px; }
+    border-radius: 2px;
+    -webkit-appearance: none; }
     input[type='date'], input[type='time'] {
       -webkit-appearance: none;
       height: 39px;
