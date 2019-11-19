@@ -36,8 +36,9 @@ ul {
 
 @media (max-width: 540px) {
   .scene-layer-1 img {
-    width: 65%; }
+    width: 65%;
+    bottom: 30%; }
   .scene-layer-2 img {
     width: 105%;
     left: -25px;
-    bottom: 14%; } }
+    bottom: 24%; } }
