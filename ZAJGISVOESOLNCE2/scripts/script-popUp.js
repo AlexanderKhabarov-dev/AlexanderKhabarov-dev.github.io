@@ -21,7 +21,7 @@ popUpCloseForm.onclick = function(){
     popUpForm.style.display = "none";
 }
 window.onclick = function(e){
-    if(e.target == popUp) {
+    if(e.target == popUpForm) {
         popUpForm.style.display = "none";
     }
 }
