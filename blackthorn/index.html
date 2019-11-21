@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Black Thorn</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fake-loader/fakeLoader.min.css">
 </head>
 <body>
+    <div class="fakeLoader"></div>
     <div class="section-outer section-header">
         <div class="section-header__container">
         <div class="section-header__logo">
@@ -65,5 +67,13 @@
         </div>
     </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./fake-loader/fakeLoader.min.js"></script>
+    <script>
+        $.fakeLoader({
+            bgColor: '#040404',
+            spinner:"spinner1",
+        });
+    </script>
 </body>
 </html>
