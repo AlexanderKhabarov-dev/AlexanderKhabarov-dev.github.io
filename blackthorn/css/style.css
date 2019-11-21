@@ -358,10 +358,8 @@ ul {
 
 @keyframes logo {
   from {
-    transform: rotate(360deg);
     opacity: 0; }
   to {
-    transform: rotate(0deg);
     opacity: 1; } }
   .section-header__social {
     display: flex;
@@ -473,7 +471,7 @@ ul {
     .section-header__content::after {
       content: '';
       position: absolute;
-      width: 279px;
+      width: 239px;
       height: 1px;
       border-bottom: 1px solid #fff;
       bottom: -30px;
