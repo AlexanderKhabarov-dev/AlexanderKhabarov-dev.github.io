@@ -429,7 +429,7 @@ ul {
       .section-header__nav-link:hover {
         color: #a5a5a5; }
   .section-header__wrapper {
-    height: 70%;
+    height: 75%;
     display: flex;
     justify-content: center;
     align-items: center; }
