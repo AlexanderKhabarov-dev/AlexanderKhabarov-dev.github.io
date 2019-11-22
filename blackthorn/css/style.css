@@ -310,6 +310,18 @@ template {
   font-style: normal;
   src: url("../fonts/Exodus-PersonalUse-Sharpen.otf"); }
 
+@font-face {
+  font-family: Opinion-Pro;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/OpinionProExtended-Light.woff2"); }
+
+@font-face {
+  font-family: Opinion-Pro-Light;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/OpinionPro-Light.woff2"); }
+
 body {
   box-sizing: border-box;
   padding: 0;
@@ -520,3 +532,125 @@ ul {
 
 .section-header__scroll-text:hover + .section-header__scroll-arrow {
   opacity: .6; }
+
+.section-about {
+  background-image: url("../img/about-background.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .section-about .section-inner {
+    display: flex;
+    height: 100vh;
+    align-items: center; }
+  .section-about__wrapper {
+    display: flex; }
+  .section-about__content {
+    padding-left: 50px;
+    width: 260px;
+    color: #fff; }
+    .section-about__content-title {
+      font-family: "Opinion-Pro";
+      font-size: 20px;
+      line-height: 22px;
+      text-transform: uppercase;
+      padding-bottom: 23px; }
+    .section-about__content-text {
+      font-family: "Opinion-Pro-Light";
+      font-size: 16px;
+      line-height: 22px;
+      color: #D8D8D8;
+      padding-bottom: 40px; }
+    .section-about__content-feedback {
+      font-family: "Opinion-Pro-Light";
+      font-size: 12px;
+      line-height: 19px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      width: 178px;
+      padding-bottom: 8px;
+      position: relative;
+      transition: 0.3s ease; }
+      .section-about__content-feedback:hover {
+        opacity: .6; }
+      .section-about__content-feedback::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 178px;
+        height: 2px;
+        border-bottom: 1px solid #fff; }
+      .section-about__content-feedback::after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: 0px;
+        background-image: url(../img/feedback-link.svg);
+        background-repeat: none;
+        width: 18px;
+        height: 6px; }
+    .section-about__content-link {
+      color: #fff; }
+
+.slides-item {
+  animation: slides 1.3s 1;
+  animation-timing-function: ease; }
+
+.slides-item img {
+  box-shadow: 2px 5px 30px rgba(0, 0, 0, 0.5); }
+
+@keyframes slides {
+  from {
+    transform: scale(1);
+    opacity: 0; }
+  to {
+    transform: scale(1);
+    opacity: 1; } }
+
+.dots-block {
+  display: flex;
+  margin: auto;
+  margin-left: 40px;
+  margin-top: 35px;
+  position: relative;
+  font-family: "Exodus-PersonalUseSharpen"; }
+  .dots-block::before {
+    content: '01';
+    position: absolute;
+    bottom: -6px;
+    left: -30px;
+    color: #fff; }
+  .dots-block::after {
+    content: '05';
+    position: absolute;
+    bottom: -6px;
+    right: 115px;
+    color: #fff; }
+  .dots-block .dots-item {
+    position: relative;
+    cursor: pointer;
+    height: 2px;
+    width: 70px;
+    background: #fff;
+    transition: 0.3s ease; }
+    .dots-block .dots-item .active2 {
+      background: black; }
+
+.buttons-block {
+  position: relative; }
+  .buttons-block .slide-button {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 15px;
+    height: 15px;
+    z-index: 1000; }
+    .buttons-block .slide-button:hover {
+      opacity: .6; }
+    .buttons-block .slide-button-left {
+      right: 70px; }
+
+.section-about .dots-block .active2 {
+  background: #7A7B7B;
+  transition: 0.3s ease; }
