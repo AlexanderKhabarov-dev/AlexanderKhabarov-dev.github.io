@@ -735,7 +735,8 @@ ul {
       color: #fff; }
   .section-catalog__category {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    width: 1000px; }
   .section-catalog__wrapper {
     position: relative;
     width: 300px;
