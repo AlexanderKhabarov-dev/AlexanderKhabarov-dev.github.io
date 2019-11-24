@@ -322,6 +322,12 @@ template {
   font-style: normal;
   src: url("../fonts/OpinionPro-Light.woff2"); }
 
+@font-face {
+  font-family: Playfair-Display;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/PlayfairDisplay-Regular.ttf"); }
+
 body {
   box-sizing: border-box;
   padding: 0;
@@ -499,15 +505,16 @@ ul {
   to {
     width: 279; } }
   .section-header__scroll {
+    font-family: "Arimo", sans-serif;
     text-align: center;
     position: absolute;
     bottom: 0;
     left: 50%;
-    margin-left: -80px;
     padding-bottom: 1%;
     animation: scroll 2s linear;
     animation-fill-mode: both;
-    animation-delay: 1.5s; }
+    animation-delay: 1.5s;
+    margin-left: -85px; }
 
 @keyframes scroll {
   from {
@@ -520,7 +527,6 @@ ul {
       line-height: 19px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      width: 161px;
       margin: auto;
       padding-bottom: 16px;
       display: block;
@@ -529,15 +535,51 @@ ul {
         color: #a5a5a5; }
     .section-header__scroll-arrow {
       transition: 0.3s ease; }
-
-.section-header__scroll-text:hover + .section-header__scroll-arrow {
-  opacity: .6; }
+    .section-header__scroll-text {
+      width: 170px; }
+    .section-header__scroll .section-header__scroll-text:hover + .section-header__scroll-arrow {
+      opacity: .6; }
 
 .section-about {
   background-image: url("../img/about-background.png");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat; }
+  .section-about__scroll {
+    font-family: "Arimo", sans-serif;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding-bottom: 1%;
+    animation: scroll 2s linear;
+    animation-fill-mode: both;
+    animation-delay: 1.5s;
+    margin-left: -100px; }
+
+@keyframes scroll {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+    .section-about__scroll-text {
+      color: #fff;
+      font-size: 12px;
+      line-height: 19px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin: auto;
+      padding-bottom: 16px;
+      display: block;
+      transition: 0.3s ease; }
+      .section-about__scroll-text:hover {
+        color: #a5a5a5; }
+    .section-about__scroll-arrow {
+      transition: 0.3s ease; }
+    .section-about__scroll-text {
+      width: 200px; }
+    .section-about__scroll .section-about__scroll-text:hover + .section-about__scroll-arrow {
+      opacity: .6; }
   .section-about .section-inner {
     display: flex;
     height: 100vh;
@@ -546,15 +588,24 @@ ul {
     display: flex; }
   .section-about__content {
     padding-left: 50px;
-    width: 260px;
     color: #fff; }
     .section-about__content-title {
       font-family: "Opinion-Pro";
+      width: 100vw;
       font-size: 20px;
       line-height: 22px;
       text-transform: uppercase;
-      padding-bottom: 23px; }
+      padding-bottom: 23px;
+      position: relative; }
+      .section-about__content-title::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: -137px;
+        border-bottom: 1px solid #fff;
+        width: 100%; }
     .section-about__content-text {
+      width: 260px;
       font-family: "Opinion-Pro-Light";
       font-size: 16px;
       line-height: 22px;
@@ -654,3 +705,121 @@ ul {
 .section-about .dots-block .active2 {
   background: #7A7B7B;
   transition: 0.3s ease; }
+
+.section-catalog {
+  background-image: url(../img/catalog-background.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .section-catalog .fp-tableCell {
+    display: block; }
+  .section-catalog__nav {
+    padding-top: 55px;
+    padding-bottom: 60px; }
+    .section-catalog__nav-list {
+      display: flex;
+      justify-content: space-between;
+      width: 210px; }
+      .section-catalog__nav-list li:nth-child(n+2):before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        border-bottom: 1px solid #fff;
+        left: -23px;
+        top: 7px; }
+    .section-catalog__nav-item {
+      position: relative; }
+    .section-catalog__nav-link {
+      font-family: "Opinion-Pro-Light";
+      color: #fff; }
+  .section-catalog__category {
+    display: flex;
+    justify-content: space-between; }
+  .section-catalog__wrapper {
+    position: relative;
+    width: 300px;
+    height: 443px; }
+    .section-catalog__wrapper:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: 0.3s ease;
+      backdrop-filter: blur(27px); }
+    .section-catalog__wrapper:hover::before {
+      opacity: 1; }
+    .section-catalog__wrapper:hover .section-catalog__content-hover {
+      opacity: 1; }
+  .section-catalog__content {
+    max-width: 290px;
+    color: #fff; }
+    .section-catalog__content-title {
+      font-family: "Playfair-Display";
+      font-size: 30px;
+      padding-bottom: 16px; }
+    .section-catalog__content-subtitle {
+      font-family: "Opinion-Pro-Light";
+      font-size: 16px;
+      line-height: 28px;
+      padding-bottom: 30px; }
+    .section-catalog__content-hover {
+      opacity: 0;
+      transition: 0.3s ease;
+      z-index: 99999; }
+      .section-catalog__content-hover::before {
+        content: '';
+        position: absolute;
+        background-image: url(../img/decoration-top.svg);
+        background-repeat: no-repeat;
+        width: 77px;
+        height: 102px;
+        top: 15px;
+        right: 15px; }
+      .section-catalog__content-hover::after {
+        content: '';
+        position: absolute;
+        background-image: url(../img/decoration-bottom.svg);
+        background-repeat: no-repeat;
+        width: 77px;
+        height: 102px;
+        bottom: 15px;
+        left: 15px; }
+    .section-catalog__content-link-position {
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      left: 50%;
+      margin-left: -60px; }
+    .section-catalog__content-link {
+      font-family: "Opinion-Pro-Light";
+      color: #fff;
+      font-size: 12px;
+      line-height: 19px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      width: 178px;
+      padding-bottom: 8px;
+      position: relative;
+      transition: 0.3s ease; }
+      .section-catalog__content-link:hover {
+        opacity: .6; }
+      .section-catalog__content-link::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 113px;
+        height: 2px;
+        border-bottom: 1px solid #fff; }
+      .section-catalog__content-link::after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: -20px;
+        background-image: url(../img/feedback-link.svg);
+        background-repeat: none;
+        width: 18px;
+        height: 6px; }

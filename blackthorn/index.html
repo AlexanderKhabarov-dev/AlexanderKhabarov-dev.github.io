@@ -14,7 +14,7 @@
     <div class="fakeLoader"></div>
     <!--header-->
     <div id="fullpage">
-        <section class="section-outer section-header section">
+        <div class="section-outer section-header section">
             <div class="section-header__container">
                 <div class="section-header__logo">
                     <svg width="58" height="60" viewBox="0 0 58 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +58,7 @@
                     <div class="section-header__wrapper">
                         <div class="section-header__content">BlackThorn</div>
                     </div>
-                    <div class="section-header__scroll" id="myMenu">
+                    <div class="section-header__scroll">
                         <div data-menuanchor="secondPage">
                             <a href="#secondPage" class="section-header__scroll-text">scroll for more</a>
                             <div href="#" class="section-header__scroll-arrow">
@@ -72,11 +72,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     <!--/header-->
 
     <!--about-->
-        <section class="section-outer section-about section">
+        <div class="section-outer section-about section">
             <div class="section-inner">
                 <div class="section-about__wrapper">
                     <div class="section-about__container">
@@ -100,7 +100,6 @@
                             <div class="dots-item"> </div>
                         </div>
                     </div>
-
                     <div class="section-about__content">
                         <div class="section-about__content-title">Blackthorn</div>
                         <div class="section-about__content-text">
@@ -112,10 +111,90 @@
                         <div class="section-about__content-feedback"> <a class="section-about__content-link" href="#">Связаться с нами</a></div>
                     </div>
                 </div>
+                <div class="section-about__scroll">
+                        <div data-menuanchor="thridPage">
+                            <a href="#thirdPage" class="section-about__scroll-text">ПЕРЕЙТИ К КАТАЛОГам</a>
+                            <div href="#" class="section-about__scroll-arrow">
+                                <svg width="15" height="31" viewBox="0 0 15 31"  xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.03115 1.42161L7.03115 29.0699V29.9915H8.33115V29.0699L8.33115 1.42161V0.5L7.03115 0.5V1.42161Z" fill="white"/>
+                                    <path d="M7.5 30L1.5 24" stroke="white" stroke-linecap="square"/>
+                                    <path d="M13.5 24L7.5 30" stroke="white" stroke-linecap="square"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
             </div>
-        </section>
+        </div>
+        <!--/about-->
+        <div class="section-outer section-catalog section">
+            <div class="section-inner">
+                <div class="section-catalog__nav">
+                    <ul class="section-catalog__nav-list">
+                        <li class="section-catalog__nav-item"><a href="#" class="section-catalog__nav-link">Главная</a></li>
+                        <li class="section-catalog__nav-item"><a href="#" class="section-catalog__nav-link">О нас</a></li>
+                        <li class="section-catalog__nav-item"><a href="#" class="section-catalog__nav-link">Каталог</a></li>
+                    </ul>
+                </div>
+                <div class="section-catalog__category">
+                    <div class="section-catalog__content">
+                        <div class="section-catalog__content-title">Одежда</div>
+                        <div class="section-catalog__content-subtitle">
+                            Cможет стать акцентом вашего образа 
+                            и достойным пополнением коллекции уникальных
+                            вещей в гардеробе.
+                        </div>
+                        <div class="section-catalog__wrapper">
+                            <div class="section-catalog__content-image">
+                                <img src="./img/catalog-image-1.png" width="300" height="443" alt="">
+                            </div>
+                            <div class="section-catalog__content-hover">
+                                <div class="section-catalog__content-link-position">
+                                    <a class="section-catalog__content-link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-catalog__content">
+                        <div class="section-catalog__content-title">Винтаж</div>
+                        <div class="section-catalog__content-subtitle">
+                            Cможет стать акцентом вашего образа 
+                            и достойным пополнением коллекции уникальных
+                            вещей в гардеробе.
+                        </div>
+                        <div class="section-catalog__wrapper">
+                            <div class="section-catalog__content-image">
+                                <img src="./img/catalog-image-2.png" width="300" height="443" alt="">
+                            </div>
+                            <div class="section-catalog__content-hover">
+                                <div class="section-catalog__content-link-position">
+                                    <a class="section-catalog__content-link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-catalog__content">
+                        <div class="section-catalog__content-title">Аренда</div>
+                        <div class="section-catalog__content-subtitle">
+                            Cможет стать акцентом вашего образа 
+                            и достойным пополнением коллекции уникальных
+                            вещей в гардеробе.
+                        </div>
+                        <div class="section-catalog__wrapper">
+                            <div class="section-catalog__content-image">
+                                <img src="./img/catalog-image-3.png" width="300" height="443" alt="">
+                            </div>
+                            <div class="section-catalog__content-hover">
+                                <div class="section-catalog__content-link-position">
+                                    <a class="section-catalog__content-link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!--/about-->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./fake-loader/fakeLoader.min.js"></script>
     <script>
@@ -132,7 +211,7 @@
     <script>
         new fullpage('#fullpage', {
             //options here
-            anchors: ['firstPage', 'secondPage',],
+            anchors: ['firstPage', 'secondPage', 'thirdPage'],
             autoScrolling:true,
             scrollHorizontally: true,
         });
