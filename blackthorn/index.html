@@ -8,7 +8,7 @@
     <link rel="preload" href="./img/header-background.png" as="image">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./fake-loader/fakeLoader.min.css">
-    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="./fullpage.js/dist/fullpage.min.css">
 </head>
 <body>
     <div class="fakeLoader"></div>
@@ -112,20 +112,22 @@
                     </div>
                 </div>
                 <div class="section-about__scroll">
-                        <div data-menuanchor="thridPage">
-                            <a href="#thirdPage" class="section-about__scroll-text">ПЕРЕЙТИ К КАТАЛОГам</a>
-                            <div href="#" class="section-about__scroll-arrow">
-                                <svg width="15" height="31" viewBox="0 0 15 31"  xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.03115 1.42161L7.03115 29.0699V29.9915H8.33115V29.0699L8.33115 1.42161V0.5L7.03115 0.5V1.42161Z" fill="white"/>
-                                    <path d="M7.5 30L1.5 24" stroke="white" stroke-linecap="square"/>
-                                    <path d="M13.5 24L7.5 30" stroke="white" stroke-linecap="square"/>
-                                </svg>
-                            </div>
+                    <div data-menuanchor="thridPage">
+                        <a href="#thirdPage" class="section-about__scroll-text">ПЕРЕЙТИ К КАТАЛОГам</a>
+                        <div href="#" class="section-about__scroll-arrow">
+                            <svg width="15" height="31" viewBox="0 0 15 31"  xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.03115 1.42161L7.03115 29.0699V29.9915H8.33115V29.0699L8.33115 1.42161V0.5L7.03115 0.5V1.42161Z" fill="white"/>
+                                <path d="M7.5 30L1.5 24" stroke="white" stroke-linecap="square"/>
+                                <path d="M13.5 24L7.5 30" stroke="white" stroke-linecap="square"/>
+                            </svg>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
         <!--/about-->
+
+        <!--catalog-->
         <div class="section-outer section-catalog section">
             <div class="section-inner">
                 <div class="section-catalog__nav">
@@ -193,7 +195,84 @@
                 </div>
             </div>
         </div>
+        <!--/catalog-->
+
+        <!--contacts-->
+        <div class="section-outer section-contacts section">
+            <div class="section-inner">
+                <div class="section-contacts__container">
+                    <div class="section-contacts__title">Контакты</div>
+                    <div class="section-contacts__wrapper">
+                        <div class="section-contacts__map"><img src="./img/contacts-map.png" alt=""></div>
+                        <div class="section-contacts__data">
+                            <div class="section-contacts__data-wrapper">
+                                <div class="section-contacts__text">Телефон</div>
+                                <div class="section-contacts__text">+7(911)-028-91-76</div>
+                            </div>
+                            <div class="section-contacts__data-wrapper">
+                                <div class="section-contacts__text">Адрес</div>
+                                <div class="section-contacts__text">Мастерская ул., 9<br>Санкт-Петербург, 190121</div>
+                            </div>
+                            <div class="section-contacts__data-wrapper">
+                                <div class="section-contacts__text">E-mail</div>
+                                <div class="section-contacts__text">BLACKTHORN@gmail.com</div>
+                            </div>
+                            <div class="section-contacts__social">
+                                <div class="section-contacts__social-button"><a class="section-contacts__social-link" href="#"><img src="./img/Instagram_black.svg" alt=""></a></div>
+                                <div class="section-contacts__social-button"><a class="section-contacts__social-link" href="#"><img src="./img/VK_black.svg" alt=""></a></div>
+                                <div class="section-contacts__social-button"><a class="section-contacts__social-link" href="#"><img src="./img/Twitter_black.svg" alt=""></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-contacts__questions">
+                        <div class="section-contacts__questions-text">
+                            Если у вас остались какие либо вопросы, 
+                            или вы хотите связаться с нами, просто заполните
+                            форму и мы выйдем с вами на связь!
+                        </div>
+                        <form action="#" class="section-contacts__questions-form">
+                            <div class="section-contacts__questions-wrapper">
+                                <input type="text" name="name" placeholder="Имя">
+                                <input type="text" name="e-mail" placeholder="Ваш e-mail">
+                            </div>
+                            <div>
+                                <input type="text" name="question" placeholder="Ваш вопрос">
+                            </div>
+                            <div>
+                                <button class="form-button">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--/contact-->
+        </div>
     </div>
+            <!--footer-->
+        <div class="section-outer section-footer">
+            <div class="section-inner">
+                <div class="section-footer__container">
+                    <div class="section-footer__copyright"></div>
+                    <div class="section-footer__nav">
+                        <ul class="section-footer__nav-list">
+                            <li class="section-footer__nav-item"><a href="#" class="section-footer__nav-link">Главная</a></li>
+                            <li class="section-footer__nav-item"><a href="#" class="section-footer__nav-link">Одежда</a></li>
+                            <li class="section-footer__nav-item"><a href="#" class="section-footer__nav-link">Винтаж</a></li>
+                            <li class="section-footer__nav-item"><a href="#" class="section-footer__nav-link">Аренда</a></li>
+                        </ul>
+                    </div>
+                     <div class="section-footer__nav">
+                        <ul class="section-footer__nav-list">
+                            <li class="section-footer__nav-item"><a href="#" class="section-footer__nav-link">Фотосъемка</a></li>
+                            <li class="section-footer__nav-item"><a href="#" class="section-footer__nav-link">Контакты</a></li>
+                            <li class="section-footer__nav-item"><a href="#" class="section-footer__nav-link">FAQ</a></li>
+                            <li class="section-footer__nav-item"><a href="#" class="section-footer__nav-link">RU EN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--footer-->
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./fake-loader/fakeLoader.min.js"></script>
@@ -208,14 +287,6 @@
     <script src="fullpage.js/vendors/easings.min.js"></script>
     <script type="text/javascript" src="fullpage.js/vendors/scrolloverflow.min.js"></script>
     <script type="text/javascript" src="fullpage.js/dist/fullpage.extensions.min.js"></script>
-    <script>
-        new fullpage('#fullpage', {
-            //options here
-            anchors: ['firstPage', 'secondPage', 'thirdPage'],
-            autoScrolling:true,
-            scrollHorizontally: true,
-        });
-        fullpage_api.setAllowScrolling(true);
-    </script>
+    <script src="scripts/scroll-init.js"></script>
 </body>
 </html>

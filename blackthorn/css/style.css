@@ -711,8 +711,6 @@ ul {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat; }
-  .section-catalog .fp-tableCell {
-    display: block; }
   .section-catalog .section-inner {
     height: 100vh; }
   .section-catalog__nav {
@@ -760,7 +758,6 @@ ul {
     .section-catalog__wrapper:hover .section-catalog__content-hover {
       opacity: 1; }
   .section-catalog__content {
-    max-width: 290px;
     color: #fff; }
     .section-catalog__content-title {
       font-family: "Playfair-Display";
@@ -770,7 +767,8 @@ ul {
       font-family: "Opinion-Pro-Light";
       font-size: 16px;
       line-height: 28px;
-      padding-bottom: 30px; }
+      padding-bottom: 30px;
+      max-width: 290px; }
     .section-catalog__content-hover {
       opacity: 0;
       transition: 0.3s ease;
@@ -828,3 +826,107 @@ ul {
         background-repeat: none;
         width: 18px;
         height: 6px; }
+
+.section-contacts {
+  color: #fff;
+  background-image: url(../img/contacts-backgound.png);
+  background-position: 50% 50%;
+  background-size: cover; }
+  .section-contacts .fp-tableCell {
+    display: block; }
+  .section-contacts .section-inner {
+    height: 100vh;
+    display: flex;
+    align-items: center; }
+  .section-contacts__title {
+    font-family: "Playfair-Display";
+    font-size: 50px;
+    padding-bottom: 70px; }
+  .section-contacts__wrapper {
+    display: flex;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #fff; }
+  .section-contacts__map {
+    padding-right: 100px; }
+  .section-contacts__data-wrapper {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #fff; }
+  .section-contacts__text {
+    font-family: "Opinion-Pro-Light";
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-align: left;
+    width: 300px; }
+  .section-contacts__social {
+    max-width: 100%;
+    display: flex;
+    border-top: 1px solid #fff;
+    padding-top: 24px; }
+    .section-contacts__social-button {
+      margin-right: 10px; }
+    .section-contacts__social-link {
+      transition: 0.3s ease; }
+      .section-contacts__social-link:hover {
+        opacity: .6; }
+  .section-contacts__questions {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    font-family: "Opinion-Pro-Light";
+    padding-top: 35px; }
+    .section-contacts__questions-text {
+      max-width: 416px;
+      line-height: 28px; }
+    .section-contacts__questions-form {
+      width: 50%; }
+      .section-contacts__questions-form input {
+        font-family: "Opinion-Pro-Light";
+        color: #fff;
+        background: none;
+        border: none;
+        height: 40px;
+        width: 240px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        outline: none;
+        color: #fff; }
+      .section-contacts__questions-form input[name="question"] {
+        width: 100%; }
+    .section-contacts__questions-wrapper {
+      display: flex;
+      justify-content: space-between; }
+  .section-contacts .form-button {
+    font-family: "Opinion-Pro-Light";
+    color: #fff;
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    padding-left: 0px;
+    margin-top: 38px;
+    position: relative;
+    transition: 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none; }
+    .section-contacts .form-button:hover {
+      opacity: .6; }
+    .section-contacts .form-button::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 113px;
+      height: 6px;
+      border-bottom: 1px solid #fff; }
+    .section-contacts .form-button::after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      right: -20px;
+      background-image: url(../img/feedback-link.svg);
+      background-repeat: none;
+      width: 18px;
+      height: 4px; }
