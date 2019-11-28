@@ -950,7 +950,23 @@ ul {
     font-size: 110px;
     line-height: 110px;
     color: #fff;
-    margin-top: -100px; }
+    margin-top: -100px;
+    position: relative; }
+    .preloader-text::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      background: #040404;
+      width: 860px;
+      height: 110px;
+      animation: preloader-text 3s 1 ease; }
+
+@keyframes preloader-text {
+  from {
+    transform: translateX(0px); }
+  to {
+    transform: translateX(860px); } }
   .preloader-progressbar {
     width: 845px;
     border-bottom: 2px solid #626262;
