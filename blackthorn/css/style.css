@@ -356,7 +356,7 @@ ul {
     background-size: cover;
     background-repeat: no-repeat;
     animation: section-header 1.6s 1 linear;
-    animation-delay: 3s; }
+    animation-delay: 2.7s; }
 
 @keyframes section-header {
   from {
