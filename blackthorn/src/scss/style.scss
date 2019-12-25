@@ -293,7 +293,7 @@ ul{
                 &::after{
                     position: absolute;
                     content:'';
-                    background-image: url('../..src/img/hidden-menu-link-hover.svg');
+                    background-image: url('../../src/img/menu-link-hover.svg');
                     background-repeat: none;
                     width: 201px;
                     height: 17px;
@@ -435,6 +435,48 @@ ul{
         }
     }
 }
+
+@media (min-width:$md) and (max-width: $notebooks){
+    .header{
+        &__wrapper{
+            padding-top: 30px;
+        }
+        &__nav-link{
+            font-size: 10px;
+        }
+        &__intro{
+            height: 65%;
+            &-text{
+                font-size: 80px;
+            }    
+        }
+        &__scroll{
+            &-link{
+                font-size: 10px;
+            }
+        }
+        &__social{
+            &-link{
+                font-size: 12px;
+            }
+        }
+        .menu-hidden{
+            &__close{
+                display: none;
+            }
+            &__cart{
+                padding-bottom: 20px;
+                &-icon{
+                    padding-right: 20px;
+                }
+            }
+            &__nav-list{
+                padding-bottom: 40px;
+            }
+        }
+    }
+}
+
 @media (max-width:$md-min){
     .header{
         &__nav-list{
@@ -459,47 +501,10 @@ ul{
         &__nav-link{
             font-size: 10px;
         }
-        &__social{
-            left:-5%;
-            &-link{
-                font-size: 12px;
-            }
-        }
+       
     }
 }
 
-@media (max-width:$sm){
-    .header{
-        &__nav-list{
-            display: none;
-        }
-        &__intro{
-            height: 72%;
-            &-text{
-                font-size: 40px;
-                &:before{
-                    left:-60%;
-                }
-                &:after{
-                    right:-60%;
-                    width:279px;
-                }
-            }
-        }
-        &__scroll{
-        }
-        &__social{
-            left: -20%;
-            bottom:20%;
-        }
-        .menu-hidden{
-            width:100%;
-            &__wrapper{
-                padding-left: 20px;
-            }
-        }
-    }
-}
 @media (min-width:$md-min) and (max-width:$md){
     .header{
         &__nav-list{
@@ -514,6 +519,12 @@ ul{
                 font-size: 70px;
             }
         }
+        &__social{
+            left:-15%;
+            &-link{
+                font-size: 12px;
+            }
+        }
         .menu-hidden{
             width:70%;
             &__close{
@@ -526,28 +537,76 @@ ul{
     }
 }
 
-@media (min-width:$md) and (max-width: $notebooks){
+@media (max-width:$sm){
     .header{
-        &__wrapper{
-            padding-top: 30px;
+        &__logo{
+            transform: scale(.7);
         }
-        &__nav-link{
-            font-size: 10px;
+        &__nav-list{
+            display: none;
+        }
+        .menu-button{
+            width:50px;
+        }
+        .menu-button svg{
+            width:100%;
         }
         &__intro{
-            height: 65%;
+            height: 72%;
             &-text{
-                font-size: 80px;
-            }    
-        }
-        &__scroll{
-            &-link{
-                font-size: 10px;
+                font-size: 40px;
+                &::before, &::after{
+                    border:none;
+                    background-image: url('../../src/img/intro-decoration.svg');
+                    background-repeat: no-repeat;
+                    width: 200px;
+                    height: 20px;
+                }
+                &:before{
+                    left:-22%;
+                }
+                &:after{
+                    right:-22%;
+                    transform: rotate(180deg);
+                }
             }
         }
+        &__scroll{
+            display: none;
+        }
         &__social{
+            left: -20%;
+            bottom:20%;
             &-link{
-                font-size: 12px;
+                font-size: 14px;
+            }
+        }
+        .menu-hidden{
+            width:100%;
+            &__wrapper{
+                padding-left: 20px;
+            }
+            &__cart{
+                padding-bottom: 70px;
+                &-icon{
+                    padding-right: 50px;
+                }
+            }
+            &__nav-list{
+                padding-bottom: 70px;
+            }
+            &__close{
+                &::before , &::after {
+                    border: none;
+                    transform: rotate(0);
+                }
+                &::before{
+                    background-image: url('../../src/img/menu-arrow.svg');
+                    width: 43px;
+                    height: 43px;
+                    left:20px;
+                    top:40px;
+                }
             }
         }
     }
