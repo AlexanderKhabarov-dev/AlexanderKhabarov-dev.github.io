@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="build/css/style.css"/>
+  </head>
+  <body>
+    <section class="header-category">
+      <div class="header-category__container">
+        <div class="header-category__nav">
+          <ul class="header-category__nav-list">
+            <li class="header-category__nav-item"><a class="header-category__nav-link" href="index.html">Главная</a></li>
+            <li class="header-category__nav-item"><a class="header-category__nav-link" href="">О нас</a></li>
+            <li class="header-category__nav-item"><a class="header-category__nav-link" href="">Каталог</a></li>
+            <li class="header-category__nav-item"><a class="header-category__nav-link header-category__nav-link--active" href="">Одежда</a></li>
+          </ul>
+        </div>
+        <div class="header-category__wrapper">
+          <div class="header-category__title">Одежда</div>
+        </div>
+      </div>
+      <div class="header-category__sorting">
+        <ul class="header-category__sorting-list">
+          <li class="header-category__sorting-item"><a class="header-category__sorting-link header-category__sorting-link--active" href="">Вся продукция</a></li>
+          <li class="header-category__sorting-item"><a class="header-category__sorting-link" href="">Обувь</a></li>
+          <li class="header-category__sorting-item"><a class="header-category__sorting-link" href="">Платья</a></li>
+          <li class="header-category__sorting-item"><a class="header-category__sorting-link" href="">Топы</a></li>
+          <li class="header-category__sorting-item"><a class="header-category__sorting-link" href="">Брюки</a></li>
+          <li class="header-category__sorting-item"><a class="header-category__sorting-link" href="">Юбки</a></li>
+          <li class="header-category__sorting-item"><a class="header-category__sorting-link" href="">Аксессуары</a></li>
+          <li class="header-category__sorting-item"><a class="header-category__sorting-link" href="">Верхняя одежда</a></li>
+        </ul>
+      </div>
+      <div class="sorting-category">
+        <div class="sorting-category__wrapper">
+          <form class="sorting-category__form" action="#">
+            <input class="sorting-category__input" type="text"/>
+            <div class="sorting-category__dropdown">Сортировка</div><a class="sorting-category__link sorting-category__link--active" href="#">Новинки</a><a class="sorting-category__link" href="#">Акции</a>
+          </form>
+          <div class="counter">0</div>
+        </div>
+      </div>
+    </section>
+    <section class="products">
+      <div class="products__container"></div>
+    </section>
+    <div class="cart"></div>
+    <script src="src/js/catalog.js"></script>
+    <script src="src/js/serviceCreateElement.js"></script>
+    <script src="src/js/serviceStore.js"></script>
+    <script src="src/js/serviceProducts.js"></script>
+    <script src="src/js/serviceCart.js"></script>
+  </body>
+</html>
