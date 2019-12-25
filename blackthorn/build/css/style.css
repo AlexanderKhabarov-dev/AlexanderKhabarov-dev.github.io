@@ -1127,7 +1127,8 @@ ul {
     .header__social-link {
       font-size: 14px; }
   .header .menu-hidden {
-    width: 100%; }
+    width: 100%;
+    overflow: hidden; }
     .header .menu-hidden__wrapper {
       padding-left: 20px; }
     .header .menu-hidden__cart {

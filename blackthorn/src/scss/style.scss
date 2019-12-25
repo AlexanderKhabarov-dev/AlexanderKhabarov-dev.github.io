@@ -583,6 +583,7 @@ ul{
         }
         .menu-hidden{
             width:100%;
+            overflow: hidden;
             &__wrapper{
                 padding-left: 20px;
             }
