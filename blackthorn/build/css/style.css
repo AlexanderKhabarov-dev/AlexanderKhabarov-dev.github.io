@@ -308,37 +308,37 @@ template {
   font-family: Exodus-PersonalUseSharpen;
   font-weight: normal;
   font-style: normal;
-  src: url("/src/fonts/Exodus-PersonalUse-Sharpen.otf"); }
+  src: url("../../src/fonts/Exodus-PersonalUse-Sharpen.otf"); }
 
 @font-face {
   font-family: Exodus-PersonalUseRegular;
   font-weight: normal;
   font-style: normal;
-  src: url("/src/fonts/Exodus-PersonalUse-Regular.otf"); }
+  src: url("../../src/fonts/Exodus-PersonalUse-Regular.otf"); }
 
 @font-face {
   font-family: Opinion-Pro;
   font-weight: normal;
   font-style: normal;
-  src: url("/src/fonts/OpinionProExtended-Light.woff2"); }
+  src: url("../../src/fonts/OpinionProExtended-Light.woff2"); }
 
 @font-face {
   font-family: Opinion-Pro-Light;
   font-weight: normal;
   font-style: normal;
-  src: url("/src/fonts/OpinionPro-Light.woff2"); }
+  src: url("../../src/fonts/OpinionPro-Light.woff2"); }
 
 @font-face {
   font-family: Playfair-Display;
   font-weight: normal;
   font-style: normal;
-  src: url("/src/fonts/PlayfairDisplay-Regular.ttf"); }
+  src: url("../../src/fonts/PlayfairDisplay-Regular.ttf"); }
 
 @font-face {
   font-family: Mason-Chronicles-Regular;
   font-weight: normal;
   font-style: normal;
-  src: url("/src/fonts/Mason_Chronicles_Regular_Wither.ttf"); }
+  src: url("../../src/fonts/Mason_Chronicles_Regular_Wither.ttf"); }
 
 .header-category__container {
   background-position: 50% 50%;
@@ -527,7 +527,7 @@ template {
     .products__card-price::before, .products__card-price::after {
       position: absolute;
       content: '';
-      background-image: url("/src/img/vetka.svg");
+      background-image: url("../../src/img/vetka.svg");
       background-repeat: no-repeat;
       width: 120px;
       height: 10px;
@@ -564,7 +564,7 @@ template {
     right: 10px;
     height: 36px;
     width: 36px;
-    background-image: url("/src/img/close-icon.svg");
+    background-image: url("../../src/img/close-icon.svg");
     cursor: pointer;
     transition: 0.3s ease; }
     .cart-close:hover {
@@ -745,7 +745,7 @@ ul {
   overflow: hidden;
   position: relative; }
   .header__container {
-    background-image: url("/src/img/header-background.png");
+    background-image: url("../../src/img/header-background.png");
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -919,7 +919,7 @@ ul {
         .header .menu-hidden__nav-item::after {
           position: absolute;
           content: '';
-          background-image: url(/src/img/hidden-menu-link-hover.svg);
+          background-image: url("../..src/img/hidden-menu-link-hover.svg");
           background-repeat: none;
           width: 201px;
           height: 17px;
@@ -963,7 +963,7 @@ ul {
           position: absolute;
           top: 5px;
           right: 0px;
-          background-image: url("/src/img/feedback-link.svg");
+          background-image: url("../../src/img/feedback-link.svg");
           background-repeat: none;
           width: 18px;
           height: 6px;
@@ -1108,7 +1108,7 @@ ul {
     font-size: 12px; } }
 
 .about {
-  background-image: url("/src/img/about-background.png");
+  background-image: url("../../src/img/about-background.png");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1180,7 +1180,7 @@ ul {
       .about__content-title::before {
         position: absolute;
         content: '';
-        background-image: url("/src/img/about-title-decoration.svg");
+        background-image: url("../../src/img/about-title-decoration.svg");
         background-repeat: no-repeat;
         width: 100vh;
         height: 20px;
@@ -1218,7 +1218,7 @@ ul {
         position: absolute;
         top: 5px;
         right: 0px;
-        background-image: url("/src/img/feedback-link.svg");
+        background-image: url("../../src/img/feedback-link.svg");
         background-repeat: none;
         width: 18px;
         height: 6px;
@@ -1260,7 +1260,7 @@ ul {
       display: none; } }
 
 .catalog {
-  background-image: url("/src/img/catalog-background.png");
+  background-image: url("../../src/img/catalog-background.png");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1336,7 +1336,7 @@ ul {
       .catalog__content-hover::before {
         content: '';
         position: absolute;
-        background-image: url("/src/img/decoration-top.svg");
+        background-image: url("../../src/img/decoration-top.svg");
         background-repeat: no-repeat;
         width: 77px;
         height: 102px;
@@ -1346,7 +1346,7 @@ ul {
       .catalog__content-hover::after {
         content: '';
         position: absolute;
-        background-image: url("/src/img/decoration-bottom.svg");
+        background-image: url("../../src/img/decoration-bottom.svg");
         background-repeat: no-repeat;
         width: 77px;
         height: 102px;
@@ -1383,13 +1383,13 @@ ul {
         position: absolute;
         top: 5px;
         right: -20px;
-        background-image: url("/src/img/feedback-link.svg");
+        background-image: url("../../src/img/feedback-link.svg");
         background-repeat: none;
         width: 18px;
         height: 6px; }
 
 .contacts {
-  background-image: url("/src/img/contacts-backgound.png");
+  background-image: url("../../src/img/contacts-backgound.png");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1490,7 +1490,7 @@ ul {
         position: absolute;
         top: 5px;
         right: -15px;
-        background-image: url("/src/img/feedback-link.svg");
+        background-image: url("../../src/img/feedback-link.svg");
         background-repeat: none;
         width: 18px;
         height: 6px; }
@@ -1577,7 +1577,7 @@ ul {
       position: absolute;
       top: 5px;
       right: -15px;
-      background-image: url("/src/img/feedback-link.svg");
+      background-image: url("../../src/img/feedback-link.svg");
       background-repeat: none;
       width: 18px;
       height: 6px; }

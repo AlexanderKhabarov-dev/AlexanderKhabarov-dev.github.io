@@ -91,7 +91,7 @@ ul{
     overflow: hidden;
     position: relative;
     &__container{
-        background-image: url('/src/img/header-background.png');
+        background-image: url('../../src/img/header-background.png');
         @include background-cover;
         height: 100vh;
         position: relative;
@@ -293,7 +293,7 @@ ul{
                 &::after{
                     position: absolute;
                     content:'';
-                    background-image: url(/src/img/hidden-menu-link-hover.svg);
+                    background-image: url('../..src/img/hidden-menu-link-hover.svg');
                     background-repeat: none;
                     width: 201px;
                     height: 17px;
@@ -344,7 +344,7 @@ ul{
                     position: absolute;
                     top:5px;
                     right: 0px;
-                    background-image: url('/src/img/feedback-link.svg');
+                    background-image: url('../../src/img/feedback-link.svg');
                     background-repeat: none;
                     width: 18px;
                     height: 6px;
@@ -556,7 +556,7 @@ ul{
 
 // === about ===
 .about{
-    background-image: url('/src/img/about-background.png');
+    background-image: url('../../src/img/about-background.png');
     @include background-cover;
     overflow: hidden;
     &__wrapper{
@@ -641,7 +641,7 @@ ul{
             &::before{
                 position: absolute;
                 content: '';
-                background-image: url('/src/img/about-title-decoration.svg');
+                background-image: url('../../src/img/about-title-decoration.svg');
                 background-repeat: no-repeat;
                 width: 100vh;
                 height: 20px;
@@ -684,7 +684,7 @@ ul{
                 position: absolute;
                 top:5px;
                 right: 0px;
-                background-image: url('/src/img/feedback-link.svg');
+                background-image: url('../../src/img/feedback-link.svg');
                 background-repeat: none;
                 width: 18px;
                 height: 6px;
@@ -744,7 +744,7 @@ ul{
 
 // === catalog ===
 .catalog{
-    background-image: url('/src/img/catalog-background.png');
+    background-image: url('../../src/img/catalog-background.png');
     @include background-cover;
     &__container{
         @include margin-auto;
@@ -830,7 +830,7 @@ ul{
             &::before{
                 content: '';
                 position: absolute;
-                background-image: url('/src/img/decoration-top.svg');
+                background-image: url('../../src/img/decoration-top.svg');
                 background-repeat: no-repeat;
                 width: 77px;
                 height: 102px;
@@ -841,7 +841,7 @@ ul{
             &::after{
                 content: '';
                 position: absolute;
-                background-image: url('/src/img/decoration-bottom.svg');
+                background-image: url('../../src/img/decoration-bottom.svg');
                 background-repeat: no-repeat;
                 width: 77px;
                 height: 102px;
@@ -883,7 +883,7 @@ ul{
                 position: absolute;
                 top:5px;
                 right: -20px;
-                background-image: url('/src/img/feedback-link.svg');
+                background-image: url('../../src/img/feedback-link.svg');
                 background-repeat: none;
                 width: 18px;
                 height: 6px;
@@ -895,7 +895,7 @@ ul{
 
 // === contacts ===
 .contacts{
-    background-image: url('/src/img/contacts-backgound.png');
+    background-image: url('../../src/img/contacts-backgound.png');
     @include background-cover;
     &__container{
         @include margin-auto;
@@ -1009,7 +1009,7 @@ ul{
                 position: absolute;
                 top:5px;
                 right: -15px;
-                background-image: url('/src/img/feedback-link.svg');
+                background-image: url('../../src/img/feedback-link.svg');
                 background-repeat: none;
                 width: 18px;
                 height: 6px;
@@ -1118,7 +1118,7 @@ ul{
                 position: absolute;
                 top:5px;
                 right: -15px;
-                background-image: url('/src/img/feedback-link.svg');
+                background-image: url('../../src/img/feedback-link.svg');
                 background-repeat: none;
                 width: 18px;
                 height: 6px;

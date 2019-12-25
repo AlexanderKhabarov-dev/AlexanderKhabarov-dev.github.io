@@ -35,7 +35,7 @@
             &::before, &::after{
                 position: absolute;
                 content: '';
-                background-image: url('/src/img/vetka.svg');
+                background-image: url('../../src/img/vetka.svg');
                 background-repeat: no-repeat;
                 width: 120px;
                 height: 10px;
@@ -78,7 +78,7 @@
         right:10px;
         height: 36px;
         width: 36px;
-        background-image: url('/src/img/close-icon.svg');
+        background-image: url('../../src/img/close-icon.svg');
         cursor: pointer;
         transition: $transition;
         &:hover{
