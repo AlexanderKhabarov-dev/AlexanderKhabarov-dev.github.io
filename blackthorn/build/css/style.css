@@ -346,11 +346,11 @@ template {
   background-repeat: no-repeat;
   font-family: "Arimo", sans-serif;
   height: 432px;
-  background-image: url("/src/img/catalog-clothes.jpg"); }
+  background-image: url("../../src/img/catalog-clothes.jpg"); }
   .header-category__container--rent {
-    background-image: url("/src/img/catalog-rent.jpg"); }
+    background-image: url("../../src/img/catalog-rent.jpg"); }
   .header-category__container--vintage {
-    background-image: url("/src/img/catalog-vintage.jpg"); }
+    background-image: url("../../src/img/catalog-vintage.jpg"); }
 
 .header-category__nav {
   max-width: 1140px;
@@ -439,7 +439,7 @@ template {
     .sorting-category__form::after {
       position: absolute;
       content: '';
-      background-image: url("/src/img/search-icon.svg");
+      background-image: url("../../src/img/search-icon.svg");
       background-repeat: no-repeat;
       width: 38px;
       height: 38px;
@@ -484,7 +484,7 @@ template {
     .sorting-category .counter::before {
       position: absolute;
       content: '';
-      background-image: url("/src/img/cart-icon.svg");
+      background-image: url("../../src/img/cart-icon.svg");
       background-repeat: no-repeat;
       width: 22px;
       height: 27px;

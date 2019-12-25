@@ -7,5 +7,4 @@ let productsCatalog = [
     {id:'elem6' , name:'Сумка из натуральной кожи с замком' ,           price:3100 ,  img:'../../src/img/card5.jpg', url: '#'},
     {id:'elem7' , name:'Ботинки DR MARTENS' ,                           price:800 ,   img:'../../src/img/card4.jpg', url: '#'},
     {id:'elem8' , name:'Белое хлопковое платье с кружевом' ,            price:1700 ,  img:'../../src/img/card5.jpg', url: '#'}
-   
 ]
