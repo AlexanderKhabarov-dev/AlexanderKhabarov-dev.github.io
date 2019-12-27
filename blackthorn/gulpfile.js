@@ -18,7 +18,9 @@ const jsFiles = [
    './src/js/main.js',
    './src/js/slides.js',
    './src/js/scroll-animation.js',
-   './src/js/hidden-menu.js'
+   './src/js/hidden-menu.js',
+   './src/js/swiper.min.js',
+
 ]
 
 function styles() {

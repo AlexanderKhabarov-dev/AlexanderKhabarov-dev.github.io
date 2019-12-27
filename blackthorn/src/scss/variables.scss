@@ -14,13 +14,13 @@ $transition: .3s ease;
 $animation-delay: 4.3s;
 
 $mb-min: 320px;
-$mb: 375px;
+$mb: 375px; //del
 $mb-max: 480px;
-$sm: 576px;
+$sm: 540px;  //del
 
 $md-min:768px;
-$md:960px;
+$md-max:960px;
 
 $xl:1200px;
 $notebooks:1440px;
-$desktop: 1920px;
+$desktop: 1920px; // del

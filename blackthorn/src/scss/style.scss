@@ -6,6 +6,8 @@
 @import './catalogCategory.scss';
 @import './products.scss';
 @import './key-frames.scss';
+@import './swiper-custom.scss';
+@import './swiper.min.scss';
 
 body{
     box-sizing: border-box;
@@ -20,6 +22,14 @@ ul{
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+img{
+    display: block;
+}
+
+.container{
+    @include container;
 }
 
 // === preloader ===
@@ -164,7 +174,7 @@ ul{
                 color:#7A7B7B;
             }
         }
-        
+
     }
     .menu-button{
         cursor: pointer;
@@ -375,7 +385,6 @@ ul{
         position: relative;
         font-family: $font-Exodus-PersonalUseSharpen;
         color:$color-text;
-        
         height: 75%;
         display: flex;
         align-items: center;
@@ -436,7 +445,7 @@ ul{
     }
 }
 
-@media (min-width:$md) and (max-width: $notebooks){
+@media (min-width:$md-max) and (max-width: $notebooks){
     .header{
         &__wrapper{
             padding-top: 30px;
@@ -448,7 +457,7 @@ ul{
             height: 65%;
             &-text{
                 font-size: 80px;
-            }    
+            }
         }
         &__scroll{
             &-link{
@@ -493,7 +502,7 @@ ul{
     }
 }
 
-@media (max-width: $md){
+@media (max-width: $md-max){
     .header{
         &__wrapper{
             padding-top: 20px;
@@ -501,11 +510,11 @@ ul{
         &__nav-link{
             font-size: 10px;
         }
-       
+
     }
 }
 
-@media (min-width:$md-min) and (max-width:$md){
+@media (min-width:$md-min) and (max-width:$md-max){
     .header{
         &__nav-list{
             width:470px;
@@ -622,7 +631,6 @@ ul{
     &__wrapper{
         height: 100vh;
         display: flex;
-        justify-content: center;
         align-items: center;
     }
     &__slides{
@@ -702,10 +710,9 @@ ul{
                 position: absolute;
                 content: '';
                 background-image: url('../../src/img/about-title-decoration.svg');
-                background-repeat: no-repeat;
                 width: 100vh;
                 height: 20px;
-                left:60%;
+                left:130px;
                 top:0;
             }
         }
@@ -807,8 +814,8 @@ ul{
     background-image: url('../../src/img/catalog-background.png');
     @include background-cover;
     &__container{
+        padding-bottom: 120px;
         @include margin-auto;
-        height:100vh;
     }
     &__nav-list{
         display: flex;
@@ -833,12 +840,11 @@ ul{
         font-family: $font-Opinion-Pro-Light;
         color:$color-text;
     }
-    &__category{
+    &__swiper-wrapper{
         display: flex;
         justify-content: space-between;
         align-items: center;
         max-width:1000px;
-        height: 70vh;
     }
     &__wrapper{
         position: relative;
@@ -864,6 +870,8 @@ ul{
     }
     &__content{
         color:$color-text;
+        flex-basis: 30%;
+        max-width: 30%;
         &-image{
             max-width:300px;
         }
@@ -950,6 +958,79 @@ ul{
             }
         }
     }
+    
+    .swiper-container-horizontal >
+    .swiper-pagination-bullets
+    .swiper-pagination-bullet{
+        margin: 0 8px;
+    }
+    .swiper-container-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: 10px;
+    }
+    .swiper-pagination-bullet{
+        background-color: #FFFFFF;
+        transform: scale(.9);
+    }
+    .swiper-pagination-bullet-active{
+        transition: $transition;
+        position: relative;
+        transition: $transition;
+        
+        transform: scale(1.1);
+        &::before{
+            position: absolute;
+            content: '';
+            //background-image: url('../../src/img/pagination-decor.svg');
+            //background-repeat: no-repeat;
+            border: 1px solid #fff;
+            border-radius: 100%;
+            width: 18px;
+            height: 18px;
+            top:-6px;
+            left:-6px;
+            animation: pagination 0.2s 1 ease-in;
+            
+        }
+    }
+}
+
+
+@media (min-width: $md-min) and (max-width: $md-max){
+    .catalog{
+        &__container{
+            padding-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width:$sm){
+    .catalog{
+        &__container{
+            padding-bottom: 50px;
+            padding-right:0px;
+            padding-left: 20px;
+        }
+        &__swiper-wrapper{
+            
+        }
+        &__nav-list{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            & li:nth-child(1), & li:nth-child(2) {
+                display: none;
+            }
+            li:nth-child(3):before{
+                display: none;
+            }
+        }
+        &__content{
+            flex-basis: 100%;
+            max-width:110%;
+            padding-bottom: 60px;
+            margin:auto;
+        }
+    }
 }
 // === /catalog ===
 
@@ -958,7 +1039,6 @@ ul{
     background-image: url('../../src/img/contacts-backgound.png');
     @include background-cover;
     &__container{
-        @include margin-auto;
         height: 100vh;
         color:$color-text;
     }
@@ -968,65 +1048,68 @@ ul{
         padding-bottom: 70px;
         padding-top: 76px;
     }
-    &__wrapper{
+    &__info{
         display: flex;
-        justify-content: space-between;
-        &_border{
-            border-top: 1px solid $color-text;
-        }
+        padding-bottom: 45px;
+        border-bottom: 1px solid #FFFFFF;
     }
     &__map{
-        flex-basis: 50%;
+        margin-right: 72px;
+        max-height: 263px;
+        min-width: 477px;
+        max-width: 477px;
     }
     &__data{
-        flex-basis: 50%;
+        max-width: 51.51%;
+        flex-basis: 51%;
+    }
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        padding: 23px 0;
+        border-top: 1px solid $color-text;
     }
     &__text{
         font-family: $font-Opinion-Pro-Light;
-        padding-top: 24px;
-        padding-bottom: 24px;
-        &_left{
-            width:60%;
-        }
-        &_right{
-            width:40%;
+        flex-basis: 100%;
+
+        &:nth-child(2n) {
+          padding-left: 50px;
         }
     }
     &__social{
         display: flex;
         border-top: 1px solid $color-text;
-        padding-top: 5px;
-        &-button{
-            padding-right: 7px;
-        }
+        padding-top: 10px;
+    }
+    &__feedback {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 34px;
+    }
+    &__inputs-row {
+      display: flex;
+      justify-content: space-between;
     }
     &__question{
         font-family: $font-Opinion-Pro-Light;
-        padding-top: 65px;
-        max-width:416px;
+        max-width: 477px;
+        min-width: 477px;
+        margin-right: 72px;
     }
     &__form{
-        flex-basis: 50%;
-        padding-top: 55px;
-        position: relative;
-        &:before{
-            position: absolute;
-            content: '';
-            height: 1px;
-            width:1140px;
-            top:20px;
-            left: -100%;
-            border-bottom: 1px solid $color-text;
-        }
+        max-width: 51.51%;
+        flex-basis: 51%;
         &-input{
             font-family: $font-Opinion-Pro-Light;
             color: $color-text;
             background: none;
             border:none;
             height: 40px;
-            flex-basis:260px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.5);
             outline: none;
+            flex-basis: 45.5%;
+            max-width: 45.5%;
         }
         &-textarea{
             color: $color-text;
@@ -1037,6 +1120,7 @@ ul{
             height: 40px;
             outline: none;
             margin-top: 30px;
+            resize: none;
         }
         &-link{
             font-family: $font-Opinion-Pro-Light;
@@ -1083,12 +1167,12 @@ ul{
 .footer{
     background-color:#000;
     &__container{
-        @include margin-auto;
         display: flex;
         justify-content: space-between;
         padding-top: 50px;
         padding-bottom: 40px;
         color:$color-text;
+        max-width: 1020px;
     }
     &__copyright{
         &-title{

@@ -10,19 +10,29 @@
     position: $position;
     display: $display;
 }
+
 @mixin input-placeholder {
     &.placeholder { @content; }
     &:-moz-placeholder { @content; }
     &::-moz-placeholder { @content; }
     &:-ms-input-placeholder { @content; }
     &::-webkit-input-placeholder { @content; }
-  }
+}
 
-  @mixin animation-parametrs{
-    animation-fill-mode: both;
-    animation-delay: $animation-delay;
-  }
-  @mixin margin-auto{
-    max-width:1140px;
-    margin: auto;
-  }
+@mixin container{
+    max-width: 1120px;
+    padding: 0 35px;
+    margin: 0 auto;
+}
+
+@mixin animation-parametrs{
+  animation-fill-mode: both;
+  animation-delay: $animation-delay;
+}
+
+@mixin margin-auto{
+  max-width:1140px;
+  margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}

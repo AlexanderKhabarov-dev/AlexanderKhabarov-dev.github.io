@@ -69,52 +69,47 @@ html(lang="en")
                 li.menu-hidden__social-button
                   a.menu-hidden__social-link(href="") Vkontakte
 
-    section.about(id="about")
-      .about__wrapper
-        .about__container
-          .about__slides
-            .about__slides-item
-              img(src="./src/img/slider-image.jpg" width="540" height="320" alt="")
-            .about__slides-item
-              img(src="./src/img/slider-image.jpg" width="540" height="320" alt="")
-            .about__slides-item
-              img(src="./src/img/slider-image.jpg" width="540" height="320" alt="")
-            .about__slides-item
-              img(src="./src/img/slider-image.jpg" width="540" height="320" alt="")
-            .about__slides-item
-              img(src="./src/img/slider-image.jpg" width="540" height="320" alt="")
-          .buttons-block
-            .slide-button(class="slide-button-left" id="left-button")
-              img(src="./src/img/slide-arrow-left.svg" alt="")
-            .slide-button(class="slide-button-right" id="right-button")
-              img(src="./src/img/slide-arrow-right.svg" alt="")
-          .dots-block
-            .dots-item(class="active")
-            .dots-item
-            .dots-item
-            .dots-item
-            .dots-item
-        .about__content
-          .about__content-title Blackthorn
-          .about__content-text.
-            Тут красивый текст о красивом шоуруме и не только. Так же можем после каждого
-            переключения фотки давать какой-то другой текст именно к этой фотографии, если
-            на ней например новая коллекция или фотографии сделанные там то там то при таких
-            то обстоятельствах. и тут еще пару слов что бы я мог красиво блок заполнить, вот так, супер вообще.
-          .about__content-feedback
-            a.about__content-link(href="") Связаться с нами
-            
+    //section.about(id="about")
+      .container
+        .about__wrapper
+          .about__slider
+                .about__slides
+                  .about__slides-item
+                    img(src="./src/img/slider-image.jpg" width="540" height="320" alt="")
+                .buttons-block
+                  .slide-button(class="slide-button-left" id="left-button")
+                    img(src="./src/img/slide-arrow-left.svg" alt="")
+                  .slide-button(class="slide-button-right" id="right-button")
+                    img(src="./src/img/slide-arrow-right.svg" alt="")
+                .dots-block
+                  .dots-item(class="active")
+                  .dots-item
+                  .dots-item
+                  .dots-item
+                  .dots-items
+          .about__content
+                .about__content-title Blackthorn
+                .about__content-text.
+                  Тут красивый текст о красивом шоуруме и не только. Так же можем после каждого
+                  переключения фотки давать какой-то другой текст именно к этой фотографии, если
+                  на ней например новая коллекция или фотографии сделанные там то там то при таких
+                  то обстоятельствах. и тут еще пару слов что бы я мог красиво блок заполнить, вот так, супер вообще.
+                .about__content-feedback
+                  a.about__content-link(href="") Связаться с нами
+
     section.catalog
-      .catalog__container
-        ul.catalog__nav-list
-          li.catalog__nav-item
-            a.catalog__nav-link(href="index.html") Главная
-          li.catalog__nav-item
-            a.catalog__nav-link(href="") О Нас
-          li.catalog__nav-item
-            a.catalog__nav-link(href="") Каталог
-        .catalog__category
-          .catalog__content
+        .catalog__container
+          ul.catalog__nav-list
+            li.catalog__nav-item
+              a.catalog__nav-link(href="index.html") Главная
+            li.catalog__nav-item
+              a.catalog__nav-link(href="") О Нас
+            li.catalog__nav-item
+              a.catalog__nav-link(href="") Каталог
+              
+          .catalog__category(class="swiper-container")
+            .catalog__swiper-wrapper(class="swiper-wrapper")
+              .catalog__content(class="swiper-slide")
                 .catalog__content-title Одежда
                 .catalog__content-subtitle.
                   Cможет стать акцентом вашего образа
@@ -127,106 +122,109 @@ html(lang="en")
                     .catalog__content-link_position
                       a.catalog__content-link(href="clothes.html") Подробнее
 
-          .catalog__content
-            .catalog__content-title Винтаж
-            .catalog__content-subtitle.
-              Cможет стать акцентом вашего образа
-              и достойным пополнением коллекции уникальных
-              вещей в гардеробе.
-            .catalog__wrapper
-              .catalog__content-image
-                img(src="./src/img/catalog-image-2.png"  alt="")
-              .catalog__content-hover
-                .catalog__content-link_position
-                  a.catalog__content-link(href="vintage.html") Подробнее
-          .catalog__content
-            .catalog__content-title Аренда
-            .catalog__content-subtitle.
-              Cможет стать акцентом вашего образа
-              и достойным пополнением коллекции уникальных
-              вещей в гардеробе.
-            .catalog__wrapper
-              .catalog__content-image
-                img(src="./src/img/catalog-image-3.png"  alt="")
-              .catalog__content-hover
-                .catalog__content-link_position
-                  a.catalog__content-link(href="rent.html") Подробнее
+              .catalog__content(class="swiper-slide")
+                .catalog__content-title Винтаж
+                .catalog__content-subtitle.
+                  Cможет стать акцентом вашего образа
+                  и достойным пополнением коллекции уникальных
+                  вещей в гардеробе.
+                .catalog__wrapper
+                  .catalog__content-image
+                    img(src="./src/img/catalog-image-2.png"  alt="")
+                  .catalog__content-hover
+                    .catalog__content-link_position
+                      a.catalog__content-link(href="vintage.html") Подробнее
 
-    // - section.contacts
-      .contacts__container
-        .contacts__title Контакты
-        .contacts__wrapper
-          .contacts__content
-            .contacts__map
-              img(src="./src/img/contacts-map.png" alt="")
-            .contacts__question.
-              Если у вас остались какие либо вопросы,
-              или вы хотите связаться с нами, просто
-              заполните форму и мы выйдем с вами на связь!
+              .catalog__content(class="swiper-slide")
+                .catalog__content-title Аренда
+                .catalog__content-subtitle.
+                  Cможет стать акцентом вашего образа
+                  и достойным пополнением коллекции уникальных
+                  вещей в гардеробе.
+                .catalog__wrapper
+                  .catalog__content-image
+                    img(src="./src/img/catalog-image-3.png"  alt="")
+                  .catalog__content-hover
+                    .catalog__content-link_position
+                      a.catalog__content-link(href="rent.html") Подробнее
+            .swiper-pagination
+            
+            
 
-          .contacts__data
-            .contacts__wrapper(class="contacts__wrapper_border")
-              .contacts__text(class="contacts__text_left") Телефон
-              .contacts__text(class="contacts__text_right") +7(911)-028-91-76
-            .contacts__wrapper(class="contacts__wrapper_border")
-              .contacts__text(class="contacts__text_left") Адрес
-              .contacts__text(class="contacts__text_right") Мастерская ул., 9<br>Санкт-Петербург, 190121
-            .contacts__wrapper(class="contacts__wrapper_border")
-              .contacts__text(class="contacts__text_left") E-mail
-              .contacts__text(class="contacts__text_right") BLACKTHORN@gmail.com
-            .contacts__social
-              .contacts__social-button
-                a(href="")
-                  img(src="./src/img/Instagram_black.svg" alt="")
-              .contacts__social-button
-                a(href="")
-                  img(src="./src/img/VK_black.svg" alt="")
-              .contacts__social-button
-                a(href="")
-                  img(src="./src/img/Twitter_black.svg" alt="")
-            form(class="contacts__form" action="#")
-              .contacts__wrapper
-                input(class="contacts__form-input" type="text" name="name" placeholder="Ваше Имя")
-                input(class="contacts__form-input" type="text" name="name" placeholder="Ваш E-mail")
-              textarea(class="contacts__form-textarea" type="text" name="questions" placeholder="Ваш вопрос")
-              button.contacts__form-link Отправить
-              
+    //section.contacts
+      .container
+        .contacts__container
+          .contacts__title Контакты
+          .contacts__wrapper
+            .contacts__info
+              .contacts__map
+                img(src="./src/img/contacts-map.png" alt="")
+              .contacts__data
+                .contacts__row
+                  .contacts__text Телефон
+                  .contacts__text +7(911)-028-91-76
+                .contacts__row
+                  .contacts__text Адрес
+                  .contacts__text Мастерская ул., 9<br>Санкт-Петербург, 190121
+                .contacts__row
+                  .contacts__text E-mail
+                  .contacts__text BLACKTHORN@gmail.com
+                .contacts__social
+                  a(class="contacts__social-link" href="")
+                    img(src="./src/img/Instagram_black.svg" alt="")
+                  a(class="contacts__social-link" href="")
+                    img(src="./src/img/VK_black.svg" alt="")
+                  a(class="contacts__social-link" href="")
+                    img(src="./src/img/Twitter_black.svg" alt="")
+            .contacts__feedback
+              .contacts__question.
+                Если у вас остались какие либо вопросы, <br>
+                или вы хотите связаться с нами, просто
+                заполните форму и мы выйдем с вами на связь!
+              form(class="contacts__form" action="#")
+                .contacts__inputs-row
+                  input(class="contacts__form-input" type="text" name="name" placeholder="Ваше Имя")
+                  input(class="contacts__form-input" type="text" name="name" placeholder="Ваш E-mail")
+                textarea(class="contacts__form-textarea" type="text" name="questions" placeholder="Ваш вопрос")
+                button.contacts__form-link Отправить
     section.footer
-      .footer__container
-        .footer__copyright
-          .footer__copyright-title BLACKTHORN
-          .footer__copyright-subtitle BLACKTHORN 2017 — 2019.<br> Все права защищены.
-          .footer__copyright-text Политика конфиденциальности
-        .footer__wrapper
-          ul.footer__nav-list
-            li.footer__nav-item
-              a.footer__nav-link(href="") Главная
-            li.footer__nav-item
-              a.footer__nav-link(href="") Одежда
-            li.footer__nav-item
-              a.footer__nav-link(href="") Винтаж
-            li.footer__nav-item
-              a.footer__nav-link(href="") Аренда
-          ul.footer__nav-list
-            li.footer__nav-item
-              a.footer__nav-link(href="") Фотосъемка
-            li.footer__nav-item
-              a.footer__nav-link(href="") Контакты
-            li.footer__nav-item
-              a.footer__nav-link(href="") FAQ
-            li.footer__nav-item
-              a.footer__nav-link(href="") RU EN
-        form.footer__form(action="")
-          .footer__form-title Подписка
-          div
-            input(class="footer__form-input" type="text" name="E-mail" placeholder="Ваш E-mail")
-          div
-            button.footer__form-link Подписаться
-    .preloader(id="preloader_malc")
-      .preloader__wrapper
-        .preloader-text Blackthorn
-        .preloader-progressbar
+      .container
+        .footer__container
+          .footer__copyright
+            .footer__copyright-title BLACKTHORN
+            .footer__copyright-subtitle BLACKTHORN 2017 — 2019.<br> Все права защищены.
+            .footer__copyright-text Политика конфиденциальности
+          .footer__wrapper
+            ul.footer__nav-list
+              li.footer__nav-item
+                a.footer__nav-link(href="") Главная
+              li.footer__nav-item
+                a.footer__nav-link(href="") Одежда
+              li.footer__nav-item
+                a.footer__nav-link(href="") Винтаж
+              li.footer__nav-item
+                a.footer__nav-link(href="") Аренда
+            ul.footer__nav-list
+              li.footer__nav-item
+                a.footer__nav-link(href="") Фотосъемка
+              li.footer__nav-item
+                a.footer__nav-link(href="") Контакты
+              li.footer__nav-item
+                a.footer__nav-link(href="") FAQ
+              li.footer__nav-item
+                a.footer__nav-link(href="") RU EN
+          form.footer__form(action="")
+            .footer__form-title Подписка
+            div
+              input(class="footer__form-input" type="text" name="E-mail" placeholder="Ваш E-mail")
+            div
+              button.footer__form-link Подписаться
+    //.preloader(id="preloader_malc")
+    //  .preloader__wrapper
+    //    .preloader-text Blackthorn
+    //    .preloader-progressbar
     script(src="build/js/script.js")
+    script(src="src/js/swiper-init.js")
 
 
 

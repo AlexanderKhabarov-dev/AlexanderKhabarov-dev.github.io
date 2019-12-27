@@ -131,3 +131,11 @@
         width:845px;
     }
 }
+@keyframes pagination{
+    from{
+        transform: scale(.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
