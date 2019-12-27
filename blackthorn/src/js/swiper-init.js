@@ -2,7 +2,7 @@
 if(document.body.clientWidth<540){
     let swiper1 = new Swiper('.swiper-container',{
         effect: 'coverflow',
-        initialSlide: 1,
+        initialSlide: 0,
         slidesPerView: 1,
         loop: false,
         spaceBetween: 50,
