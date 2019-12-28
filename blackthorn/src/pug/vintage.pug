@@ -1,4 +1,5 @@
 include blocks/category-banner.pug
+include blocks/category-slider.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -10,4 +11,15 @@ html(lang="en")
         link(rel="stylesheet", href="build/css/style.css")
     body
         +category-banner('Винтаж', 'header-category__container--vintage')
+         section.products
+            .products__container
+        .cart
+        +category-slider()
+            
+        
+        script(src="src/js/catalog.js")
+        script(src="src/js/serviceCreateElement.js")
+        script(src="src/js/serviceStore.js")
+        script(src="src/js/serviceProducts.js")
+        script(src="src/js/serviceCart.js")
             

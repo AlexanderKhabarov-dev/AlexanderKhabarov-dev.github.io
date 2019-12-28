@@ -8,6 +8,7 @@
 @import './key-frames.scss';
 @import './swiper-custom.scss';
 @import './swiper.min.scss';
+@import './category-slider.scss';
 
 body{
     box-sizing: border-box;
@@ -50,7 +51,7 @@ img{
     }
     &-text{
         font-family: $font-Exodus-PersonalUseSharpen;
-        font-size: 110px;
+        font-size: 0px;
         line-height: 110px;
         color:$color-text;
         margin-top: -100px;
@@ -616,7 +617,7 @@ img{
                     width: 43px;
                     height: 43px;
                     left:20px;
-                    top:40px;
+                    top:20px;
                 }
             }
         }
@@ -991,7 +992,7 @@ img{
             height: 22px;
             top:-5px;
             left:-5px;
-            animation: pagination 0.2s 1 ease;
+            animation: pagination 0.2s 1 ease-in;
         }
     }
 }
