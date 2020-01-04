@@ -44,6 +44,7 @@ class ServiceProducts {
 				}
 			});
 
+		
 			item.appendChild(img);
 			item.appendChild(name);
 			item.appendChild(price);

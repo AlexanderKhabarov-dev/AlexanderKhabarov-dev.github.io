@@ -6,9 +6,9 @@ mixin category-banner(category, classMod)
           li.header-category__nav-item
             a.header-category__nav-link(href="index.html") Главная
           li.header-category__nav-item
-            a.header-category__nav-link(href="") О нас
+            a.header-category__nav-link(href="" class="header-category__nav-link--mobile") О нас
           li.header-category__nav-item
-            a.header-category__nav-link(href="") Каталог
+            a.header-category__nav-link(href="" class="header-category__nav-link--mobile") Каталог
           li.header-category__nav-item
             a.header-category__nav-link(href="" class="header-category__nav-link--active")= category
       .header-category__wrapper
@@ -31,14 +31,16 @@ mixin category-banner(category, classMod)
           a.header-category__sorting-link(href="") Аксессуары
         li.header-category__sorting-item
           a.header-category__sorting-link(href="") Верхняя одежда
+        
     
     .sorting-category
       .sorting-category__wrapper
         form.sorting-category__form(action="#")
           input.sorting-category__input(type="text")
           .sorting-category__dropdown Сортировка
-          a.sorting-category__link(href="#" class="sorting-category__link--active") Новинки
-          a.sorting-category__link(href="#") Акции
+          .sorting-category__dropdown(class="sorting-category__dropdown--mobile") Категории
+          a.sorting-category__link(href="#" class="sorting-category__link--active sorting-category__link--mobile") Новинки
+          a.sorting-category__link(href="#" class="sorting-category__link--mobile") Акции
         .counter 0
   
   

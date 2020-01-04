@@ -46,6 +46,7 @@
             &--active{
                 opacity: 1;
             }
+           
         }
     }
     &__wrapper{
@@ -78,7 +79,6 @@
             font-size: 20px;
             transition: $transition;
             padding-bottom: 7px;
-
             &:hover{
                 opacity: $color-hover;
             }
@@ -97,7 +97,47 @@
             }
         }
     }
+    @media(max-width:$md-max){
+        .header-category{
+            &__sorting{
+                &-list{
+
+                }
+                &-link{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    @media(max-width:$sm){
+        .header-category{
+            &__container{
+                background-image: url('../../src/img/catalog-clothes--mobile.jpg');
+                height: 100vh;
+            }
+            &__nav{
+                &-list{
+                    justify-content: start;
+                }
+                &-link{
+                    margin-right: 25px;
+                    &--mobile{
+                        display: none;
+                    }
+                }
+            }
+            &__title{
+                font-size: 70px;
+            }
+            &__sorting{
+               &-list{
+                   display: none;
+               }
+            }
+        }
+    }
 }
+
 .sorting-category{
     font-family: $font-Opinion-Pro-Light;
     color: $color-text;
@@ -146,6 +186,7 @@
         margin-right: 50px;
         opacity: .5;
         transition: $transition;
+        cursor: pointer;
         &:hover{
             opacity: 1;
         }
@@ -180,6 +221,60 @@
             right:3px;
             top:-1px;
             z-index: -1;
+        }
+    }
+    
+    @media (min-width:541px) {
+        .sorting-category{
+            &__link{
+                &--mobile{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @media(max-width:$md-min) {
+        .sorting-category{
+            &__link{
+                &--mobile{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media(max-width:$sm){
+        .sorting-category{
+            padding-top: 27px;
+            padding-bottom: 27px;
+            &__form::after{
+                display: none;
+            }
+            &__input{
+                display: none;
+            }
+            &__dropdown{
+                opacity: 1;
+                margin-right: 0;
+            }
+            &__link{
+                &--mobile{
+                    display: none;
+                }
+            }
+        }
+        .counter{
+            &::after{
+                position: absolute;
+                content: '';
+                background-image: url('../../src/img/search-icon.svg');
+                background-repeat: no-repeat;
+                width: 38px;
+                height: 38px;
+                left:-60px;
+                top:-5px;
+            }
         }
     }
 }
