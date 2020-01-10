@@ -102,159 +102,133 @@
         </div>
       </div>
     </section>
-    <!--section.about(id="about")
-    .container
-      .about__wrapper
-        .about__slider
-              .about__slides
-                .about__slides-item
-                  img(src="./src/img/slider-image.jpg" width="540" height="320" alt="")
-              .buttons-block
-                .slide-button(class="slide-button-left" id="left-button")
-                  img(src="./src/img/slide-arrow-left.svg" alt="")
-                .slide-button(class="slide-button-right" id="right-button")
-                  img(src="./src/img/slide-arrow-right.svg" alt="")
-              .dots-block
-                .dots-item(class="active")
-                .dots-item
-                .dots-item
-                .dots-item
-                .dots-items
-        .about__content
-              .about__content-title Blackthorn
-              .about__content-text.
-                Тут красивый текст о красивом шоуруме и не только. Так же можем после каждого
-                переключения фотки давать какой-то другой текст именно к этой фотографии, если
-                на ней например новая коллекция или фотографии сделанные там то там то при таких
-                то обстоятельствах. и тут еще пару слов что бы я мог красиво блок заполнить, вот так, супер вообще.
-              .about__content-feedback
-                a.about__content-link(href="") Связаться с нами
-    
-    -->
-    <section class="catalog">
-      <div class="catalog__container">
-        <ul class="catalog__nav-list">
-          <li class="catalog__nav-item"><a class="catalog__nav-link" href="index.html">Главная</a></li>
-          <li class="catalog__nav-item"><a class="catalog__nav-link" href="">О Нас</a></li>
-          <li class="catalog__nav-item"><a class="catalog__nav-link" href="">Каталог</a></li>
-        </ul>
-        <div class="catalog__category swiper-container">
-          <div class="catalog__swiper-wrapper swiper-wrapper">
-            <div class="catalog__content swiper-slide">
-              <div class="catalog__content-title">Одежда</div>
-              <div class="catalog__content-subtitle">
-                Cможет стать акцентом вашего образа
-                и достойным пополнением коллекции уникальных
-                вещей в гардеробе.
-              </div>
-              <div class="catalog__wrapper">
-                <div class="catalog__content-image"><img src="./src/img/catalog-image-1.png" alt=""/></div>
-                <div class="catalog__content-hover">
-                  <div class="catalog__content-link_position"><a class="catalog__content-link" href="clothes.html">Подробнее</a></div>
-                </div>
-              </div>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__wrapper">
+          <div class="about__slider">
+            <div class="about__slides">
+              <div class="about__slides-item"><img class="about__slides-img" src="./src/img/slider-image.jpg" width="540" height="320" alt=""/></div>
             </div>
-            <div class="catalog__content swiper-slide">
-              <div class="catalog__content-title">Винтаж</div>
-              <div class="catalog__content-subtitle">
-                Cможет стать акцентом вашего образа
-                и достойным пополнением коллекции уникальных
-                вещей в гардеробе.
-              </div>
-              <div class="catalog__wrapper">
-                <div class="catalog__content-image"><img src="./src/img/catalog-image-2.png" alt=""/></div>
-                <div class="catalog__content-hover">
-                  <div class="catalog__content-link_position"><a class="catalog__content-link" href="vintage.html">Подробнее</a></div>
-                </div>
-              </div>
+            <div class="buttons-block">
+              <div class="slide-button slide-button-left" id="left-button"><img src="./src/img/slide-arrow-left.svg" alt=""/></div>
+              <div class="slide-button slide-button-right" id="right-button"><img src="./src/img/slide-arrow-right.svg" alt=""/></div>
             </div>
-            <div class="catalog__content swiper-slide">
-              <div class="catalog__content-title">Аренда</div>
-              <div class="catalog__content-subtitle">
-                Cможет стать акцентом вашего образа
-                и достойным пополнением коллекции уникальных
-                вещей в гардеробе.
-              </div>
-              <div class="catalog__wrapper">
-                <div class="catalog__content-image"><img src="./src/img/catalog-image-3.png" alt=""/></div>
-                <div class="catalog__content-hover">
-                  <div class="catalog__content-link_position"><a class="catalog__content-link" href="rent.html">Подробнее</a></div>
-                </div>
-              </div>
+            <div class="dots-block">
+              <div class="dots-item active"></div>
+              <div class="dots-item"></div>
+              <div class="dots-item"></div>
+              <div class="dots-item"></div>
+              <div class="dots-items"></div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="about__content">
+            <div class="about__content-title">Blackthorn</div>
+            <div class="about__content-text">
+              Тут красивый текст о красивом шоуруме и не только. Так же можем после каждого
+              переключения фотки давать какой-то другой текст именно к этой фотографии, если
+              на ней например новая коллекция или фотографии сделанные там то там то при таких
+              то обстоятельствах. и тут еще пару слов что бы я мог красиво блок заполнить, вот так, супер вообще.
+            </div>
+            <div class="about__content-feedback"><a class="about__content-link" href="">Связаться с нами</a></div>
+          </div>
         </div>
       </div>
     </section>
-    <!--section.contacts
-    .container
-      .contacts__container
-        .contacts__title Контакты
-        .contacts__wrapper
-          .contacts__info
-            .contacts__map
-              img(src="./src/img/contacts-map.png" alt="")
-            .contacts__data
-              .contacts__row
-                .contacts__text Телефон
-                .contacts__text +7(911)-028-91-76
-              .contacts__row
-                .contacts__text Адрес
-                .contacts__text Мастерская ул., 9<br>Санкт-Петербург, 190121
-              .contacts__row
-                .contacts__text E-mail
-                .contacts__text BLACKTHORN@gmail.com
-              .contacts__social
-                a(class="contacts__social-link" href="")
-                  img(src="./src/img/Instagram_black.svg" alt="")
-                a(class="contacts__social-link" href="")
-                  img(src="./src/img/VK_black.svg" alt="")
-                a(class="contacts__social-link" href="")
-                  img(src="./src/img/Twitter_black.svg" alt="")
-          .contacts__feedback
-            .contacts__question.
+    <section class="catalog">
+      <div class="container">
+        <div class="catalog__container">
+          <ul class="catalog__nav-list">
+            <li class="catalog__nav-item"><a class="catalog__nav-link" href="index.html">Главная</a></li>
+            <li class="catalog__nav-item"><a class="catalog__nav-link" href="">О Нас</a></li>
+            <li class="catalog__nav-item"><a class="catalog__nav-link" href="">Каталог</a></li>
+          </ul>
+          <div class="catalog__category swiper-container">
+            <div class="catalog__swiper-wrapper swiper-wrapper">
+              <div class="catalog__content swiper-slide">
+                <div class="catalog__content-title">Одежда</div>
+                <div class="catalog__content-subtitle">
+                  Cможет стать акцентом вашего образа
+                  и достойным пополнением коллекции уникальных
+                  вещей в гардеробе.
+                </div>
+                <div class="catalog__wrapper">
+                  <div class="catalog__content-image"><img src="./src/img/catalog-image-1.png" alt=""/></div>
+                  <div class="catalog__content-hover">
+                    <div class="catalog__content-link_position"><a class="catalog__content-link" href="clothes.html">Подробнее</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__content swiper-slide">
+                <div class="catalog__content-title">Винтаж</div>
+                <div class="catalog__content-subtitle">
+                  Cможет стать акцентом вашего образа
+                  и достойным пополнением коллекции уникальных
+                  вещей в гардеробе.
+                </div>
+                <div class="catalog__wrapper">
+                  <div class="catalog__content-image"><img src="./src/img/catalog-image-2.png" alt=""/></div>
+                  <div class="catalog__content-hover">
+                    <div class="catalog__content-link_position"><a class="catalog__content-link" href="vintage.html">Подробнее</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__content swiper-slide">
+                <div class="catalog__content-title">Аренда</div>
+                <div class="catalog__content-subtitle">
+                  Cможет стать акцентом вашего образа
+                  и достойным пополнением коллекции уникальных
+                  вещей в гардеробе.
+                </div>
+                <div class="catalog__wrapper">
+                  <div class="catalog__content-image"><img src="./src/img/catalog-image-3.png" alt=""/></div>
+                  <div class="catalog__content-hover">
+                    <div class="catalog__content-link_position"><a class="catalog__content-link" href="rent.html">Подробнее</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <div class="contacts__container">
+          <div class="contacts__title">Контакты</div>
+          <div class="contacts__info">
+            <div class="contacts__map"><img src="./src/img/contacts-map.png" alt=""/></div>
+            <div class="contacts__data">
+              <div class="contacts__row">
+                <div class="contacts__text">Телефон</div>
+                <div class="contacts__text">+7(911)-028-91-76</div>
+              </div>
+              <div class="contacts__row">
+                <div class="contacts__text">Адрес</div>
+                <div class="contacts__text">Мастерская ул., 9<br>Санкт-Петербург, 190121</div>
+              </div>
+              <div class="contacts__row">
+                <div class="contacts__text">E-mail</div>
+                <div class="contacts__text">BLACKTHORN@gmail.com</div>
+              </div>
+              <div class="contacts__social"><a class="contacts__social-link" href=""><img src="./src/img/Instagram_black.svg" alt=""/></a><a class="contacts__social-link" href=""><img src="./src/img/VK_black.svg" alt=""/></a><a class="contacts__social-link" href=""><img src="./src/img/Twitter_black.svg" alt=""/></a></div>
+            </div>
+          </div>
+          <div class="contacts__feedback">
+            <div class="contacts__question">
               Если у вас остались какие либо вопросы, <br>
               или вы хотите связаться с нами, просто
               заполните форму и мы выйдем с вами на связь!
-            form(class="contacts__form" action="#")
-              .contacts__inputs-row
-                input(class="contacts__form-input" type="text" name="name" placeholder="Ваше Имя")
-                input(class="contacts__form-input" type="text" name="name" placeholder="Ваш E-mail")
-              textarea(class="contacts__form-textarea" type="text" name="questions" placeholder="Ваш вопрос")
-              button.contacts__form-link Отправить
-    -->
-    <section class="footer">
-      <div class="container">
-        <div class="footer__container">
-          <div class="footer__copyright">
-            <div class="footer__copyright-title">BLACKTHORN</div>
-            <div class="footer__copyright-subtitle">BLACKTHORN 2017 — 2019.<br> Все права защищены.</div>
-            <div class="footer__copyright-text">Политика конфиденциальности</div>
-          </div>
-          <div class="footer__wrapper">
-            <ul class="footer__nav-list">
-              <li class="footer__nav-item"><a class="footer__nav-link" href="">Главная</a></li>
-              <li class="footer__nav-item"><a class="footer__nav-link" href="">Одежда</a></li>
-              <li class="footer__nav-item"><a class="footer__nav-link" href="">Винтаж</a></li>
-              <li class="footer__nav-item"><a class="footer__nav-link" href="">Аренда</a></li>
-            </ul>
-            <ul class="footer__nav-list">
-              <li class="footer__nav-item"><a class="footer__nav-link" href="">Фотосъемка</a></li>
-              <li class="footer__nav-item"><a class="footer__nav-link" href="">Контакты</a></li>
-              <li class="footer__nav-item"><a class="footer__nav-link" href="">FAQ</a></li>
-              <li class="footer__nav-item"><a class="footer__nav-link" href="">RU EN</a></li>
-            </ul>
-          </div>
-          <form class="footer__form" action="">
-            <div class="footer__form-title">Подписка</div>
-            <div>
-              <input class="footer__form-input" type="text" name="E-mail" placeholder="Ваш E-mail"/>
             </div>
-            <div>
-              <button class="footer__form-link">Подписаться</button>
-            </div>
-          </form>
+            <form class="contacts__form" action="#">
+              <div class="contacts__inputs-row">
+                <input class="contacts__form-input" type="text" name="name" placeholder="Ваше Имя"/>
+                <input class="contacts__form-input" type="text" name="name" placeholder="Ваш E-mail"/>
+              </div>
+              <textarea class="contacts__form-textarea" type="text" name="questions" placeholder="Ваш вопрос"></textarea>
+              <button class="contacts__form-link">Отправить</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

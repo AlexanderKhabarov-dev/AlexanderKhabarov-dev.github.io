@@ -1,9 +1,11 @@
+
 .category-slider{
    margin-bottom: 50px;
    max-width: 1140px;
    padding-left: 10px;
    padding-right: 10px;
    overflow: hidden;
+   height: 600px;
     &__wrapper{
         display: flex;
         @include margin-auto;
@@ -98,6 +100,11 @@
     }
 }
 
+@media(max-width:$sm){
+    .category-slider{
+        height: 520px;
+    }
+}
 
 .swiper-conteiner2{
     overflow: hidden;
@@ -115,7 +122,7 @@
     @media(max-width:$sm){
         .swiper-container-horizontal > .swiper-pagination-bullets,
         .swiper-pagination-custom, .swiper-pagination-fraction{
-            bottom: 75px;
+            bottom: 55px;
     }
     }
     .swiper-pagination-bullet{
@@ -148,7 +155,7 @@
 
 @media(max-width:$sm){
     .swiper-button-next, .swiper-button-prev{
-        bottom: 60px;
+        bottom: 40px;
     }
 }
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next{

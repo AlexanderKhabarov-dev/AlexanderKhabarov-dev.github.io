@@ -70,13 +70,13 @@ html(lang="en")
                 li.menu-hidden__social-button
                   a.menu-hidden__social-link(href="") Vkontakte
 
-    //section.about(id="about")
+    section.about(id="about")
       .container
         .about__wrapper
           .about__slider
                 .about__slides
                   .about__slides-item
-                    img(src="./src/img/slider-image.jpg" width="540" height="320" alt="")
+                    img(class="about__slides-img" src="./src/img/slider-image.jpg" width="540" height="320" alt="")
                 .buttons-block
                   .slide-button(class="slide-button-left" id="left-button")
                     img(src="./src/img/slide-arrow-left.svg" alt="")
@@ -97,8 +97,8 @@ html(lang="en")
                   то обстоятельствах. и тут еще пару слов что бы я мог красиво блок заполнить, вот так, супер вообще.
                 .about__content-feedback
                   a.about__content-link(href="") Связаться с нами
-
     section.catalog
+      .container
         .catalog__container
           ul.catalog__nav-list
             li.catalog__nav-item
@@ -107,7 +107,7 @@ html(lang="en")
               a.catalog__nav-link(href="") О Нас
             li.catalog__nav-item
               a.catalog__nav-link(href="") Каталог
-              
+
           .catalog__category(class="swiper-container")
             .catalog__swiper-wrapper(class="swiper-wrapper")
               .catalog__content(class="swiper-slide")
@@ -149,46 +149,42 @@ html(lang="en")
                     .catalog__content-link_position
                       a.catalog__content-link(href="rent.html") Подробнее
             .swiper-pagination
-            
-            
 
-    //section.contacts
+    section.contacts
       .container
         .contacts__container
           .contacts__title Контакты
-          .contacts__wrapper
-            .contacts__info
-              .contacts__map
-                img(src="./src/img/contacts-map.png" alt="")
-              .contacts__data
-                .contacts__row
-                  .contacts__text Телефон
-                  .contacts__text +7(911)-028-91-76
-                .contacts__row
-                  .contacts__text Адрес
-                  .contacts__text Мастерская ул., 9<br>Санкт-Петербург, 190121
-                .contacts__row
-                  .contacts__text E-mail
-                  .contacts__text BLACKTHORN@gmail.com
-                .contacts__social
-                  a(class="contacts__social-link" href="")
-                    img(src="./src/img/Instagram_black.svg" alt="")
-                  a(class="contacts__social-link" href="")
-                    img(src="./src/img/VK_black.svg" alt="")
-                  a(class="contacts__social-link" href="")
-                    img(src="./src/img/Twitter_black.svg" alt="")
-            .contacts__feedback
-              .contacts__question.
-                Если у вас остались какие либо вопросы, <br>
-                или вы хотите связаться с нами, просто
-                заполните форму и мы выйдем с вами на связь!
-              form(class="contacts__form" action="#")
-                .contacts__inputs-row
-                  input(class="contacts__form-input" type="text" name="name" placeholder="Ваше Имя")
-                  input(class="contacts__form-input" type="text" name="name" placeholder="Ваш E-mail")
-                textarea(class="contacts__form-textarea" type="text" name="questions" placeholder="Ваш вопрос")
-                button.contacts__form-link Отправить
-    +footer
+          .contacts__info
+            .contacts__map
+              img(src="./src/img/contacts-map.png" alt="")
+            .contacts__data
+              .contacts__row
+                .contacts__text Телефон
+                .contacts__text +7(911)-028-91-76
+              .contacts__row
+                .contacts__text Адрес
+                .contacts__text Мастерская ул., 9<br>Санкт-Петербург, 190121
+              .contacts__row
+                .contacts__text E-mail
+                .contacts__text BLACKTHORN@gmail.com
+              .contacts__social
+                a(class="contacts__social-link" href="")
+                  img(src="./src/img/Instagram_black.svg" alt="")
+                a(class="contacts__social-link" href="")
+                  img(src="./src/img/VK_black.svg" alt="")
+                a(class="contacts__social-link" href="")
+                  img(src="./src/img/Twitter_black.svg" alt="")
+          .contacts__feedback
+            .contacts__question.
+              Если у вас остались какие либо вопросы, <br>
+              или вы хотите связаться с нами, просто
+              заполните форму и мы выйдем с вами на связь!
+            form(class="contacts__form" action="#")
+              .contacts__inputs-row
+                input(class="contacts__form-input" type="text" name="name" placeholder="Ваше Имя")
+                input(class="contacts__form-input" type="text" name="name" placeholder="Ваш E-mail")
+              textarea(class="contacts__form-textarea" type="text" name="questions" placeholder="Ваш вопрос")
+              button.contacts__form-link Отправить
     .preloader(id="preloader_malc")
       .preloader__wrapper
         .preloader-text Blackthorn
