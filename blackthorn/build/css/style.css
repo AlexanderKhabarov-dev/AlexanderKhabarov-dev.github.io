@@ -345,59 +345,6 @@ template {
   padding: 0 35px;
   margin: 0 auto; }
 
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #040404;
-  z-index: 999999999; }
-  .preloader__wrapper {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; }
-  .preloader-text {
-    font-family: "Exodus-PersonalUseSharpen";
-    font-size: 0px;
-    line-height: 110px;
-    color: #fff;
-    margin-top: -100px;
-    position: relative; }
-    .preloader-text::before {
-      position: absolute;
-      content: '';
-      left: 0;
-      top: 0;
-      background: #040404;
-      width: 860px;
-      height: 110px;
-      animation: preloader-text 3s 1 ease; }
-  .preloader-progressbar {
-    width: 845px;
-    border-bottom: 2px solid #626262;
-    margin-top: 20px;
-    position: relative; }
-    .preloader-progressbar::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 845px;
-      height: 2px;
-      border-bottom: 2px solid #fff;
-      box-shadow: 0px 0px 10px #fff;
-      animation: progressbar 3s 1 ease;
-      z-index: 1; }
-
-@media (max-width: 540px) {
-  .preloader-text {
-    transform: scale(0.4); }
-  .preloader-progressbar {
-    transform: scale(0.4); } }
-
 .header {
   overflow: hidden;
   position: relative; }
@@ -1627,6 +1574,51 @@ template {
       left: -60px;
       top: -5px; } }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  z-index: 100; }
+  .preloader__progressbar {
+    position: relative;
+    height: 100vh; }
+    .preloader__progressbar--elem1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -50px;
+      width: 100px;
+      height: 100px;
+      border: 2px solid #fff;
+      border-right: 1px solid transparent;
+      border-radius: 100%; }
+    .preloader__progressbar--elem2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -35px;
+      margin-left: -35px;
+      width: 70px;
+      height: 70px;
+      border: 2px solid #fff;
+      border-left: 1px solid transparent;
+      border-radius: 100%; }
+    .preloader__progressbar--elem3 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -20px;
+      margin-left: -20px;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #fff;
+      border-right: 1px solid transparent;
+      border-radius: 100%; }
+
 .btn-active {
   background: tomato; }
 
@@ -2472,29 +2464,28 @@ button.swiper-pagination-bullet {
 .products__container {
   margin-top: 50px; }
 
-.catalog__wrapper {
-  position: relative;
-  max-width: 250px;
-  margin: auto;
-  height: auto; }
-  .catalog__wrapper:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    transition: 0.3s ease;
-    backdrop-filter: blur(27px); }
-  .catalog__wrapper:hover::before {
-    opacity: 1; }
-  .catalog__wrapper:hover .catalog__card-hover {
-    opacity: 1; }
-
 .catalog__card {
   color: #fff;
   text-align: center; }
+  .catalog__card-wrapper {
+    position: relative;
+    max-width: 250px;
+    margin: auto;
+    height: auto; }
+    .catalog__card-wrapper:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: 0.3s ease;
+      backdrop-filter: blur(27px); }
+    .catalog__card-wrapper:hover::before {
+      opacity: 1; }
+    .catalog__card-wrapper:hover .catalog__card-hover {
+      opacity: 1; }
   .catalog__card-image img {
     width: 100%;
     height: auto; }

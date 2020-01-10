@@ -185,10 +185,15 @@ html(lang="en")
                 input(class="contacts__form-input" type="text" name="name" placeholder="Ваш E-mail")
               textarea(class="contacts__form-textarea" type="text" name="questions" placeholder="Ваш вопрос")
               button.contacts__form-link Отправить
-    .preloader(id="preloader_malc")
-      .preloader__wrapper
-        .preloader-text Blackthorn
-        .preloader-progressbar
+
+    .preloader(id="preloader")
+      .preloader__progressbar
+        .preloader__progressbar--elem1(id="elem1")
+        .preloader__progressbar--elem2(id="elem2")
+        .preloader__progressbar--elem3(id="elem3")
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js")
+    script(src="src/js/preloader.js")
     script(src="build/js/script.js")
     script(src="src/js/swiper-main__init.js")
 

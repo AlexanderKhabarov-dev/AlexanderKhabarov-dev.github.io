@@ -2,71 +2,6 @@
     @include container;
 }
 
-// === preloader ===
-.preloader{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #040404;
-    z-index: 999999999;
-    &__wrapper{
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    &-text{
-        font-family: $font-Exodus-PersonalUseSharpen;
-        font-size: 0px;
-        line-height: 110px;
-        color:$color-text;
-        margin-top: -100px;
-        position: relative;
-        &::before{
-            position: absolute;
-            content: '';
-            left:0;
-            top:0;
-            background:  #040404;
-            width: 860px;
-            height: 110px;
-            animation: preloader-text 3s 1 ease;  
-        }
-    }
-    &-progressbar{
-        width: 845px;
-        border-bottom: 2px solid rgb(98, 98, 98);
-        margin-top: 20px;
-        position: relative;
-        &::before{
-            position: absolute;
-            content: "";
-            top:0;
-            left:0;
-            width: 845px;
-            height:2px;
-            border-bottom: 2px solid $color-text;
-            box-shadow: 0px 0px 10px $color-text;
-            animation: progressbar 3s 1 ease;  
-            z-index: 1;     
-        }
-    }
-}
-@media(max-width: $sm){
-    .preloader{
-        &-text{
-            transform: scale(.4);
-        }
-        &-progressbar{
-            transform: scale(.4);
-        }
-    }
-}
-// === /preloader ===
-
 // === header ===
 .header{
     overflow: hidden;
@@ -955,6 +890,7 @@
                 width: 18px;
                 height: 6px;
             }
+            
         }
     }
     
@@ -1320,7 +1256,7 @@
             width:260px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.5);
             outline: none;
-            margin-bottom: 15px;
+            margin-bottom: 15px;    
         }
         &-link{
             text-align: left;
