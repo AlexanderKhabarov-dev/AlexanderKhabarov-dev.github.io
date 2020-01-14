@@ -1,0 +1,28 @@
+include blocks/category-banner.pug
+include blocks/category-slider.pug
+include blocks/footer.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        link(rel="stylesheet", href="build/css/style.css")
+    body
+        +category-banner('Аренда', 'header-category__container--rent')
+        section.products
+            .products__container
+        .cart
+        +category-slider('swiper-container2')
+        +footer
+            
+        
+        script(src="src/js/swiper.min.js")
+        script(src="src/js/catalog.js")
+        script(src="src/js/swiper-category__init.js")
+        script(src="src/js/serviceCreateElement.js")
+        script(src="src/js/serviceStore.js")
+        script(src="src/js/serviceProducts.js")
+        script(src="src/js/serviceCart.js")

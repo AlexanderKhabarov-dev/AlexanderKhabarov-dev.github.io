@@ -1,0 +1,204 @@
+include blocks/footer.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Document
+    link(rel="stylesheet", href="build/css/style.css")
+  body
+    section.header
+      .header__container
+        .header__wrapper
+          .header__logo
+            include ../img/header-logo.svg
+          ul.header__nav-list
+            li.header__nav-item
+              a.header__nav-link(href="clothes.html") Одежда
+            li.header__nav-item
+              a.header__nav-link(href="vintage.html") Винтаж
+            li.header__nav-item
+              a.header__nav-link(href="rent.html") Аренда
+            li.header__nav-item
+              a.header__nav-link(href="") Контакты
+
+          .menu-button(id="toggle")
+              include ../img/menu.svg
+
+        .header__intro
+          .header__intro-text BlackThorn
+            .header__intro-text--decorationTop
+            .header__intro-text--decorationBot
+        .header__scroll
+          a.header__scroll-link(href="#about") scroll for more
+          .header__scroll-arrow
+            include ../img/arrow.svg
+        .header__social
+          ul.header__social-list
+            li.header__social-item
+              a.header__social-link(href="") Twitter
+            li.header__social-item
+              a.header__social-link(href="") Instagramm
+            li.header__social-item
+              a.header__social-link(href="") Vkontakte
+
+      .menu(id="hidden-menu")
+        .menu-hidden
+          .menu-hidden__close(id="close")
+          .menu-hidden__container
+            .menu-hidden__wrapper
+              .menu-hidden__cart
+                .menu-hidden__language
+                  a.menu-hidden__language-link(href="") RU
+                  a.menu-hidden__language-link(href="") EN
+                .menu-hidden__cart-icon
+                  include ../img/cart-empty.svg
+              ul.menu-hidden__nav-list
+                li.menu-hidden__nav-item
+                  a.menu-hidden__nav-link(href="") Фотосъемка
+                li.menu-hidden__nav-item
+                  a.menu-hidden__nav-link(href="") Контакты
+                li.menu-hidden__nav-item
+                  a.menu-hidden__nav-link(href="") FAQ
+              .menu-hidden__feedback
+                a.menu-hidden__feedback-link(href="") Связаться с нами
+              ul.menu-hidden__social
+                li.menu-hidden__social-button
+                  a.menu-hidden__social-link(href="") Twitter
+                li.menu-hidden__social-button
+                  a.menu-hidden__social-link(href="") Instagramm
+                li.menu-hidden__social-button
+                  a.menu-hidden__social-link(href="") Vkontakte
+
+    section.about(id="about")
+      .container
+        .about__wrapper
+          .about__slider
+                .about__slides
+                  .about__slides-item
+                    img(class="about__slides-img" src="./src/img/slider-image.jpg" width="540" height="320" alt="")
+                .buttons-block
+                  .slide-button(class="slide-button-left" id="left-button")
+                    img(src="./src/img/slide-arrow-left.svg" alt="")
+                  .slide-button(class="slide-button-right" id="right-button")
+                    img(src="./src/img/slide-arrow-right.svg" alt="")
+                .dots-block
+                  .dots-item(class="active")
+                  .dots-item
+                  .dots-item
+                  .dots-item
+                  .dots-items
+          .about__content
+                .about__content-title Blackthorn
+                .about__content-text.
+                  Тут красивый текст о красивом шоуруме и не только. Так же можем после каждого
+                  переключения фотки давать какой-то другой текст именно к этой фотографии, если
+                  на ней например новая коллекция или фотографии сделанные там то там то при таких
+                  то обстоятельствах. и тут еще пару слов что бы я мог красиво блок заполнить, вот так, супер вообще.
+                .about__content-feedback
+                  a.about__content-link(href="") Связаться с нами
+    section.catalog
+      .container
+        .catalog__container
+          ul.catalog__nav-list
+            li.catalog__nav-item
+              a.catalog__nav-link(href="index.html") Главная
+            li.catalog__nav-item
+              a.catalog__nav-link(href="") О Нас
+            li.catalog__nav-item
+              a.catalog__nav-link(href="") Каталог
+
+          .catalog__category(class="swiper-container")
+            .catalog__swiper-wrapper(class="swiper-wrapper")
+              .catalog__content(class="swiper-slide")
+                .catalog__content-title Одежда
+                .catalog__content-subtitle.
+                  Cможет стать акцентом вашего образа
+                  и достойным пополнением коллекции уникальных
+                  вещей в гардеробе.
+                .catalog__wrapper
+                  .catalog__content-image
+                    img(src="./src/img/catalog-image-1.png"  alt="")
+                  .catalog__content-hover
+                    .catalog__content-link_position
+                      a.catalog__content-link(href="clothes.html") Подробнее
+
+              .catalog__content(class="swiper-slide")
+                .catalog__content-title Винтаж
+                .catalog__content-subtitle.
+                  Cможет стать акцентом вашего образа
+                  и достойным пополнением коллекции уникальных
+                  вещей в гардеробе.
+                .catalog__wrapper
+                  .catalog__content-image
+                    img(src="./src/img/catalog-image-2.png"  alt="")
+                  .catalog__content-hover
+                    .catalog__content-link_position
+                      a.catalog__content-link(href="vintage.html") Подробнее
+
+              .catalog__content(class="swiper-slide")
+                .catalog__content-title Аренда
+                .catalog__content-subtitle.
+                  Cможет стать акцентом вашего образа
+                  и достойным пополнением коллекции уникальных
+                  вещей в гардеробе.
+                .catalog__wrapper
+                  .catalog__content-image
+                    img(src="./src/img/catalog-image-3.png"  alt="")
+                  .catalog__content-hover
+                    .catalog__content-link_position
+                      a.catalog__content-link(href="rent.html") Подробнее
+            .swiper-pagination
+
+    section.contacts
+      .container
+        .contacts__container
+          .contacts__title Контакты
+          .contacts__info
+            .contacts__map
+              img(src="./src/img/contacts-map.png" alt="")
+            .contacts__data
+              .contacts__row
+                .contacts__text Телефон
+                .contacts__text +7(911)-028-91-76
+              .contacts__row
+                .contacts__text Адрес
+                .contacts__text Мастерская ул., 9<br>Санкт-Петербург, 190121
+              .contacts__row
+                .contacts__text E-mail
+                .contacts__text BLACKTHORN@gmail.com
+              .contacts__social
+                a(class="contacts__social-link" href="")
+                  img(src="./src/img/Instagram_black.svg" alt="")
+                a(class="contacts__social-link" href="")
+                  img(src="./src/img/VK_black.svg" alt="")
+                a(class="contacts__social-link" href="")
+                  img(src="./src/img/Twitter_black.svg" alt="")
+          .contacts__feedback
+            .contacts__question.
+              Если у вас остались какие либо вопросы, <br>
+              или вы хотите связаться с нами, просто
+              заполните форму и мы выйдем с вами на связь!
+            form(class="contacts__form" action="#")
+              .contacts__inputs-row
+                input(class="contacts__form-input" type="text" name="name" placeholder="Ваше Имя")
+                input(class="contacts__form-input" type="text" name="name" placeholder="Ваш E-mail")
+              textarea(class="contacts__form-textarea" type="text" name="questions" placeholder="Ваш вопрос")
+              button.contacts__form-link Отправить
+
+    .preloader(id="preloader")
+      .preloader__progressbar(id="preloader")
+        .preloader__progressbar--elem1(id="elem1")
+        .preloader__progressbar--elem2(id="elem2")
+        .preloader__progressbar--elem3(id="elem3")
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js")  
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/CSSRulePlugin.min.js")
+    script(src="src/js/preloader.js")
+    script(src="build/js/script.js")
+    script(src="src/js/swiper-main__init.js")
+
+
+

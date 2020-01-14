@@ -1,0 +1,51 @@
+include blocks/category-banner.pug
+include blocks/category-slider.pug
+include blocks/footer.pug
+include blocks/catalog-card.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        link(rel="stylesheet", href="build/css/style.css")
+    body
+        +category-banner('Одежда')
+        section.products
+            .products__container(class="swiper-container2")
+                .swiper-wrapper
+                    +catalog-card('swiper-slide', 'Белое хлопковое платье с кружевом',          '1900 Р', "./src/img/card1.jpg")
+                    +catalog-card('swiper-slide', 'Венок из кукольных тел в розовой проволоке', '900 Р',  "./src/img/card2.jpg")
+                    +catalog-card('swiper-slide', 'Винтажная брошь причудливой формы',          '700 Р',  "./src/img/card3.jpg")
+                    +catalog-card('swiper-slide', 'Косуха из натуральной кожи с бахромой',      '1500 Р', "./src/img/card4.jpg")
+                    +catalog-card('swiper-slide', 'Удлиненная юбка, полностью из хлопка',       '1300 Р', "./src/img/card5.jpg")
+                    +catalog-card('swiper-slide', 'Ботинки DR MARTENS',                         '700 Р',  "./src/img/card6.jpg")
+                    +catalog-card('swiper-slide', 'Винтажная брошь «Букет полевых цветов»',     '500 Р',  "./src/img/card3.jpg")
+                    +catalog-card('swiper-slide', 'Венок из кукольных тел в розовой проволоке', '900 Р',  "./src/img/card2.jpg")
+        .cart
+        +category-slider
+        section.products
+            .products__container
+                +catalog-card('',  'Белое хлопковое платье с кружевом',          '1900 Р',  "./src/img/card1.jpg")
+                +catalog-card('',  'Венок из кукольных тел в розовой проволоке', '900 Р',   "./src/img/card2.jpg")
+                +catalog-card('',  'Винтажная брошь причудливой формы',          '700 Р',   "./src/img/card3.jpg")
+                +catalog-card('',  'Косуха из натуральной кожи с бахромой',      '1500 Р',  "./src/img/card4.jpg")
+                +catalog-card('',  'Удлиненная юбка, полностью из хлопка',       '1300 Р',  "./src/img/card5.jpg")
+                +catalog-card('',  'Ботинки DR MARTENS',                         '700 Р',   "./src/img/card6.jpg")
+                +catalog-card('',  'Винтажная брошь «Букет полевых цветов»',     '500 Р',   "./src/img/card3.jpg")
+                +catalog-card('',  'Венок из кукольных тел в розовой проволоке', '900 Р',   "./src/img/card2.jpg")
+        +footer
+        
+            
+        script(src="src/js/swiper.min.js")
+        script(src="src/js/swiper-category__init.js")
+
+        
+
+        
+
+
+
+            

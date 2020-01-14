@@ -1,0 +1,88 @@
+.btn-active{
+    background: tomato;
+}
+.products{
+    &__container{
+        @include margin-auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    &__card{
+        color:$color-text;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        font-family: $font-Opinion-Pro-Light;
+        &-image{
+            height:395px;
+            width: 260px;
+            background-position: 50% 50%;
+            background-size: cover;
+            margin-bottom: 20px;
+        }
+        &-name{
+            padding-bottom: 10px;
+            max-width:190px;
+            min-height: 50px;
+            margin: auto;
+        }
+        &-price{
+            padding-bottom: 10px;
+            padding-top: 17px;
+            margin: auto;
+            position: relative;
+            &::before, &::after{
+                position: absolute;
+                content: '';
+                background-image: url('../../src/img/vetka.svg');
+                background-repeat: no-repeat;
+                width: 120px;
+                height: 10px;
+                transform: translateX(67px);
+                top: 0;
+                left:0;
+            }
+        }
+        &-button{
+            color:$color-text;
+            font-size: 12px;
+            width: 200px;
+            height: 50px;
+            text-transform: uppercase;
+            background: #000;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+        &-link{
+            text-transform: uppercase;
+            display: block;
+        }
+    }
+}
+
+.cart{
+    position: fixed;
+    display: none;
+    width:600px;
+    height: 90vh;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    background-color: #121315;
+    z-index: 999999;
+    &-close{
+        position: absolute;
+        top:10px;
+        right:10px;
+        height: 36px;
+        width: 36px;
+        background-image: url('../../src/img/close-icon.svg');
+        cursor: pointer;
+        transition: $transition;
+        &:hover{
+            opacity: $color-hover;
+        }
+    }
+}

@@ -1,0 +1,280 @@
+.header-category{
+    &__container{
+        @include background-cover;
+        height: 432px;
+        background-image: url('../../src/img/catalog-clothes.jpg');
+
+        &--rent {
+            background-image: url('../../src/img/catalog-rent.jpg');
+        }
+
+        &--vintage{
+            background-image: url('../../src/img/catalog-vintage.jpg');
+        }
+    }
+
+    &__nav{
+        @include margin-auto;
+        &-list{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 60px;
+            width: 310px;
+
+            & li:nth-child(n+2):before{
+                content:'';
+                position: absolute;
+                width: 15px;
+                height: 2px;
+                border-bottom: 1px solid $color-text;
+                left: -21px;
+                top:8px;
+                opacity: .3;
+            }
+        }
+
+        &-item{
+            position: relative;
+        }
+
+        &-link{
+            font-family: $font-Opinion-Pro-Light;
+            color:$color-text;
+            font-size: 18px;
+            opacity: .3;
+
+            &--active{
+                opacity: 1;
+            }
+           
+        }
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+
+    &__title{
+        font-family: $font-Mason-Chronicles-Regular;
+        color:#858889;
+        font-size: 96px;
+    }
+
+    &__sorting{
+        background: #000;
+
+        &-list{
+            @include margin-auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        &-link{
+            font-family: $font-Opinion-Pro-Light;
+            color:$color-text;
+            font-size: 20px;
+            transition: $transition;
+            padding-bottom: 7px;
+            &:hover{
+                opacity: $color-hover;
+            }
+
+            &--active{
+                position: relative;
+
+                &::before{
+                    position: absolute;
+                    content:'';
+                    border-bottom: 1px solid $color-text;
+                    height: 2px;
+                    width:100%;
+                    bottom:0px;
+                }
+            }
+        }
+    }
+    @media(max-width:$md-max){
+        .header-category{
+            &__sorting{
+                &-list{
+
+                }
+                &-link{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    @media(max-width:$sm){
+        .header-category{
+            &__container{
+                background-image: url('../../src/img/catalog-clothes--mobile.jpg');
+                height: 100vh;
+            }
+            &__nav{
+                &-list{
+                    justify-content: start;
+                }
+                &-link{
+                    margin-right: 25px;
+                    &--mobile{
+                        display: none;
+                    }
+                }
+            }
+            &__title{
+                font-size: 70px;
+            }
+            &__sorting{
+               &-list{
+                   display: none;
+               }
+            }
+        }
+    }
+}
+
+.sorting-category{
+    font-family: $font-Opinion-Pro-Light;
+    color: $color-text;
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.25);
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include margin-auto;
+    }
+    &__form{
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        width:80%;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            background-image: url('../../src/img/search-icon.svg');
+            background-repeat: no-repeat;
+            width: 38px;
+            height: 38px;
+            left:0;
+            top:0;
+        }
+    }
+    &__input{
+        color: $color-text;
+        flex-basis: 400px;
+        border: none;
+        background: none;
+        border-bottom: 1px solid $color-text;
+        opacity: .5;
+        margin-left: 50px;
+        margin-right: 40px;
+        position: relative;
+        outline: none;
+        
+    }
+    &__dropdown{
+        flex-basis:130px;
+        margin-right: 50px;
+        opacity: .5;
+        transition: $transition;
+        cursor: pointer;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &__link{
+        color: $color-text;
+        display: block;
+        margin-right: 40px;
+        transition: $transition;
+        padding-bottom: 5px;
+        &--active{
+            border-bottom: 1px solid $color-text;
+        }
+    }
+    .counter{
+        font-family: $font-Arimo;
+        font-weight: 700;
+        font-size: 12px;
+        width: 22px;
+        height: 27px;
+        color:#000;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url('../../src/img/cart-icon.svg');
+            background-repeat: no-repeat;
+            width: 22px;
+            height: 27px;
+            right:3px;
+            top:-1px;
+            z-index: -1;
+        }
+    }
+    
+    @media (min-width:541px) {
+        .sorting-category{
+            &__link{
+                &--mobile{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @media(max-width:$md-min) {
+        .sorting-category{
+            &__link{
+                &--mobile{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media(max-width:$sm){
+        .sorting-category{
+            padding-top: 27px;
+            padding-bottom: 27px;
+            &__form::after{
+                display: none;
+            }
+            &__input{
+                display: none;
+            }
+            &__dropdown{
+                opacity: 1;
+                margin-right: 0;
+            }
+            &__link{
+                &--mobile{
+                    display: none;
+                }
+            }
+        }
+        .counter{
+            &::after{
+                position: absolute;
+                content: '';
+                background-image: url('../../src/img/search-icon.svg');
+                background-repeat: no-repeat;
+                width: 38px;
+                height: 38px;
+                left:-60px;
+                top:-5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+mixin catalog-card(classMod, title, price, image)
+    .catalog__card(class= classMod)
+        .catalog__card-wrapper
+            .catalog__card-image
+                img(src= image  alt="")
+            .catalog__card-hover
+                .catalog__card-link_position
+                    a.catalog__card-link(href="clothes.html") Подробнее
+                    button.catalog__card-btn Добваить в корзину
+        .catalog__card-title= title
+        .catalog__card-price= price

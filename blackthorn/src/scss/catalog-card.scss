@@ -1,0 +1,161 @@
+.swiper-container2{
+    overflow: hidden;
+}
+.swiper-wrapper{
+    position: relative;
+}
+.products__container{
+    margin-top: 50px;
+}
+
+.catalog{
+    &__card{
+        color:$color-text;
+        text-align: center;
+        &-wrapper{
+            position: relative;
+            max-width: 250px;
+            margin: auto;
+            height: auto;
+            &:before{
+                content: '';
+                position: absolute;
+                top:0;
+                bottom:0;
+                left:0;
+                right: 0;
+                opacity: 0;
+                transition: $transition;
+                backdrop-filter: blur(27px);
+            }
+            &:hover::before{
+                opacity: 1;
+            }
+            &:hover .catalog__card-hover{
+                opacity: 1;
+            }
+        }
+        &-image img{
+            width:100%;
+            height: auto;
+        }
+        &-title{
+            font-family: $font-Opinion-Pro-Light;
+            font-size: 18px;
+            line-height: 24px;
+            padding-top: 20px;
+            max-width: 205px;
+            min-height: 70px;
+            margin: auto;
+            position: relative;
+            &::before,{
+                position: absolute;
+                content: '';
+                background-image: url('../../src/img/vetka.svg');
+                background-repeat: no-repeat;
+                width: 120px;
+                height: 10px;
+                transform: translateX(42px);
+                bottom: 0;
+                left:0;
+            }
+        }
+        &-price{
+            font-family: $font-Opinion-Pro-Light;
+            font-size: 16px;
+            line-height: 28px;
+            padding-top: 10px;
+            padding-bottom: 40px;
+            max-width: 290px;
+            margin: auto;
+        }
+        &-hover{
+            opacity: 0;
+            transition: $transition;
+            z-index:99;
+            &::before{
+                content: '';
+                position: absolute;
+                background-image: url('../../src/img/decoration-top.svg');
+                background-repeat: no-repeat;
+                width: 77px;
+                height: 102px;
+                top:15px;
+                right:15px;
+                z-index: 1000;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                background-image: url('../../src/img/decoration-bottom.svg');
+                background-repeat: no-repeat;
+                width: 77px;
+                height: 102px;
+                bottom:15px;
+                left:15px;
+            }
+        }
+        &-link_position{
+            position: absolute;
+            top:57%;
+            left:50%;
+            margin-left: -60px;
+        }
+        &-link{
+            font-family: $font-Opinion-Pro-Light;
+            color: $color-text;
+            font-size: 12px;
+            line-height: 19px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            width: 178px;
+            padding-bottom: 8px;
+            position: relative;
+            transition: $transition;
+            &:hover{
+                opacity: .6;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 113px;
+                height: 2px;
+                border-bottom: 1px solid $color-text;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                top:5px;
+                right: -20px;
+                background-image: url('../../src/img/feedback-link.svg');
+                background-repeat: none;
+                width: 18px;
+                height: 6px;
+            }
+        }
+        &-btn{
+            font-family: $font-Opinion-Pro-Light;
+            position: absolute;
+            top:-65px;
+            left:-30px;
+            color:$color-text;
+            font-size: 12px;
+            width: 180px;
+            height: 45px;
+            text-transform: uppercase;
+            background: #000;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+}
+
+@media(max-width: $sm){
+    .catalog{
+        &__wrapper{
+            max-width: 320px;
+        }
+    }
+}

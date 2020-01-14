@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
+@import './normalize.scss';
+@import './mixins.scss';
+@import './variables.scss';
+@import './fonts.scss';
+@import './main-page.scss';
+@import './catalogCategory.scss';
+@import './preloader.scss';
+@import './products.scss';
+@import './key-frames.scss';
+@import './swiper.min.scss';
+@import './category-slider.scss';
+@import './catalog-card.scss';
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: $color-main;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    display: block;
+}

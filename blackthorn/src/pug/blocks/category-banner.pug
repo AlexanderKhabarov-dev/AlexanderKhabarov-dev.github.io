@@ -1,0 +1,47 @@
+mixin category-banner(category, classMod)
+  section.header-category
+    .header-category__container(class= classMod)
+      .header-category__nav
+        ul.header-category__nav-list
+          li.header-category__nav-item
+            a.header-category__nav-link(href="index.html") Главная
+          li.header-category__nav-item
+            a.header-category__nav-link(href="" class="header-category__nav-link--mobile") О нас
+          li.header-category__nav-item
+            a.header-category__nav-link(href="" class="header-category__nav-link--mobile") Каталог
+          li.header-category__nav-item
+            a.header-category__nav-link(href="" class="header-category__nav-link--active")= category
+      .header-category__wrapper
+        .header-category__title= category
+    .header-category__sorting
+      ul.header-category__sorting-list
+        li.header-category__sorting-item
+          a.header-category__sorting-link(href="" class="header-category__sorting-link--active") Вся продукция
+        li.header-category__sorting-item
+          a.header-category__sorting-link(href="") Обувь
+        li.header-category__sorting-item
+          a.header-category__sorting-link(href="") Платья
+        li.header-category__sorting-item
+          a.header-category__sorting-link(href="") Топы
+        li.header-category__sorting-item
+          a.header-category__sorting-link(href="") Брюки
+        li.header-category__sorting-item
+          a.header-category__sorting-link(href="") Юбки
+        li.header-category__sorting-item
+          a.header-category__sorting-link(href="") Аксессуары
+        li.header-category__sorting-item
+          a.header-category__sorting-link(href="") Верхняя одежда
+        
+    
+    .sorting-category
+      .sorting-category__wrapper
+        form.sorting-category__form(action="#")
+          input.sorting-category__input(type="text")
+          .sorting-category__dropdown Сортировка
+          .sorting-category__dropdown(class="sorting-category__dropdown--mobile") Категории
+          a.sorting-category__link(href="#" class="sorting-category__link--active sorting-category__link--mobile") Новинки
+          a.sorting-category__link(href="#" class="sorting-category__link--mobile") Акции
+        .counter 0
+  
+  
+
