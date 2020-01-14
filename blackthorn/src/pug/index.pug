@@ -29,6 +29,8 @@ html(lang="en")
 
         .header__intro
           .header__intro-text BlackThorn
+            .header__intro-text--decorationTop
+            .header__intro-text--decorationBot
         .header__scroll
           a.header__scroll-link(href="#about") scroll for more
           .header__scroll-arrow
@@ -187,12 +189,13 @@ html(lang="en")
               button.contacts__form-link Отправить
 
     .preloader(id="preloader")
-      .preloader__progressbar
+      .preloader__progressbar(id="preloader")
         .preloader__progressbar--elem1(id="elem1")
         .preloader__progressbar--elem2(id="elem2")
         .preloader__progressbar--elem3(id="elem3")
 
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js")  
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/CSSRulePlugin.min.js")
     script(src="src/js/preloader.js")
     script(src="build/js/script.js")
     script(src="src/js/swiper-main__init.js")

@@ -51,7 +51,10 @@
           </div>
         </div>
         <div class="header__intro">
-          <div class="header__intro-text">BlackThorn</div>
+          <div class="header__intro-text">BlackThorn
+            <div class="header__intro-text--decorationTop"></div>
+            <div class="header__intro-text--decorationBot"></div>
+          </div>
         </div>
         <div class="header__scroll"><a class="header__scroll-link" href="#about">scroll for more</a>
           <div class="header__scroll-arrow"><svg width="15" height="31" viewBox="0 0 15 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -233,13 +236,14 @@
       </div>
     </section>
     <div class="preloader" id="preloader">
-      <div class="preloader__progressbar">
+      <div class="preloader__progressbar" id="preloader">
         <div class="preloader__progressbar--elem1" id="elem1"></div>
         <div class="preloader__progressbar--elem2" id="elem2"></div>
         <div class="preloader__progressbar--elem3" id="elem3"></div>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/CSSRulePlugin.min.js"></script>
     <script src="src/js/preloader.js"></script>
     <script src="build/js/script.js"></script>
     <script src="src/js/swiper-main__init.js"></script>

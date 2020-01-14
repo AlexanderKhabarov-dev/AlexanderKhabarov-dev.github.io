@@ -368,6 +368,7 @@ template {
     margin: auto;
     padding-top: 50px; }
   .header__logo {
+    opacity: 0;
     animation: logo 1s linear;
     animation-fill-mode: both;
     animation-delay: 4.3s; }
@@ -377,8 +378,8 @@ template {
     width: 550px;
     margin: auto;
     animation: navigation 1s linear;
-    animation-fill-mode: both;
-    animation-delay: 4.3s; }
+    opacity: 0;
+    transform: translateY(-150px); }
     .header__nav-list li:nth-child(n+2):before {
       content: '';
       position: absolute;
@@ -405,7 +406,9 @@ template {
     transform: rotate(-90deg);
     animation: social 1s linear;
     animation-fill-mode: both;
-    animation-delay: 4.3s; }
+    animation-delay: 4.3s;
+    opacity: 0;
+    transform: translateX(-100px) rotate(-90deg); }
     .header__social-list {
       display: flex; }
     .header__social-item {
@@ -421,7 +424,9 @@ template {
     cursor: pointer;
     animation: menu-button .5s linear;
     animation-fill-mode: both;
-    animation-delay: 4.3s; }
+    animation-delay: 4.3s;
+    transform: translate(200px);
+    opacity: 0; }
   .header .menu-button svg {
     transition: 0.3s ease; }
     .header .menu-button svg:hover {
@@ -599,21 +604,20 @@ template {
       position: relative;
       animation: content 2s linear;
       animation-fill-mode: both;
-      animation-delay: 4.3s; }
-      .header__intro-text::before {
-        content: '';
+      animation-delay: 4.3s;
+      opacity: 0; }
+      .header__intro-text--decorationTop {
         position: absolute;
-        width: 279px;
+        width: 0px;
         height: 1px;
         border-bottom: 1px solid #fff;
         top: -25px;
         animation: content-docoration 1s linear;
         animation-fill-mode: both;
         animation-delay: 4.3s; }
-      .header__intro-text::after {
-        content: '';
+      .header__intro-text--decorationBot {
         position: absolute;
-        width: 239px;
+        width: 0px;
         height: 1px;
         border-bottom: 1px solid #fff;
         bottom: -25px;
@@ -627,7 +631,8 @@ template {
     text-align: center;
     animation: scroll 2s linear;
     animation-fill-mode: both;
-    animation-delay: 4.3s; }
+    animation-delay: 4.3s;
+    opacity: 0; }
     .header__scroll-link {
       font-family: "Arimo", sans-serif;
       color: #fff;
@@ -1595,7 +1600,8 @@ template {
       height: 100px;
       border: 2px solid #fff;
       border-right: 1px solid transparent;
-      border-radius: 100%; }
+      border-radius: 100%;
+      opacity: 0; }
     .preloader__progressbar--elem2 {
       position: absolute;
       top: 50%;
@@ -1606,7 +1612,8 @@ template {
       height: 70px;
       border: 2px solid #fff;
       border-left: 1px solid transparent;
-      border-radius: 100%; }
+      border-radius: 100%;
+      opacity: 0; }
     .preloader__progressbar--elem3 {
       position: absolute;
       top: 50%;
@@ -1617,7 +1624,8 @@ template {
       height: 40px;
       border: 2px solid #fff;
       border-right: 1px solid transparent;
-      border-radius: 100%; }
+      border-radius: 100%;
+      opacity: 0; }
 
 .btn-active {
   background: tomato; }
@@ -1699,117 +1707,148 @@ template {
     .cart-close:hover {
       opacity: 0.6; }
 
-@keyframes scroll {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
+/*@keyframes scroll{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
 
-@keyframes header {
-  from {
-    transform: scale(1.4) translateX(150px) translateY(70px); }
-  to {
-    transform: scale(1) translateX(0px) translateY(0); } }
+@keyframes header{
+    from{
+        transform: scale(1.4) translateX(150px) translateY(70px);
+    }
+    to{
+        transform: scale(1) translateX(0px) translateY(0);
+    }
+}
 
-@media (max-width: 540px) {
-  @keyframes header {
-    from {
-      transform: scale(1.4) translateX(50px) translateY(20px); }
-    to {
-      transform: scale(1) translateX(0px) translateY(0); } } }
+@media(max-width: $sm){
+    @keyframes header{
+        from{
+            transform: scale(1.4) translateX(50px) translateY(20px);
+        }
+        to{
+            transform: scale(1) translateX(0px) translateY(0);
+        }
+    }
+}
 
-@keyframes logo {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
+@keyframes logo{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 
-@keyframes menu-button {
-  from {
-    transform: translateX(200px);
-    opacity: 0; }
-  to {
-    transform: translateX(0px);
-    opacity: 1; } }
+@keyframes menu-button{
+    from{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 
-@keyframes hidden-menu {
-  from {
-    transform: translateX(500px); }
-  to {
-    transform: translateX(0px); } }
+@keyframes hidden-menu{
+    from{
+        transform: translateX(500px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
 
-@keyframes background-blur {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
+@keyframes background-blur{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 
-@keyframes social {
-  from {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(-100px) rotate(-90deg); }
-  to {
-    opacity: 1;
-    transform: translateX(0px) rotate(-90deg); } }
+@keyframes social{
+    from{
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-100px) rotate(-90deg);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px) rotate(-90deg);
+    }
+}
 
 @keyframes navigation {
-  from {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-100px); }
-  to {
-    opacity: 1;
-    transform: translateY(0px); } }
+    from{
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 
 @keyframes content-decoration {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
+    from{opacity:0;}
+    to{opacity: 1;}
+}
 
 @keyframes content-docoration {
-  from {
-    width: 0; }
-  to {
-    width: 279; } }
+    from{width:0;}
+    to{width:279;}
+}
 
 @keyframes content {
-  from {
-    opacity: 0;
-    text-shadow: 0; }
-  60%, 70% {
-    text-shadow: 0px 0px 20px #fff; }
-  to {
-    opacity: 1;
-    text-shadow: 0px 0px 0px #fff; } }
+    from{
+        opacity: 0;
+        text-shadow: 0;
+    }
+    60%, 70%{
+        text-shadow: 0px 0px 20px $color-text;
+    }
+    to{
+        opacity: 1;
+        text-shadow: 0px 0px 0px $color-text;
+    }
+}
 
 @keyframes slides {
-  from {
-    transform: scale(1);
-    opacity: 0; }
-  to {
-    transform: scale(1);
-    opacity: 1; } }
+    from{transform: scale(1);opacity: 0;}
+    to{transform: scale(1);opacity: 1;}
+}
 
 @keyframes preloader-text {
-  from {
-    transform: translateX(0px); }
-  to {
-    transform: translateX(860px); } }
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(860px);
+    }
+}
 
 @keyframes progressbar {
-  from {
-    width: 0; }
-  to {
-    width: 845px; } }
-
-@keyframes pagination {
-  from {
-    transform: scale(0); }
-  to {
-    transform: scale(1); } }
-
+    from{
+       width:0;
+    }
+    to{
+        width:845px;
+    }
+}
+@keyframes pagination{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+*/
 /**
  * Swiper 5.2.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions

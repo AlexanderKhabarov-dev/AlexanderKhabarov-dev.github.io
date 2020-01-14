@@ -21,6 +21,7 @@
             border: 2px solid #fff;
             border-right: 1px solid transparent;
             border-radius: 100%;
+            opacity: 0;
         }
         &--elem2{
             position: absolute;
@@ -33,6 +34,7 @@
             border: 2px solid #fff;
             border-left: 1px solid transparent;
             border-radius: 100%;
+            opacity: 0;
         }
         &--elem3{
             position: absolute;
@@ -45,6 +47,7 @@
             border: 2px solid #fff;
             border-right: 1px solid transparent;
             border-radius: 100%;
+            opacity: 0;
         }
     }
 }
