@@ -600,13 +600,12 @@ template {
     align-items: center;
     justify-content: center; }
     .header__intro-text {
-      position: relative; }
-      .header__intro-text--main {
-        font-size: 110px;
-        animation: content 2s linear;
-        animation-fill-mode: both;
-        animation-delay: 4.3s;
-        opacity: 0; }
+      font-size: 110px;
+      position: relative;
+      animation: content 2s linear;
+      animation-fill-mode: both;
+      animation-delay: 4.3s;
+      opacity: 0; }
       .header__intro-text--decorationTop {
         position: absolute;
         width: 0px;
@@ -1771,7 +1770,7 @@ template {
     }
 }
 
-@keyframes  {
+@keyframes social{
     from{
         visibility: hidden;
         opacity: 0;

@@ -302,13 +302,11 @@
         align-items: center;
         justify-content: center;
         &-text{
+            font-size: 110px;
             position: relative;
-            &--main{
-                font-size: 110px;
-                animation: content 2s linear;
-                @include animation-parametrs;
-                opacity: 0;
-            }
+            animation: content 2s linear;
+            @include animation-parametrs;
+            opacity: 0;
             &--decorationTop{
                 position: absolute;
                 width: 0px;
