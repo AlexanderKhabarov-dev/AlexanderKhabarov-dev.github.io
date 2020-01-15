@@ -302,11 +302,10 @@
         align-items: center;
         justify-content: center;
         &-text{
-            font-size: 110px;
             position: relative;
-            animation: content 2s linear;
-            @include animation-parametrs;
-            opacity: 0;
+            &--main{
+                font-size: 110px;
+            }
             &--decorationTop{
                 position: absolute;
                 width: 0px;
@@ -475,18 +474,21 @@
         &__intro{
             height: 72%;
             &-text{
-                font-size: 40px;
-                &::before, &::after{
-                    border:none;
+                &--main{
+                    font-size: 40px;
+                }
+                &--decorationTop, &--decorationBot{
+                    position: absolute;
+                    border-bottom:none;
                     background-image: url('../../src/img/intro-decoration.svg');
                     background-repeat: no-repeat;
-                    width: 200px;
+                    width: 0px;
                     height: 20px;
                 }
-                &:before{
+                &--decorationTop{
                     left:-22%;
                 }
-                &:after{
+                &--decorationBot{
                     right:-22%;
                     transform: rotate(180deg);
                 }

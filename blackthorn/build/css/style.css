@@ -600,12 +600,9 @@ template {
     align-items: center;
     justify-content: center; }
     .header__intro-text {
-      font-size: 110px;
-      position: relative;
-      animation: content 2s linear;
-      animation-fill-mode: both;
-      animation-delay: 4.3s;
-      opacity: 0; }
+      position: relative; }
+      .header__intro-text--main {
+        font-size: 110px; }
       .header__intro-text--decorationTop {
         position: absolute;
         width: 0px;
@@ -715,19 +712,20 @@ template {
     width: 100%; }
   .header__intro {
     height: 72%; }
-    .header__intro-text {
+    .header__intro-text--main {
       font-size: 40px; }
-      .header__intro-text::before, .header__intro-text::after {
-        border: none;
-        background-image: url("../../src/img/intro-decoration.svg");
-        background-repeat: no-repeat;
-        width: 200px;
-        height: 20px; }
-      .header__intro-text:before {
-        left: -22%; }
-      .header__intro-text:after {
-        right: -22%;
-        transform: rotate(180deg); }
+    .header__intro-text--decorationTop, .header__intro-text--decorationBot {
+      position: absolute;
+      border-bottom: none;
+      background-image: url("../../src/img/intro-decoration.svg");
+      background-repeat: no-repeat;
+      width: 0px;
+      height: 20px; }
+    .header__intro-text--decorationTop {
+      left: -22%; }
+    .header__intro-text--decorationBot {
+      right: -22%;
+      transform: rotate(180deg); }
   .header__scroll {
     display: none; }
   .header__social {
