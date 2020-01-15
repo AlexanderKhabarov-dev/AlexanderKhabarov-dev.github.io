@@ -99,49 +99,38 @@
             opacity: $color-hover;
         }
     }
-    .menu{
+    .menu{  
         position: fixed;
+        z-index: -1; //// !!!!!!!!!!!!!!!!
         top:0;
         bottom:0;
-        right:0;
         left:0;
-        z-index: 999;
+        right:0;
         backdrop-filter: blur(7px);
-        display: none;
-        animation: background-blur .2s 1 linear;
+        opacity: 0;
         &-hidden{
             color: $color-text;
             position: fixed;
             top:0;
-            right:0;
+            right:-40%;
             bottom: 0;
             width:40%;
             background: #0B0B0B;
             z-index: 999999;
             animation: hidden-menu .5s 1 linear;
             &__close{
-                position: relative;
+                position: absolute;
+                right: 7%;
+                top:6%;
+                width: 50px;
+                height: 50px;
+                background-image: url('../../src/img/close-menu.svg');
+                background-repeat: no-repeat;
                 cursor: pointer;
                 transition: $transition;
                 &:hover{
                     opacity: $color-hover;
                 }
-                &::before, &::after{
-                    position: absolute;
-                    content: '';
-                    width:60px;
-                    height: 2px;
-                    border-bottom: 2px solid $color-text;
-                    right:100px;
-                    top:100px;
-                }
-                &::before{
-                    transform: rotate(45deg);
-                }
-                &::after{
-                    transform: rotate(-45deg);
-                }
-                
             }
             &__container{
                 height: 100vh;
@@ -381,9 +370,6 @@
             }
         }
         .menu-hidden{
-            &__close{
-                display: none;
-            }
             &__cart{
                 padding-bottom: 20px;
                 &-icon{

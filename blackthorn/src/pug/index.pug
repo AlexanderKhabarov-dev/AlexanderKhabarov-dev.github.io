@@ -24,7 +24,7 @@ html(lang="en")
             li.header__nav-item
               a.header__nav-link(href="") Контакты
 
-          .menu-button(id="toggle")
+          .menu-button
               include ../img/menu.svg
 
         .header__intro
@@ -45,9 +45,9 @@ html(lang="en")
             li.header__social-item
               a.header__social-link(href="") Vkontakte
 
-      .menu(id="hidden-menu")
+      .menu
         .menu-hidden
-          .menu-hidden__close(id="close")
+          .menu-hidden__close
           .menu-hidden__container
             .menu-hidden__wrapper
               .menu-hidden__cart
@@ -195,9 +195,11 @@ html(lang="en")
         .preloader__progressbar--elem2(id="elem2")
         .preloader__progressbar--elem3(id="elem3")
 
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js")  
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TimelineLite.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/CSSRulePlugin.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js") 
     script(src="src/js/preloader.js")
+    script(src="src/js/hidden-menu.js")
     script(src="build/js/script.js")
     script(src="src/js/swiper-main__init.js")
 
