@@ -1770,7 +1770,7 @@ template {
     }
 }
 
-@keyframes social{
+@keyframes  {
     from{
         visibility: hidden;
         opacity: 0;

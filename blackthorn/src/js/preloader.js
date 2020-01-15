@@ -17,26 +17,28 @@ window.onload = function() {
         let decorBot =      document.querySelector('.header__intro-text--decorationBot');
         let scroll =        document.querySelector('.header__scroll');
         
-        TweenLite.from(header,      1.6,{scale: 1.4, x: 150, y: 100 });
-        TweenLite.to(logo,          1,  {delay: 1, opacity:1});
-        TweenLite.to(navigation,    1,  {delay: 1, y: 0, opacity:1});
-        TweenLite.to(social,        1,  {delay: 1.1, x: 0, opacity:1});
-        TweenLite.to(menuBtn,       1,  {delay: 1.1, x: 0, opacity:1});
-        TweenMax.to(introText,      2,  {delay: 1.4,  opacity:1,  onComplete: console.log('123') });
+        TweenLite.from(header,      1.6,{scale: 1.4, x: 150, y: 100 ,delay:2});
+        TweenLite.to(logo,          1,  {delay: 3, opacity:1});
+        TweenLite.to(navigation,    1,  {delay: 3, y: 0, opacity:1});
+        TweenLite.to(social,        1,  {delay: 3.1, x: 0, opacity:1});
+        TweenLite.to(menuBtn,       1,  {delay: 3.1, x: 0, opacity:1});
+        TweenMax.fromTo(introText,  2,  {delay: 3.4,  opacity:0, textShadow: "0px 0px 70px #ffffff"}, {delay: 3.4, opacity: 1, textShadow: "0px 0px 0px #ffffff"});
         
-        TweenLite.to(decorTop,      1.5,{delay: 1.6, width: "279px" });
-        TweenLite.to(decorBot,      1.5,{delay: 1.6, width: "249px" });
-        TweenLite.to(scroll,        2   ,{delay: 1.3, opacity: 1 });
+        TweenLite.to(decorTop,      1,{delay: 3.6, width: "279px" });
+        TweenLite.to(decorBot,      1,{delay: 3.6, width: "249px" });
+        TweenLite.to(scroll,        2   ,{delay: 3.3, opacity: 1 });
         
     }
 
     TweenMax.to(preloader, 1, {
         display: 'none', 
         opacity: 0,
+        delay: 2,
         onComplete: animation(),
+        
     })
 
-    TweenMax.from([elem1, elem2, elem3], 1 , {opacity: 1});
+    TweenMax.to([elem1, elem2, elem3], 1 , {opacity: 1});
     TweenMax.staggerFrom([elem1, elem2, elem3], 1.5, {rotation: 360,repeat: -1,},0.25);
 }
 
