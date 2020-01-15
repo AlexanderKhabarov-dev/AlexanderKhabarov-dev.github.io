@@ -21,21 +21,20 @@ if(document.body.clientWidth<540){
         },
     });
 }   else{
-        let slide = document.querySelectorAll('.swiper-slide');
-        let container = document.querySelectorAll('.swiper-container');
-        let wrapper = document.querySelectorAll('.swiper-wrapper');
-        
-        slide.forEach(function(item) {
-        item.classList.remove("swiper-slide");
-        })
-    
-        container.forEach(function(item) {
-        item.classList.remove("swiper-container");
-        })
-    
-        wrapper.forEach(function(item) {
-        item.classList.remove("swiper-wrapper");
-        })    
-    }
-
+      let slide = document.querySelectorAll('.swiper-slide');
+      let container = document.querySelectorAll('.swiper-container');
+      let wrapper = document.querySelectorAll('.swiper-wrapper');
+      
+      slide.forEach(function(item) {
+      item.classList.remove("swiper-slide");
+      })
+  
+      container.forEach(function(item) {
+      item.classList.remove("swiper-container");
+      })
+  
+      wrapper.forEach(function(item) {
+      item.classList.remove("swiper-wrapper");
+      })    
+  };
   

@@ -15,7 +15,6 @@ const cssFiles = [
 
 const jsFiles = [
    './src/js/scroll-animation.js',
-   './src/js/hidden-menu.js',
    './src/js/swiper.min.js',
 ]
 

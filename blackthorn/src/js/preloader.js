@@ -17,7 +17,7 @@ window.onload = function() {
         let decorBot =      document.querySelector('.header__intro-text--decorationBot');
         let scroll =        document.querySelector('.header__scroll');
         
-        if (document.body.clientWidth<540){
+        if (window.innerWidth<540){
             TweenLite.from(header,      1.6,{scale: 1.4, x: 50, y: 100 ,delay:2});
             TweenLite.to(logo,          1,  {delay: 3, opacity:1});
             TweenLite.to(navigation,    1,  {delay: 3, y: 0, opacity:1});
@@ -29,7 +29,7 @@ window.onload = function() {
             TweenLite.to(scroll,        2   ,{delay: 3.3, opacity: 1 });
         }
 
-        else if(document.body.clientWidth>540){
+        else if(window.innerWidth>540){
             TweenLite.from(header,      1.6,{scale: 1.4, x: 150, y: 100 ,delay:2});
             TweenLite.to(logo,          1,  {delay: 3, opacity:1});
             TweenLite.to(navigation,    1,  {delay: 3, y: 0, opacity:1});

@@ -112,7 +112,7 @@
             color: $color-text;
             position: fixed;
             top:0;
-            right:-700px;
+            right:-40%;
             bottom: 0;
             width:40%;
             background: #0B0B0B;
@@ -145,12 +145,16 @@
                 justify-content: space-between;
                 align-items: center;
                 padding-bottom: 100px;
+                &-icon{
+                    opacity: 0;
+                }
             }
             &__language{
                 font-family: $font-Opinion-Pro-Light;
                 width:70px;
                 display: flex;
                 justify-content: space-between;
+                opacity: 0;
                 &-link{
                     color:$color-text;
                     transition: $transition ;
@@ -188,6 +192,10 @@
             &__nav-item{
                 margin-bottom: 50px;
                 position: relative;
+                &--1, &--2, &--3{
+                    opacity: 0;
+                    transform: translateY(60px);
+                }
                 &::before{
                     position: absolute;
                     content:'';
@@ -225,6 +233,7 @@
                 &:hover{
                     opacity: $color-hover;
                 }
+                
             }
             &__feedback{
                 font-family: $font-Opinion-Pro-Light;
@@ -237,6 +246,8 @@
                 margin-bottom: 40px;
                 position: relative;
                 transition: $transition;
+                opacity: 0;
+                transform: translateY(60px);
                 &:hover{
                     opacity: $color-hover;
                 }
@@ -270,6 +281,12 @@
                 display: flex;
                 justify-content: space-between;
                 max-width:250px;
+                &-button{
+                    &--1, &--2, &--3{
+                        opacity: 0;
+                        transform: translateY(60px);
+                    }
+                }
                 &-link{
                     color:$color-text;
                     transition: $transition;
@@ -493,9 +510,11 @@
                 font-size: 14px;
             }
         }
-        .menu-hidden{
+    }
+    .menu{
+        &-hidden{
             width:100%;
-            overflow: hidden;
+            right: -100%;
             &__wrapper{
                 padding-left: 20px;
             }
@@ -509,19 +528,23 @@
                 padding-bottom: 70px;
             }
             &__close{
-                &::before , &::after {
-                    border: none;
-                    transform: rotate(0);
-                }
-                &::before{
-                    background-image: url('../../src/img/menu-arrow.svg');
-                    width: 43px;
-                    height: 43px;
-                    left:20px;
-                    top:20px;
-                }
+                transform: scale(.5);
+                top:1%;
+                right:1%;
             }
         }
+    }
+    .header .menu-hidden{
+        width:100%;
+        right: -100%;
+
+    }
+    .header .menu-hidden__close{
+        top:1%;
+        right:1%;
+    }
+    .header .menu-hidden__wrapper{
+        padding-left: 50px;
     }
 }
 // === /header ===
