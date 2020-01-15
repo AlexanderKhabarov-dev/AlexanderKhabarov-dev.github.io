@@ -112,12 +112,11 @@
             color: $color-text;
             position: fixed;
             top:0;
-            right:-40%;
+            right:-700px;
             bottom: 0;
             width:40%;
             background: #0B0B0B;
             z-index: 999999;
-            animation: hidden-menu .5s 1 linear;
             &__close{
                 position: absolute;
                 right: 7%;

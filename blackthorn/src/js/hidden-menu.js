@@ -8,7 +8,7 @@ tlMenu.to('.menu', .5 ,{
     opacity: 1, 
 })
 .to('.menu-hidden', 1 ,{
-    x: "-100%",
+    right: "0",
 })
 
 
