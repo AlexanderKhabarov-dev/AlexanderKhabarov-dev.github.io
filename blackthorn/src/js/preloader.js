@@ -24,8 +24,8 @@ window.onload = function() {
         TweenLite.to(menuBtn,       1,  {delay: 3.1, x: 0, opacity:1});
         TweenMax.fromTo(introText,  2,  {delay: 3.4,  opacity:0, textShadow: "0px 0px 70px #ffffff"}, {delay: 3.4, opacity: 1, textShadow: "0px 0px 0px #ffffff"});
         
-        TweenLite.to(decorTop,      1,{delay: 3.6, width: "279px" });
-        TweenLite.to(decorBot,      1,{delay: 3.6, width: "249px" });
+        TweenLite.to(decorTop,      1.2,{delay: 3.8, width: "279px" });
+        TweenLite.to(decorBot,      1.2,{delay: 3.8, width: "249px" });
         TweenLite.to(scroll,        2   ,{delay: 3.3, opacity: 1 });
         
     }
