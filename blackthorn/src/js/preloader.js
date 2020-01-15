@@ -17,17 +17,29 @@ window.onload = function() {
         let decorBot =      document.querySelector('.header__intro-text--decorationBot');
         let scroll =        document.querySelector('.header__scroll');
         
-        TweenLite.from(header,      1.6,{scale: 1.4, x: 150, y: 100 ,delay:2});
-        TweenLite.to(logo,          1,  {delay: 3, opacity:1});
-        TweenLite.to(navigation,    1,  {delay: 3, y: 0, opacity:1});
-        TweenLite.to(social,        1,  {delay: 3.1, x: 0, opacity:1});
-        TweenLite.to(menuBtn,       1,  {delay: 3.1, x: 0, opacity:1});
-        TweenMax.fromTo(introText,  2,  {delay: 3.4,  opacity:0, textShadow: "0px 0px 70px #ffffff"}, {delay: 3.4, opacity: 1, textShadow: "0px 0px 0px #ffffff"});
-        
-        TweenLite.to(decorTop,      1.2,{delay: 3.8, width: "279px" });
-        TweenLite.to(decorBot,      1.2,{delay: 3.8, width: "249px" });
-        TweenLite.to(scroll,        2   ,{delay: 3.3, opacity: 1 });
-        
+        if (document.body.clientWidth<540){
+            TweenLite.from(header,      1.6,{scale: 1.4, x: 50, y: 100 ,delay:2});
+            TweenLite.to(logo,          1,  {delay: 3, opacity:1});
+            TweenLite.to(navigation,    1,  {delay: 3, y: 0, opacity:1});
+            TweenLite.to(social,        1,  {delay: 3.1, x: 0, opacity:1});
+            TweenLite.to(menuBtn,       1,  {delay: 3.1, x: 0, opacity:1});
+            TweenMax.fromTo(introText,  2,  {delay: 3.4,  opacity:0, textShadow: "0px 0px 70px #ffffff"}, {delay: 3.4, opacity: 1, textShadow: "0px 0px 0px #ffffff"});
+            TweenLite.to(decorTop,      1.2,{delay: 3.8, width: "279px" });
+            TweenLite.to(decorBot,      1.2,{delay: 3.8, width: "249px" });
+            TweenLite.to(scroll,        2   ,{delay: 3.3, opacity: 1 });
+        }
+
+        else if(document.body.clientWidth>540){
+            TweenLite.from(header,      1.6,{scale: 1.4, x: 150, y: 100 ,delay:2});
+            TweenLite.to(logo,          1,  {delay: 3, opacity:1});
+            TweenLite.to(navigation,    1,  {delay: 3, y: 0, opacity:1});
+            TweenLite.to(social,        1,  {delay: 3.1, x: 0, opacity:1});
+            TweenLite.to(menuBtn,       1,  {delay: 3.1, x: 0, opacity:1});
+            TweenMax.fromTo(introText,  2,  {delay: 3.4,  opacity:0, textShadow: "0px 0px 70px #ffffff"}, {delay: 3.4, opacity: 1, textShadow: "0px 0px 0px #ffffff"});
+            TweenLite.to(decorTop,      1.2,{delay: 3.8, width: "279px" });
+            TweenLite.to(decorBot,      1.2,{delay: 3.8, width: "249px" });
+            TweenLite.to(scroll,        2   ,{delay: 3.3, opacity: 1 });
+        }
     }
 
     TweenMax.to(preloader, 1, {

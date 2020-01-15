@@ -702,6 +702,8 @@ template {
       right: 20px; } }
 
 @media (max-width: 540px) {
+  .header__container {
+    background-size: cover; }
   .header__logo {
     transform: scale(0.7); }
   .header__nav-list {

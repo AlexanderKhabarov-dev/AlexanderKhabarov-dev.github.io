@@ -56,22 +56,7 @@ for (let anchor of anchors){
         })
     })
 }
-let menu = document.getElementById('hidden-menu');
-let close = document.getElementById('close');
-let toggle = document.getElementById('toggle');
 
-toggle.onclick = function () {
-    menu.style.display = "block";
-}
-close.onclick = function () {
-    menu.style.display = "none";
-}
-
-window.onclick = function(e){
-    if(e.target == menu) {
-        menu.style.display = "none";
-    }
-}
 /**
  * Swiper 5.2.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions

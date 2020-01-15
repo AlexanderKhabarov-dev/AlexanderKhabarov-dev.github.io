@@ -459,6 +459,10 @@
 
 @media (max-width:$sm){
     .header{
+        &__container{
+            background-size: cover;
+            
+        }
         &__logo{
             transform: scale(.7);
         }
