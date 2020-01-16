@@ -8,7 +8,7 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Document
     script(src="pwabuilder-sw-register.js")
-    link(rel='manifest' href='/manifest.webmanifest')
+    link(rel='manifest' href='manifest.json')
     link(rel="stylesheet", href="build/css/style.css")
     
   body
@@ -204,7 +204,10 @@ html(lang="en")
         .preloader__progressbar--elem1(id="elem1")
         .preloader__progressbar--elem2(id="elem2")
         .preloader__progressbar--elem3(id="elem3")
+    
+    button(onclick="install()") Intsall
 
+    script(src="src/js/pwa-install.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TimelineLite.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/CSSRulePlugin.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js") 
