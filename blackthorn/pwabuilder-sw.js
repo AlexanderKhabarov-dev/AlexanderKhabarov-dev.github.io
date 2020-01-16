@@ -4,7 +4,10 @@ const timeout = 400;
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE).then((cache) => cache.addAll([
-                '/img/background'
+                'index.html',
+                'build/css/style.css',
+                'src/js/hidden-menu.js',
+                'src/js/preloader.js',
             ])
         ));
 });
