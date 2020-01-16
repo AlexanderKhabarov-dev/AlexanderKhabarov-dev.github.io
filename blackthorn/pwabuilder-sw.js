@@ -14,17 +14,11 @@ self.addEventListener('install', (event) => {
                 'src/img/header-background.png',
             ])
         ));
-});
-self.addEventListener('install', (event) => {
     console.log('Установлен');
 });
 
 self.addEventListener('activate', (event) => {
     console.log('Активирован');
-});
-
-self.addEventListener('fetch', (event) => {
-    console.log('Происходит запрос на сервер');
 });
 
 // при событии fetch, мы и делаем запрос, но используем кэш, только после истечения timeout.
@@ -34,6 +28,7 @@ self.addEventListener('fetch', (event) => {
           console.log(`Error: ${err.message()}`);
           return fromCache(event.request);
       }));
+    console.log('Происходит запрос на сервер');
 });
 
 // Временно-ограниченный запрос.
