@@ -1,6 +1,7 @@
 {
 	"name" : "BlackThorn",
 	"short_name" : "BT",
+	"description":"test",
 	"start_url" : "AlexanderKhabarov-dev.github.io/blackthorn/",
 	"display" : "standalone",
 	"orientation" : "portrait-primary",
