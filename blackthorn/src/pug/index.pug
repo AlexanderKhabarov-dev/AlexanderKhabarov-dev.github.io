@@ -8,6 +8,7 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Document
     link(rel="stylesheet", href="build/css/style.css")
+    script(src="pwabuilder-sw-register.js")
   body
     section.header
       .header__container
@@ -22,7 +23,7 @@ html(lang="en")
             li.header__nav-item
               a.header__nav-link(href="rent.html") Аренда
             li.header__nav-item
-              a.header__nav-link(href="") Контакты
+              a.header__nav-link(href="#contactsclothes.html") Контакты
 
           .menu-button
               include ../img/menu.svg
@@ -60,15 +61,15 @@ html(lang="en")
                 li.menu-hidden__nav-item(class="menu-hidden__nav-item--1")
                   a.menu-hidden__nav-link(href="") Фотосъемка
                 li.menu-hidden__nav-item(class="menu-hidden__nav-item--2")
-                  a.menu-hidden__nav-link(href="") Контакты
+                  a.menu-hidden__nav-link(href="#сontacts") Контакты
                 li.menu-hidden__nav-item(class="menu-hidden__nav-item--3")
                   a.menu-hidden__nav-link(href="") FAQ
                 li.menu-hidden__nav-item(class="menu-hidden__nav-item--4")
-                  a.menu-hidden__nav-link(href="") Одежда
+                  a.menu-hidden__nav-link(href="clothes.html") Одежда
                 li.menu-hidden__nav-item(class="menu-hidden__nav-item--5")
-                  a.menu-hidden__nav-link(href="") Винтаж
+                  a.menu-hidden__nav-link(href="vintage.html") Винтаж
                 li.menu-hidden__nav-item(class="menu-hidden__nav-item--6")
-                  a.menu-hidden__nav-link(href="") Аренда
+                  a.menu-hidden__nav-link(href="rent.html") Аренда
                 
               .menu-hidden__feedback
                 a.menu-hidden__feedback-link(href="") Связаться с нами
@@ -160,7 +161,7 @@ html(lang="en")
                       a.catalog__content-link(href="rent.html") Подробнее
             .swiper-pagination
 
-    section.contacts
+    section.contacts(id="contacts")
       .container
         .contacts__container
           .contacts__title Контакты

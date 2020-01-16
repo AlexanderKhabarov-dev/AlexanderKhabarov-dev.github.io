@@ -696,7 +696,7 @@ template {
     width: 370px; }
     .header__nav-list li:nth-child(n+2):before {
       display: none; }
-  .header__intro-text {
+  .header__intro-text--main {
     font-size: 60px; } }
 
 @media (max-width: 960px) {
@@ -712,7 +712,7 @@ template {
       left: -60px; }
   .header__intro {
     height: 70%; }
-    .header__intro-text {
+    .header__intro-text--main {
       font-size: 70px; }
   .header__social {
     left: -15%; }

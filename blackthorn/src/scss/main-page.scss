@@ -441,7 +441,9 @@
         }
         &__intro{
             &-text{
-                font-size: 60px;
+                &--main{
+                    font-size: 60px;
+                }
             }
         }
     }
@@ -470,7 +472,9 @@
         &__intro{
             height: 70%;
             &-text{
+                &--main{
                 font-size: 70px;
+                }
             }
         }
         &__social{

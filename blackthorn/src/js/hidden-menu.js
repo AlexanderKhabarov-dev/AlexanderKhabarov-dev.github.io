@@ -9,6 +9,7 @@ tlMenu.to('.menu', .2 ,{
     opacity: 1, 
 
 })
+
 .fromTo('.menu-hidden', .3 ,{bottom: "80%", },{bottom:"0",right:0}
 )
 
@@ -31,17 +32,9 @@ tlMenu.to('.menu', .2 ,{
     ease: Back.easeOut.config(1),
     opacity:1,
     y:0,
-
 },
     0.1,
     "start")
-
-
-
-
-
-
-
 
 toggleMenu.addEventListener('click', () => {
     tlMenu.play();
