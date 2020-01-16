@@ -5,11 +5,26 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE).then((cache) => cache.addAll([
                 'index.html',
+                'rent.html',
+                'clothes.html',
+                'vintage.html',
                 'build/css/style.css',
                 'src/js/hidden-menu.js',
                 'src/js/preloader.js',
+                'src/img/header-background.png',
             ])
         ));
+});
+self.addEventListener('install', (event) => {
+    console.log('Установлен');
+});
+
+self.addEventListener('activate', (event) => {
+    console.log('Активирован');
+});
+
+self.addEventListener('fetch', (event) => {
+    console.log('Происходит запрос на сервер');
 });
 
 // при событии fetch, мы и делаем запрос, но используем кэш, только после истечения timeout.
@@ -40,3 +55,4 @@ function fromCache(request) {
             matching || Promise.reject('no-match')
         ));
 }
+
