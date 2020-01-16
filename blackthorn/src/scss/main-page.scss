@@ -127,6 +127,7 @@
                 background-repeat: no-repeat;
                 cursor: pointer;
                 transition: $transition;
+                z-index: 10;
                 &:hover{
                     opacity: $color-hover;
                 }
@@ -154,8 +155,11 @@
                 width:70px;
                 display: flex;
                 justify-content: space-between;
-                opacity: 0;
+                
                 &-link{
+                    &--1, &--2{
+                        opacity: 0;
+                    }
                     color:$color-text;
                     transition: $transition ;
                     &:hover{
@@ -164,7 +168,7 @@
                 }
             }
             &__nav-list{
-                padding-bottom: 150px;
+                padding-bottom: 100px;
                 padding-left: 25px;
                 & li:nth-child(1):before{
                     position: absolute;
@@ -200,6 +204,22 @@
                     content:'';
                     width:70px;
                 }
+                & li:nth-child(4):after{
+                    position: absolute;
+                    content:'';
+                    width:135px;
+                }
+                & li:nth-child(5):after{
+                    position: absolute;
+                    content:'';
+                    width:135px;
+                }
+                & li:nth-child(6):after{
+                    position: absolute;
+                    content:'';
+                    width:135px;
+                }
+                
                 
             }
             &__nav-item{
@@ -260,7 +280,6 @@
                 position: relative;
                 transition: $transition;
                 opacity: 0;
-                transform: translateY(60px);
                 &:hover{
                     opacity: $color-hover;
                 }

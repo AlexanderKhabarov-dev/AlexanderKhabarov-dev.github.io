@@ -458,7 +458,8 @@ template {
         background-image: url("../../src/img/close-menu.svg");
         background-repeat: no-repeat;
         cursor: pointer;
-        transition: 0.3s ease; }
+        transition: 0.3s ease;
+        z-index: 10; }
         .header .menu-hidden__close:hover {
           opacity: 0.6; }
       .header .menu-hidden__container {
@@ -479,15 +480,16 @@ template {
         font-family: "Opinion-Pro-Light";
         width: 70px;
         display: flex;
-        justify-content: space-between;
-        opacity: 0; }
+        justify-content: space-between; }
         .header .menu-hidden__language-link {
           color: #fff;
           transition: 0.3s ease; }
+          .header .menu-hidden__language-link--1, .header .menu-hidden__language-link--2 {
+            opacity: 0; }
           .header .menu-hidden__language-link:hover {
             opacity: 0.6; }
       .header .menu-hidden__nav-list {
-        padding-bottom: 150px;
+        padding-bottom: 100px;
         padding-left: 25px; }
         .header .menu-hidden__nav-list li:nth-child(1):before {
           position: absolute;
@@ -515,6 +517,18 @@ template {
           position: absolute;
           content: '';
           width: 70px; }
+        .header .menu-hidden__nav-list li:nth-child(4):after {
+          position: absolute;
+          content: '';
+          width: 135px; }
+        .header .menu-hidden__nav-list li:nth-child(5):after {
+          position: absolute;
+          content: '';
+          width: 135px; }
+        .header .menu-hidden__nav-list li:nth-child(6):after {
+          position: absolute;
+          content: '';
+          width: 135px; }
       .header .menu-hidden__nav-item {
         margin-bottom: 50px;
         position: relative; }
@@ -564,8 +578,7 @@ template {
         margin-bottom: 40px;
         position: relative;
         transition: 0.3s ease;
-        opacity: 0;
-        transform: translateY(60px); }
+        opacity: 0; }
         .header .menu-hidden__feedback:hover {
           opacity: 0.6; }
         .header .menu-hidden__feedback::before {
