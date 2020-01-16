@@ -21,45 +21,43 @@ tlMenu.to('.menu', .5 ,{
 })
 .to('.menu-hidden__nav-item--1', duration ,{
     opacity: 1,
-    duration: 5,
     y: 0,
-    ease:Back.easeOut.config(1.7)
 })
 .to('.menu-hidden__nav-item--2', duration ,{
     opacity: 1,
-    duration: 5,
     y: 0,
-    ease:Back.easeOut.config(1.7)
 })
 .to('.menu-hidden__nav-item--3', duration ,{
     opacity: 1,
-    duration: 5,
     y: 0,
-    ease:Back.easeOut.config(1.7)
+})
+.to('.menu-hidden__nav-item--4', duration ,{
+    opacity: 1,
+    y: 0,
+})
+.to('.menu-hidden__nav-item--5', duration ,{
+    opacity: 1,
+    y: 0,
+})
+.to('.menu-hidden__nav-item--6', duration ,{
+    opacity: 1,
+    y: 0,
 })
 .to('.menu-hidden__feedback', duration ,{
-    opacity: 1,  
-    duration:5,
+    opacity: 1,
     y:0,
-    ease:Back.easeOut.config(1.7)
 })
 .to('.menu-hidden__social-button--1', duration ,{
     opacity: 1,
-    duration:5,
-    y:0,  
-    ease: Back.easeOut.config(1.7)
+    y:0,
 })
 .to('.menu-hidden__social-button--2', duration ,{
     opacity: 1,
-    duration:5,
     y:0,
-    ease: Back.easeOut.config(1.7)  
 })
 .to('.menu-hidden__social-button--3', duration ,{
     opacity: 1,
-    duration:5,
     y:0,
-   ease: Back.easeOut.config(1.7)
 })
 
 

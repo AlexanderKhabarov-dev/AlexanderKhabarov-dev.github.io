@@ -498,6 +498,15 @@ template {
         .header .menu-hidden__nav-list li:nth-child(3):before {
           position: absolute;
           content: '03'; }
+        .header .menu-hidden__nav-list li:nth-child(4):before {
+          position: absolute;
+          content: '04'; }
+        .header .menu-hidden__nav-list li:nth-child(5):before {
+          position: absolute;
+          content: '05'; }
+        .header .menu-hidden__nav-list li:nth-child(6):before {
+          position: absolute;
+          content: '06'; }
         .header .menu-hidden__nav-list li:nth-child(2):after {
           position: absolute;
           content: '';
@@ -509,7 +518,7 @@ template {
       .header .menu-hidden__nav-item {
         margin-bottom: 50px;
         position: relative; }
-        .header .menu-hidden__nav-item--1, .header .menu-hidden__nav-item--2, .header .menu-hidden__nav-item--3 {
+        .header .menu-hidden__nav-item--1, .header .menu-hidden__nav-item--2, .header .menu-hidden__nav-item--3, .header .menu-hidden__nav-item--4, .header .menu-hidden__nav-item--5, .header .menu-hidden__nav-item--6 {
           opacity: 0;
           transform: translateY(60px); }
         .header .menu-hidden__nav-item::before {
@@ -742,11 +751,9 @@ template {
     .menu-hidden__wrapper {
       padding-left: 20px; }
     .menu-hidden__cart {
-      padding-bottom: 70px; }
+      padding-bottom: 30px; }
       .menu-hidden__cart-icon {
         padding-right: 50px; }
-    .menu-hidden__nav-list {
-      padding-bottom: 70px; }
     .menu-hidden__close {
       transform: scale(0.5);
       top: 1%;
@@ -758,7 +765,17 @@ template {
     top: 1%;
     right: 1%; }
   .header .menu-hidden__wrapper {
-    padding-left: 50px; } }
+    padding-left: 50px; }
+  .header .menu-hidden__nav-list {
+    padding-bottom: 0; }
+  .header .menu-hidden__nav-link {
+    font-size: 24px; }
+  .header .menu-hidden__cart {
+    padding-bottom: 30px; }
+  .header .menu-hidden__nav-item::after {
+    display: none; }
+  .header .menu-hidden__nav-item::before {
+    top: 1px; } }
 
 .about {
   background-image: url("../../src/img/about-background.png");
