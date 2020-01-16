@@ -7,7 +7,6 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Document
-    script(src="pwabuilder-sw-register.js")
     link(rel='manifest' href='manifest.json')
     link(rel="stylesheet", href="build/css/style.css")
     
@@ -207,7 +206,8 @@ html(lang="en")
     
     button(onclick="install()") Intsall
 
-    script(src="src/js/pwa-install.js")
+    
+    script(src="pwabuilder-sw-register.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TimelineLite.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/CSSRulePlugin.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js") 
