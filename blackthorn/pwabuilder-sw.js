@@ -1,62 +1,39 @@
-var cache_name = 'gih-cache';
-var cached_urls = [
-  '/index.html',
-  '/clothes.html',
-  '/rent.html',
-  '/vintage.html',
-  '/build/css/style.css',
-  '/src/js/hidden-menu.js',
-  '/src/js/preloader.js',
-  '/src/js/scroll-animation.js',
-  '/src/js/swiper.min.js',
-  '/src/js/swiper-main__init.js',
-  '/src/js/swiper-category__init.js', 
-];
-
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open(cache_name)
-    .then(function(cache) {
-      return cache.addAll(cached_urls);
-    })
-  );
+const CACHE = 'network-or-cache-v1';
+const timeout = 400;
+// При установке воркера мы должны закешировать часть данных (статику).
+self.addEventListener('install', (event) => {
+    event.waitUntil(
+        caches.open(CACHE).then((cache) => cache.addAll([
+                '/img/background'
+            ])
+        ));
 });
 
-self.addEventListener('activate', function(event) {
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if (cacheName.startsWith('pages-cache-') && staticCacheName !== cacheName) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
+// при событии fetch, мы и делаем запрос, но используем кэш, только после истечения timeout.
+self.addEventListener('fetch', (event) => {
+    event.respondWith(fromNetwork(event.request, timeout)
+      .catch((err) => {
+          console.log(`Error: ${err.message()}`);
+          return fromCache(event.request);
+      }));
 });
 
-self.addEventListener('fetch', function(event) {
-    console.log('Fetch event for ', event.request.url);
-    event.respondWith(
-      caches.match(event.request).then(function(response) {
-        if (response) {
-          console.log('Found ', event.request.url, ' in cache');
-          return response;
-        }
-        console.log('Network request for ', event.request.url);
-        return fetch(event.request).then(function(response) {
-          if (response.status === 404) {
-            return caches.match('fourohfour.html');
-          }
-          return caches.open(cached_urls).then(function(cache) {
-           cache.put(event.request.url, response.clone());
-            return response;
-          });
-        });
-      }).catch(function(error) {
-        console.log('Error, ', error);
-        return caches.match('offline.html');
-      })
-    );
-  });
+// Временно-ограниченный запрос.
+function fromNetwork(request, timeout) {
+    return new Promise((fulfill, reject) => {
+        var timeoutId = setTimeout(reject, timeout);
+        fetch(request).then((response) => {
+            clearTimeout(timeoutId);
+            fulfill(response);
+        }, reject);
+    });
+}
+
+function fromCache(request) {
+// Открываем наше хранилище кэша (CacheStorage API), выполняем поиск запрошенного ресурса.
+// Обратите внимание, что в случае отсутствия соответствия значения Promise выполнится успешно, но со значением `undefined`
+    return caches.open(CACHE).then((cache) =>
+        cache.match(request).then((matching) =>
+            matching || Promise.reject('no-match')
+        ));
+}
