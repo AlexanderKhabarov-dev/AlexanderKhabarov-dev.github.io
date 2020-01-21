@@ -188,6 +188,16 @@ ul{
         }
     }
 
+    .header__menu:hover .header__menu-hamburger:nth-child(1){
+        transform: rotate(-45deg) translateY(2.4em);
+    }
+    .header__menu:hover .header__menu-hamburger:nth-child(2){
+        opacity: 0;
+    }
+    .header__menu:hover .header__menu-hamburger:nth-child(3){
+        transform: rotate(45deg) translateY(-2.3em);
+    }
+
     @media(max-width:768px){
         .header{
             &__container{
@@ -594,6 +604,30 @@ ul{
     }
 }
 
+// === menu-hidden ===
+    .menu-hidden{
+        position: fixed;
+        top: 0;
+        left:0;
+        right:0;
+        height: 15em;
+        background-color: $color-secondary;
+        z-index: 9999;
+        &__nav-list{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 15em;
+            box-shadow: #000  0px 1px 7px;
+        }
+        &__nav-item{}
+        &__nav-link{
+            font-size: 2.3em;
+            text-transform: uppercase;
+            color: $color-main;
+        }
+    }
+
 @media (max-width: 960px){
     html, body{
         font-size: 8px;
@@ -618,12 +652,3 @@ ul{
     }
 }
 
-.header__menu:hover .header__menu-hamburger:nth-child(1){
-    transform: rotate(-45deg) translateY(2.4em);
-}
-.header__menu:hover .header__menu-hamburger:nth-child(2){
-    opacity: 0;
-}
-.header__menu:hover .header__menu-hamburger:nth-child(3){
-    transform: rotate(45deg) translateY(-2.3em);
-}
