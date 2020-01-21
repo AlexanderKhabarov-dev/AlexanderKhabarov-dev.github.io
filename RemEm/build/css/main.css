@@ -27,10 +27,14 @@ ul {
   width: 14em;
   background-color: #34547A;
   color: #EEEFF1;
-  border: none;
+  border: 2px solid #34547A;
   text-transform: uppercase;
   outline: none;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.2s ease-in; }
+  .btn:hover {
+    background-color: #EEEFF1;
+    color: #34547A; }
 
 @media (max-width: 540px) {
   .btn {
@@ -79,7 +83,10 @@ ul {
       width: 60em; }
     .header__nav-link {
       font-size: 1.6em;
-      color: #000; }
+      color: #000;
+      transition: all 0.2s ease-in; }
+      .header__nav-link:hover {
+        color: #34547A; }
   .header__main {
     height: 60vh;
     display: flex;
