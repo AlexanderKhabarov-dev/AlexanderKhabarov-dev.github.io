@@ -178,10 +178,13 @@ ul{
     }
     &__menu{
         cursor: pointer;
+        position: fixed;
+        right: 2em;
+        z-index: 100;
         &-hamburger{
             width: 7rem;
             height: .7rem;
-            background-color: $color-secondary;  
+            background-color: #000;  
             position: relative;
             transition: $transition;
             margin: 1em 0;
@@ -224,6 +227,16 @@ ul{
             &__nav-list{
                 display: none;
             }
+        }
+    }
+    @media(min-width: 541px){
+        .menu-hidden{
+            display: none;
+        }
+    }
+    @media(min-width: 541px){
+        .header__menu{
+            display: none;
         }
     }
 }
@@ -616,11 +629,7 @@ ul{
         text-transform: uppercase;
         color: $color-main;
     }
-    @media(min-width: 541px){
-        .menu-hidden{
-            display: none;
-        }
-    }
+    
 }
 
 @media (max-width: 960px){

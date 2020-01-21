@@ -1,3 +1,3 @@
-mixin view__card(image)
-    .view__card
+mixin view__card(hidden,image)
+    .view__card(class= hidden)
         img.view__card-image(src= image)

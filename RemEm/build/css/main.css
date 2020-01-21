@@ -102,11 +102,14 @@ ul {
       opacity: .7;
       margin-bottom: 3.75em; }
   .header__menu {
-    cursor: pointer; }
+    cursor: pointer;
+    position: fixed;
+    right: 2em;
+    z-index: 100; }
     .header__menu-hamburger {
       width: 7rem;
       height: .7rem;
-      background-color: #34547A;
+      background-color: #000;
       position: relative;
       transition: all 0.2s ease-in;
       margin: 1em 0; }
@@ -130,6 +133,12 @@ ul {
       width: 90%; } }
   @media (max-width: 540px) {
     .header .header__nav-list {
+      display: none; } }
+  @media (min-width: 541px) {
+    .header .menu-hidden {
+      display: none; } }
+  @media (min-width: 541px) {
+    .header .header__menu {
       display: none; } }
 
 .about__container {

@@ -71,15 +71,15 @@ html(lang="en")
                         img(src="src/img/video-fake.jpg")
         .view
             .view__wrapper
-                +view__card("src/img/view__card-image--1.jpg")
-                +view__card("src/img/view__card-image--2.jpg")
-                +view__card("src/img/view__card-image--1.jpg")
-                +view__card("src/img/view__card-image--2.jpg")
+                +view__card("",                     "src/img/view__card-image--1.jpg")
+                +view__card("",                     "src/img/view__card-image--2.jpg")
+                +view__card("view__card--hidden",   "src/img/view__card-image--1.jpg")
+                +view__card("view__card--hidden",   "src/img/view__card-image--2.jpg")
             .view__wrapper
-                +view__card("src/img/view__card-image--2.jpg")
-                +view__card("src/img/view__card-image--1.jpg")
-                +view__card("src/img/view__card-image--2.jpg")
-                +view__card("src/img/view__card-image--1.jpg")
+                +view__card("",                     "src/img/view__card-image--2.jpg")
+                +view__card("",                     "src/img/view__card-image--1.jpg")
+                +view__card("view__card--hidden",   "src/img/view__card-image--2.jpg")
+                +view__card("view__card--hidden",   "src/img/view__card-image--1.jpg")
         .company
             .company__container
                 .company__wrapper
