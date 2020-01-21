@@ -1,0 +1,124 @@
+include blocks/mixins.pug
+include blocks/case-item.pug
+include blocks/skills-item.pug
+include blocks/view-card.pug
+include blocks/company-card.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        link(rel="stylesheet", href="build/css/main.css")
+    body
+        .header 
+            .header__container(class="container")
+                .header__nav
+                    .header__logo
+                        include ../../src/img/logo-icon.svg
+                    .header__nav-list
+                        +header__nav-item('Главная')
+                        +header__nav-item('Об авторе')
+                        +header__nav-item('Работы')
+                        +header__nav-item('Процесс')
+                        +header__nav-item('Контакты')
+                    .header__menu
+                        .header__menu-hamburger(class=".header__menu-hamburger--1")
+                        .header__menu-hamburger(class=".header__menu-hamburger--2")
+                        .header__menu-hamburger(class=".header__menu-hamburger--3")
+                .header__main
+                    .header__wrapper
+                        .header__image
+                            img(src="../../src/img/header-image.svg")
+                        .header__content
+                            .header__content-title Дизайн и верстка
+                            .header__content-subtitle Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                            .header__content-btn 
+                                button.btn Написать мне
+        .about
+            .about__container(class="container")
+                .about__wrapper
+                    .about__title(class="title") Обо мне
+                    .about__subtitle(class="subtitle") Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+        .case
+            .case__container(class="container")
+                .case__wrapper
+                    +case__item("../../src/img/case-icon.svg", "40+", "проектов")
+                    +case__item("../../src/img/case-icon.svg", "40+", "проектов")
+                    +case__item("../../src/img/case-icon.svg", "40+", "проектов")
+                .case__wrapper
+                    +case__item("../../src/img/case-icon.svg", "40+", "проектов")
+                    +case__item("../../src/img/case-icon.svg", "40+", "проектов")
+                    +case__item("../../src/img/case-icon.svg", "40+", "проектов")
+        .skills
+            .skills__container(class="container")
+                .skills__wrapper
+                    .skills__content
+                        .skills__content-title(class="title") Мои навыки
+                        +skills__content-item("Adobe Photoshop","skills__content-progressbar--1")
+                        +skills__content-item("Adobe Photoshop","skills__content-progressbar--2")
+                        +skills__content-item("Adobe Photoshop","skills__content-progressbar--3")
+                    .skills__photo
+                        img(src="../../src/img/skills-photo.jpg")
+        .work
+            .work__container(class="container")
+                .work__wrapper
+                    .work__title(class="title") Как я работаю
+                    .work__subtitle(class="subtitle") Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                    .work__video
+                        img(src="../../src/img/video-fake.jpg")
+        .view
+            .view__wrapper
+                +view__card("../../src/img/view__card-image--1.jpg")
+                +view__card("../../src/img/view__card-image--2.jpg")
+                +view__card("../../src/img/view__card-image--1.jpg")
+                +view__card("../../src/img/view__card-image--2.jpg")
+            .view__wrapper
+                +view__card("../../src/img/view__card-image--2.jpg")
+                +view__card("../../src/img/view__card-image--1.jpg")
+                +view__card("../../src/img/view__card-image--2.jpg")
+                +view__card("../../src/img/view__card-image--1.jpg")
+        .company
+            .company__container
+                .company__wrapper
+                    +company__card("../../src/img/company-image.png")
+                    +company__card("../../src/img/company-image.png")
+                    +company__card("../../src/img/company-image.png")
+                    +company__card("../../src/img/company-image.png")
+        .callback
+            .callback__container
+                .callback__wrapper
+                    .callback__title(class="title") Хотите веб-сайт?
+                    .callback__subtitle(class="subtitle") Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                    form.callback__form(action="#")
+                        .callback__form-wrapper
+                            .callback__form-input
+                                input.input(type="text" name="name" placeholder="Ваше Имя")
+                            .callback__form-input
+                                input.input(type="text" name="e-mail" placeholder="Ваш e-mail")
+                        .callback__form-textarea
+                            textarea.textarea(placeholder="Сообщение")
+                        .callback__form-button
+                            button.btn Отправить
+        .footer
+            .footer__container
+                .footer__wrapper
+                    .footer__logo
+                        include ../../src/img/logo-icon.svg
+                    .footer__copyright
+                        .footer__copyright-name Иванов Иван
+                        .footer__copyright-text (с) 2018. Все права защищены.
+                    ul.footer__social-list
+                        li.footer__social-item
+                            a.footer__social-link(href="")
+                                include ../../src/img/vk-icon.svg
+                        li.footer__social-item
+                            a.footer__social-link(href="")
+                                include ../../src/img/vk-icon.svg
+                        li.footer__social-item
+                            a.footer__social-link(href="")
+                                include ../../src/img/vk-icon.svg
+                
+                    

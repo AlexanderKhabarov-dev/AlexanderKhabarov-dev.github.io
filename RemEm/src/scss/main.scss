@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic-ext');
+
+// === variables ===
+$font-size: 16px;
+
+$color-main: #EEEFF1;
+$color-secondary: #34547A;
+$color-text: #000;
+
+$font-Roboto: 'Roboto', sans-serif;
+
+$transition: all .2s ease-in;
+
+
+// === mixins ===
+@mixin auto-center {
+    max-width: 114rem;
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+@mixin pseudo{
+    content: '';
+    position: absolute;
+}
+
+@mixin title{
+    font-size: 3.2em;
+    font-weight: 500;
+    margin-bottom: 1.3em;
+}
+
+
+@mixin subtitle {
+    font-size: 1.6em;
+    line-height: 1.8em;
+    opacity: .7;
+}
+
+@mixin input{
+    height: 5rem;
+    padding-left: 2em;
+    border: none;
+    width: 90%;
+    outline: none;
+}
+
+
+@mixin textarea{
+    border:none;
+    height: 17.5rem;
+    width: 95%;
+    padding: 2rem 0 0 2rem;
+}
+
+// === function ===
+@function rem-calc($size, $font-size : $font-size) {
+    $font-size: $font-size + 0px;
+    $remSize: $size / $font-size;
+    @return #{$remSize}rem;
+}
+
+@function em-calc($size, $font-size : $font-size) {
+    $font-size: $font-size + 0px;
+    $remSize: $size / $font-size;
+    @return #{$remSize}em;
+}
+
+// === common ===
+*{
+    font-family: $font-Roboto;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-size: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    @include auto-center;
+}
+
+.btn{
+    font-size: 1.6em;
+    letter-spacing: 0.1em;
+    height: 3.75em;
+    width: 14em;
+    background-color: $color-secondary;
+    color: #EEEFF1;
+    border: none;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+}
+
+.input{
+    @include input;
+}
+.textarea{
+    @include textarea;
+}
+
+.title{
+    @include title;
+}
+
+.subtitle{
+    @include subtitle;
+}
+
+// === header ===
+.header{
+    background-color: $color-main;
+    &__container{
+        height: 70rem;
+    }
+    &__logo svg{
+        fill: $color-secondary;
+        stroke: $color-secondary;
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 15em;
+        &-list{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            width: 60em;
+        }
+        &-link{
+            font-size: 1.6em;
+            color:$color-text;
+        }
+    }
+    &__main{
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+    }
+    &__image{
+        width: 40%;
+        & img{
+            width: 100%;
+        }
+    }
+    &__content{
+        width: 50%;
+        &-title{
+            font-weight: 500;
+            font-size: 4.8em;
+            padding-bottom: 1.2em;
+        }
+        &-subtitle{
+            @include subtitle;
+            margin-bottom: 3.75em;
+        }
+    }
+    &__menu{
+        cursor: pointer;
+        &-hamburger{
+            width: 7rem;
+            height: .7rem;
+            background-color: $color-secondary;  
+            position: relative;
+            transition: $transition;
+            margin: 1em 0;
+        }
+    }
+
+    @media(max-width:768px){
+        .header{
+            &__container{
+                height: 100rem;
+            }
+            &__main{
+                height: 80rem;
+            }
+            &__content{
+                text-align: center;
+                width: 70%;
+                &-subtitle{
+                    font-size: 2.3em;
+                }
+            }
+            &__wrapper{
+                flex-direction: column;
+            }
+            &__image{
+                width: 60%;
+                padding-bottom: 5em;
+            }
+        }
+    }
+    @media (max-width:768px){
+        .header{
+            &__content{
+                width: 90%;
+            }
+        }
+    }
+    @media (max-width:540px){
+        .header{
+            &__nav-list{
+                display: none;
+            }
+        }
+    }
+}
+
+// === about ===
+.about{
+    &__container{
+        height: 36.6em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    &__wrapper{
+        width: 50%;
+    }
+    &__subtitle{
+        @include subtitle;
+    }
+    @media (max-width:768px) {
+        .about{
+            &__container{
+                height: 30em;
+            }
+            &__wrapper{
+                width: 80%;
+            }
+        }
+    }
+    @media (max-width:540px) {
+        .about{
+            &__container{
+                height: 38em;
+            }
+            &__wrapper{
+                width: 100%;
+            }
+            &__title{
+                
+            }
+        }
+    }
+}
+
+// === case ===
+.case{
+    background-color: $color-secondary;
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 25em;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-grow: 1;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        color: $color-main;
+        &-image{
+            margin-right: 2rem;
+            & img{
+                width: 5em;
+                height: 5em;
+            }
+        }
+        &-count{
+            font-size: 2.1em;
+            padding-bottom: .5rem;
+        }
+        &-title{
+            font-size: 1.6em;
+        }
+    }
+    @media(max-width:768px){
+        .case{
+            &__container{
+                height: 20em;
+            }
+        }
+    }
+}
+
+// === skills ===
+.skills{
+    &__container{
+        height: 90em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content{
+        width: 40%;
+        &-item{
+            margin-bottom: 3em;
+        }
+        &-subtitle{
+            margin-bottom: 2em;
+        }
+        &-progressbar{
+            height: .4rem;
+            background-color: #C4C4C4;;
+            position: relative;
+            &::before{
+                @include pseudo;
+                background-color: $color-secondary;
+                width: 70%;
+                height: .4rem;
+                top: 0;
+                left: 0;
+            }
+            &--1::before{
+                width: 70%;
+            }
+            &--2::before{
+                width: 80%;
+            }
+            &--3::before{
+                width: 66%;
+            }
+        }
+    }
+    &__photo{
+        width: 50%;
+        & img{
+            width: 100%;
+        }
+    }
+    @media(max-width:960px){
+        .skills__content-subtitle{
+            font-size: 1.5em;
+        }
+    }
+    @media(max-width:768px){
+        .skills__content-subtitle{
+            font-size: 2em;
+        }
+    }
+    
+    @media (max-width:540px){
+        .skills{
+            &__container{
+                height: 100em;
+            }
+            &__wrapper{
+                flex-direction: column;
+            }
+            &__content{
+                width: 90%;
+            }
+            &__photo{
+                width: 90%;
+            }
+        }
+    }
+}
+
+// === work ===
+.work{
+    background-color: $color-main;
+    &__container{
+        @include auto-center;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        padding-top: 10em;  
+        padding-bottom: 10em;  
+    }
+    &__wrapper{
+        text-align: center;
+        
+    }
+    &__subtitle{
+        width: 50%;
+        margin: auto;
+        margin-bottom: 5.7rem;
+    }
+    &__video{
+        width: 80%;
+        margin: auto;
+        & img{
+            width: 100%;
+        }
+    }
+    @media (max-width:768px) {
+        .work{
+            &__subtitle{
+                width: 80%;
+            }
+        }
+    }
+    @media (max-width:540px){
+        .work{
+            &__subtitle{
+                width: 90%;
+            }
+        }
+    }
+}
+
+// === view ===
+.view{
+    &__wrapper{
+        display: flex;
+        width: 100%;
+    }
+    &__card{
+        width: 25%;
+        position: relative;
+        cursor: pointer;
+        &::before, &::after{
+            @include pseudo;
+        }
+        &::before{
+            top:0;
+            bottom:0;
+            right:0;
+            left:0;
+            background: linear-gradient(0deg, rgba(52, 84, 122, 0.8), rgba(52, 84, 122, 0.8));
+            opacity: 0;
+            transition: $transition;
+        }
+        &::after{
+            background-image: url('../../src/img/view-icon.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 11em;
+            height: 6.3em;
+            top:50%;
+            right: 50%;
+            margin-right: -5.5rem;
+            margin-top: -3rem;
+            opacity: 0;
+            transition: $transition;
+        }
+        &:hover:before{
+            opacity: 1;
+        }
+        &:hover:after{
+            opacity: 1;
+        }
+        &-image{
+            width: 100%;
+            display: block;
+        }
+    }
+    @media (max-width:768px) {
+        .view{
+            &__card::after{
+                transform: scale(.7);
+            }
+        }
+    }
+}
+
+// === company ===
+.company{
+    &__container{
+        @include auto-center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30rem;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card{
+        width: 20%;
+        &-image{
+            width: 100%;
+        }
+    }
+    @media (max-width:540px) {
+        &__container{
+            height: 20em;
+        }
+    }
+}
+
+// === callback ===
+.callback{
+    background-color: $color-main;
+    &__container{
+        @include auto-center;
+        height: 76.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__wrapper{
+        width: 54em;
+        text-align: center;
+    }
+    &__subtitle{
+        padding-bottom: 6.5rem;
+    }
+    &__form{
+        &-wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+        &-input{
+            flex-grow: 1;
+            padding-bottom: 2rem;
+        }
+        &-textarea{
+            padding-bottom: 5rem;
+        }
+    }
+}
+
+// === footer ===
+.footer{
+    background-color: $color-secondary;
+    &__container{
+        @include auto-center;
+        height: 15rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    &__logo svg{
+        fill: #fff;
+        stroke: #fff;
+        width: 8.5rem;
+        height: 3.7rem;
+    }
+    &__copyright{
+        color: #fff;
+        &-name{
+            font-size: 2.1em;
+            margin-bottom: 1em;
+        }
+        &-text{
+            font-size: 1.3em;
+        }
+    }
+    &__social{
+        &-list{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 20rem;
+        }
+        &-link{
+            & svg{
+                width: 4.3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 960px){
+    html, body{
+        font-size: 8px;
+    }
+}
+@media (max-width: 768px){
+    html, body{
+        font-size: 7px;
+    }
+}
+@media (max-width: 540px){
+    html, body{
+        font-size: 6px;
+    }
+}
+@media(max-width:768px){
+    .title{
+        font-size: 4em;
+    }
+    .subtitle{
+        font-size: 2.3em;
+    }
+}
+
+.header__menu:hover .header__menu-hamburger:nth-child(1){
+    transform: rotate(-45deg) translateY(2.3em);
+}
+.header__menu:hover .header__menu-hamburger:nth-child(2){
+    opacity: 0;
+}
+.header__menu:hover .header__menu-hamburger:nth-child(3){
+    transform: rotate(45deg) translateY(-2.3em);
+}
