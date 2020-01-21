@@ -103,6 +103,11 @@ ul{
     outline: none;
     cursor: pointer;
 }
+@media (max-width: 540px){
+    .btn{
+        font-size: 2.3em;
+    }
+}
 
 .input{
     @include input;
@@ -556,6 +561,13 @@ ul{
         }
         &-textarea{
             padding-bottom: 5rem;
+        }
+    }
+    @media (max-width:540px) {
+        .callback{
+            &__container{
+                height: 88rem;
+            }
         }
     }
 }

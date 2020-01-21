@@ -32,6 +32,10 @@ ul {
   outline: none;
   cursor: pointer; }
 
+@media (max-width: 540px) {
+  .btn {
+    font-size: 2.3em; } }
+
 .input {
   height: 5rem;
   padding-left: 2em;
@@ -378,6 +382,9 @@ ul {
     padding-bottom: 2rem; }
   .callback__form-textarea {
     padding-bottom: 5rem; }
+  @media (max-width: 540px) {
+    .callback .callback__container {
+      height: 88rem; } }
 
 .footer {
   background-color: #34547A; }
