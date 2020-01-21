@@ -160,7 +160,7 @@ ul{
     }
     &__image{
         width: 40%;
-        & img{
+        & svg{
             width: 100%;
         }
     }
@@ -188,20 +188,10 @@ ul{
         }
     }
 
-    .header__menu:hover .header__menu-hamburger:nth-child(1){
-        transform: rotate(-45deg) translateY(2.4em);
-    }
-    .header__menu:hover .header__menu-hamburger:nth-child(2){
-        opacity: 0;
-    }
-    .header__menu:hover .header__menu-hamburger:nth-child(3){
-        transform: rotate(45deg) translateY(-2.3em);
-    }
-
     @media(max-width:768px){
         .header{
             &__container{
-                height: 100rem;
+                height: 105rem;
             }
             &__main{
                 height: 80rem;
@@ -269,7 +259,7 @@ ul{
                 height: 38em;
             }
             &__wrapper{
-                width: 100%;
+                width: 90%;
             }
             &__title{
                 
@@ -611,13 +601,13 @@ ul{
         left:0;
         right:0;
         height: 15em;
-        background-color: $color-secondary;
-        z-index: 9999;
+        z-index: 10;
         &__nav-list{
             display: flex;
             justify-content: space-around;
             align-items: center;
             height: 15em;
+            background-color: $color-secondary;
             box-shadow: #000  0px 1px 7px;
         }
         &__nav-item{}
