@@ -594,6 +594,13 @@
         top:1px;
     }
 }
+@media (min-width:541px) {
+    .menu-hidden__nav-item--4,
+    .menu-hidden__nav-item--5,
+    .menu-hidden__nav-item--6{
+        display: none;
+    }
+}
 // === /header ===
 
 // === about ===
