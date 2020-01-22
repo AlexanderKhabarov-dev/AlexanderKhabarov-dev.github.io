@@ -44,7 +44,7 @@ html(lang="en")
                     .about__subtitle(class="subtitle") Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
         .case
             .case__container(class="container")
-                .case__wrapper
+                .case__wrapper(class="case__item--hidden")
                     +case__item("src/img/case-icon.svg", "40+", "проектов")
                     +case__item("src/img/case-icon.svg", "40+", "проектов")
                     +case__item("src/img/case-icon.svg", "40+", "проектов")
@@ -85,6 +85,7 @@ html(lang="en")
                 .company__wrapper
                     +company__card("src/img/company-image.png")
                     +company__card("src/img/company-image.png")
+                .company__wrapper
                     +company__card("src/img/company-image.png")
                     +company__card("src/img/company-image.png")
         .callback

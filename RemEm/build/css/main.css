@@ -49,9 +49,9 @@ ul {
 
 .textarea {
   border: none;
-  height: 17.5rem;
+  height: 17.5em;
   width: 95%;
-  padding: 2rem 0 0 2rem; }
+  padding: 2em 0 0 2em; }
 
 .title {
   font-size: 3.2em;
@@ -208,7 +208,12 @@ ul {
       font-size: 1.6em; }
   @media (max-width: 768px) {
     .case .case__container {
-      height: 20em; } }
+      height: 20em; }
+    .case .case__item--hidden {
+      display: none; } }
+  @media (max-width: 540px) {
+    .case .case__item--hidden {
+      display: none; } }
 
 .skills__container {
   height: 90em;
@@ -297,7 +302,9 @@ ul {
       width: 80%; } }
   @media (max-width: 540px) {
     .work .work__subtitle {
-      width: 90%; } }
+      width: 90%; }
+    .work .work__video {
+      width: 95%; } }
 
 .view__wrapper {
   display: flex;
@@ -342,6 +349,12 @@ ul {
   .view .view__card::after {
     transform: scale(0.7); } }
 
+@media (max-width: 540px) {
+  .view .view__card {
+    width: 50%; }
+    .view .view__card--hidden {
+      display: none; } }
+
 .company__container {
   max-width: 114rem;
   margin: auto;
@@ -354,16 +367,20 @@ ul {
 
 .company__wrapper {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-around; }
 
 .company__card {
-  width: 20%; }
+  width: 40%; }
   .company__card-image {
     width: 100%; }
 
 @media (max-width: 540px) {
   .company__container {
-    height: 20em; } }
+    height: 27em; } }
+
+@media (max-width: 540px) {
+  .company .company__container {
+    flex-direction: column; } }
 
 .callback {
   background-color: #EEEFF1; }
@@ -388,10 +405,16 @@ ul {
     flex-grow: 1;
     padding-bottom: 2rem; }
   .callback__form-textarea {
-    padding-bottom: 5rem; }
+    padding-bottom: 5em; }
+  @media (max-width: 960px) {
+    .callback .callback__container {
+      height: 90rem; } }
+  @media (max-width: 960px) {
+    .callback .callback__container {
+      height: 100rem; } }
   @media (max-width: 540px) {
     .callback .callback__container {
-      height: 88rem; } }
+      height: 110rem; } }
 
 .footer {
   background-color: #34547A; }
