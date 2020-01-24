@@ -140,7 +140,7 @@ html{
 .logo path:nth-child(20){
     stroke-dasharray: 271;
     stroke-dashoffset: 271;
-    animation: line-anime 2s ease forwards 13.8s;
+    animation: line-anime 2s ease forwards 13.9s;
 }
 @keyframes line-anime{
     to{
