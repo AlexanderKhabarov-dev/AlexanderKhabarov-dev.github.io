@@ -1,0 +1,287 @@
+
+@font-face{
+    font-family: Neutraface-Bold;
+    font-weight: bold;
+    font-style: normal;
+    src:url(../../src/fonts/Neutraface-2-Disp-Greek-Bold.otf);
+}
+@font-face{
+    font-family: Neutraface-Tl1;
+    font-weight: bold;
+    font-style: normal;
+    src:url(../../src/fonts/Neutraface-2-Disp-Greek-Titl.otf);
+}
+@font-face{
+    font-family: Neutraface-inline;
+    font-weight: bold;
+    font-style: normal;
+    src:url(../../src/fonts/Neutraface2Display-Inline.otf);
+}
+
+// === variable ===
+$font-Neutraface-Bold: Neutraface-Bold;
+$font-Neutraface-Tl1: Neutraface-Tl1;
+
+$color-secondary: #d91f1f;
+
+// === mixins ===
+@mixin center {
+    max-width: 144rem;
+    margin: auto;
+}
+
+@mixin pseudo{
+    content: '';
+    position: absolute;
+}
+
+@mixin cover($url){
+    background-image: $url;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+@mixin color-secondary{
+    background-color: $color-secondary;
+    opacity: .5;
+}
+
+@import "../scss/blocks/content.scss";
+
+// === common ===
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-size: 10px;
+    background-image: url('../../src/img/body-background.jpg');
+    background-repeat: repeat;
+
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.logo{
+    font-family: $font-Neutraface-Tl1;
+    font-size: 3.5em;
+    position: relative;
+    padding-left: 1em;
+    width: 11.5rem;
+    &::before, &::after{
+        @include pseudo;
+        width: 2.8rem;
+        height: .5rem;
+        @include color-secondary;
+        bottom: 1.2rem;
+    }
+    &::before{
+        left: -.6rem;
+    }
+    &::after{
+        right: -3.3rem;
+    }
+}
+
+// === header ===
+.header{
+    @include cover(url("../../src/img/header-background.jpg"))
+    position: relative;
+    &__container{
+        @include center();
+        height: 100vh;
+    }
+    &__logo{
+        font-family: $font-Neutraface-Tl1;
+        font-size: 3.5em;
+        position: relative;
+        padding-left: 1em;
+        &::before, &::after{
+            @include pseudo;
+            width: 2.8rem;
+            height: .5rem;
+            @include color-secondary;
+            bottom: 1.2rem;
+        }
+        &::before{
+            left: -.6rem;
+        }
+        &::after{
+            right: -3.3rem;
+        }
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 7.5rem;
+        &-list{
+            display: flex;
+            justify-content: space-between;
+            width: 70rem;
+        }
+        &-link{
+            font-family: $font-Neutraface-Bold;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            color:#000;
+        }
+    }
+    &__main{
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__wrapper{}
+    &__content{
+        max-width: 50rem;
+        &-image{
+            width: 90%;
+        }
+    }
+    &__swipe{
+        position: absolute;
+        left: 50%;
+        top:95%;
+        width: 6.4rem;
+        height: 3.5rem;
+        margin-left: -3.2rem;
+        margin-top: -1.7rem;
+        cursor: pointer;
+        &-arrow{
+            width: 100%;
+        }
+    }
+}
+
+// === story ===
+.story{
+    &__container{
+        @include center;
+        height: 63.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__content{
+        width: 40%;
+        height: 100%;
+        background-color: #fff;
+        @include cover(url("../../src/img/backgrund-mask.png"));
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image{
+        width: 60%;
+        height: 100%;
+        @include cover(url('../../src/img/story-image.jpg'))
+    }
+}
+
+// === fresh ===
+.fresh{
+    &__container{
+        @include center;
+        height: 63.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__content{
+        width: 30%;
+        height: 100%;
+        background-color: #fff;
+        @include cover(url("../../src/img/backgrund-mask.png"));
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image{
+        width: 70%;
+        height: 100%;
+        @include cover(url('../../src/img/fresh-image.jpg'))
+    }
+}
+
+// === local ===
+.local{
+    &__container{
+        @include center;
+        height: 63.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__content{
+        width: 30%;
+        height: 100%;
+        background-color: #fff;
+        @include cover(url("../../src/img/backgrund-mask.png"));
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image{
+        width: 70%;
+        height: 100%;
+        @include cover(url('../../src/img/local-image.jpg'))
+    }
+}
+
+// === picture ===
+.picture{
+    @include center;
+    @include cover(url('../../src/img/picture-image.jpg'));
+    height: 73rem;
+}
+
+// === footer ===
+.footer{
+    &__container{
+        background-color:#fff;
+        background-image: url('../../src/img/backgrund-mask.png');
+        @include center;
+        height: 44rem;
+        background-repeat: repeat;
+    }
+    &__logo{
+        transform: translateX(1em);
+    }
+    &__wrapper{}
+    &__contacts{
+        &-text{}
+    }
+    &__social{
+        &-list{}
+        &-item{}
+        &-link{}
+    }
+}
+
+
