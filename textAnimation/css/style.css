@@ -144,6 +144,6 @@ html{
 }
 @keyframes line-anime{
     to{
-        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
     }
 }
