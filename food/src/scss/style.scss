@@ -24,6 +24,8 @@ $font-Neutraface-Tl1: Neutraface-Tl1;
 
 $color-secondary: #d91f1f;
 
+$transition: all .3s ease;
+
 // === mixins ===
 @mixin center {
     max-width: 144rem;
@@ -85,6 +87,17 @@ ul{
         right: -3.3rem;
     }
 }
+.link{
+    font-family: $font-Neutraface-Bold;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color:#000;
+    transition: $transition;
+    &:hover{
+        color: $color-secondary;
+        opacity: .5;
+    }
+}
 
 // === header ===
 .header{
@@ -125,20 +138,29 @@ ul{
             justify-content: space-between;
             width: 70rem;
         }
-        &-link{
-            font-family: $font-Neutraface-Bold;
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            color:#000;
+    }
+    &__menu{
+        cursor: pointer;
+        position: fixed;
+        right: 2em;
+        top: 2em;
+        z-index: 10;
+        &-hamburger{
+            width: 5rem;
+            height: .3rem;
+            background-color:#000;
+            position: relative;
+            transition: $transition;
+            margin: 1em 0;
         }
     }
+
     &__main{
         height: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    &__wrapper{}
     &__content{
         max-width: 50rem;
         &-image{
@@ -166,6 +188,37 @@ ul{
         }
     }
 }
+@media (min-width:541px){
+    .header{
+        &__menu{
+            display: none;
+        }
+    }
+}
+
+// === menu-hidden ===
+.menu-hidden{
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    z-index: 10;
+    &__nav-list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 10em;
+        background-color: rgba(255, 255, 255, .9);
+        background-image: url(../../src/img/backgrund-mask.png);
+        background-repeat: repeat;
+        box-shadow: #000  0px 1px 7px;
+        z-index: 50;
+    }
+    &__nav-link{
+        font-size: 2em;
+    }
+}
+
 // === story ===
 .story{
     &__container{

@@ -13,11 +13,16 @@
         <div class="header__nav">
           <div class="header__logo logo">raw</div>
           <ul class="header__nav-list">
-            <li class="header__nav-item"><a class="header__nav-link" href="">stoty</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="">fresh</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="">local</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="">contacts</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link" href="#story">story</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link" href="#fresh">fresh</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link" href="#local">local</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link" href="#contacts">contacts</a></li>
           </ul>
+        </div>
+        <div class="header__menu">
+          <div class="header__menu-hamburger" id="hamburgerTop"></div>
+          <div class="header__menu-hamburger" id="hamburgerMid"></div>
+          <div class="header__menu-hamburger" id="hamburgerBot"></div>
         </div>
         <div class="header__main">
           <div class="header__wrapper">
@@ -26,8 +31,16 @@
         </div>
         <div class="header__swipe"><img class="header__swipe-arrow" src="../../src/img/ARROW.svg"/></div>
       </div>
+      <div class="menu-hidden">
+        <ul class="menu-hidden__nav-list">
+          <li class="menu-hidden__nav-item"> <a class="menu-hidden__nav-link link menu-hidden__nav-link--story" href="#story">story</a></li>
+          <li class="menu-hidden__nav-item"><a class="menu-hidden__nav-link link menu-hidden__nav-link--fresh" href="#fresh">fresh</a></li>
+          <li class="menu-hidden__nav-item"><a class="menu-hidden__nav-link link menu-hidden__nav-link--local" href="#local">local</a></li>
+          <li class="menu-hidden__nav-item"><a class="menu-hidden__nav-link link menu-hidden__nav-link--contacts" href="#contacts">contacts</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="story">
+    <div class="story" id="story">
       <div class="story__container">
         <div class="story__wrapper">
           <div class="story__content">
@@ -40,7 +53,7 @@
         </div>
       </div>
     </div>
-    <div class="fresh">
+    <div class="fresh" id="fresh">
       <div class="fresh__container">
         <div class="fresh__wrapper">
           <div class="fresh__image"></div>
@@ -53,7 +66,7 @@
         </div>
       </div>
     </div>
-    <div class="local">
+    <div class="local" id="local">
       <div class="local__container">
         <div class="local__wrapper">
           <div class="local__content">
@@ -67,7 +80,7 @@
       </div>
     </div>
     <div class="picture"></div>
-    <div class="footer">
+    <div class="footer" id="contacts">
       <div class="footer__container">
         <div class="footer__logo logo">raw</div>
         <div class="footer__wrapper">
@@ -96,5 +109,10 @@
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"> </script>
+    <script src="src/js/hidden-menu.js"> </script>
+    <script src="src/js/scroll.js"> </script>
   </body>
 </html>

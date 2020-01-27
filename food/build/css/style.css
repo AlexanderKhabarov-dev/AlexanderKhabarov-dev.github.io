@@ -75,6 +75,16 @@ ul {
   .logo::after {
     right: -3.3rem; }
 
+.link {
+  font-family: Neutraface-Bold;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: #000;
+  transition: all 0.3s ease; }
+  .link:hover {
+    color: #d91f1f;
+    opacity: .5; }
+
 .header {
   background-image: url("../../src/img/header-background.jpg");
   background-position: 50% 50%;
@@ -112,11 +122,19 @@ ul {
       display: flex;
       justify-content: space-between;
       width: 70rem; }
-    .header__nav-link {
-      font-family: Neutraface-Bold;
-      font-size: 3.5rem;
-      text-transform: uppercase;
-      color: #000; }
+  .header__menu {
+    cursor: pointer;
+    position: fixed;
+    right: 2em;
+    top: 2em;
+    z-index: 10; }
+    .header__menu-hamburger {
+      width: 5rem;
+      height: .3rem;
+      background-color: #000;
+      position: relative;
+      transition: all 0.3s ease;
+      margin: 1em 0; }
   .header__main {
     height: 90%;
     display: flex;
@@ -141,6 +159,29 @@ ul {
 @media (max-width: 768px) {
   .header__nav-list {
     display: none; } }
+
+@media (min-width: 541px) {
+  .header__menu {
+    display: none; } }
+
+.menu-hidden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; }
+  .menu-hidden__nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10em;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: url(../../src/img/backgrund-mask.png);
+    background-repeat: repeat;
+    box-shadow: #000  0px 1px 7px;
+    z-index: 50; }
+  .menu-hidden__nav-link {
+    font-size: 2em; }
 
 .story__container {
   max-width: 144rem;
