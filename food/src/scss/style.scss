@@ -88,11 +88,13 @@ ul{
 
 // === header ===
 .header{
-    @include cover(url("../../src/img/header-background.jpg"))
+    @include cover(url("../../src/img/header-background.jpg"));
     position: relative;
     &__container{
         @include center();
         height: 100vh;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     &__logo{
         font-family: $font-Neutraface-Tl1;
@@ -157,7 +159,13 @@ ul{
         }
     }
 }
-
+@media (max-width:768px){
+    .header{
+        &__nav-list{
+            display: none;
+        }
+    }
+}
 // === story ===
 .story{
     &__container{
@@ -190,6 +198,20 @@ ul{
     }
 }
 
+@media (max-width:540px){
+    .story{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__content{
+            width: 100%;
+        }
+        &__image{
+            width: 100%;
+        }
+    }
+}
+
 // === fresh ===
 .fresh{
     &__container{
@@ -206,7 +228,7 @@ ul{
         height: 100%;
     }
     &__content{
-        width: 30%;
+        width: 40%;
         height: 100%;
         background-color: #fff;
         @include cover(url("../../src/img/backgrund-mask.png"));
@@ -214,11 +236,39 @@ ul{
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        &::before{
+            @include pseudo;
+            width: 12em;
+            height: 12em;
+            background-image: url('../../src/img/fresh-decor.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            top: 3em;
+        }
     }
     &__image{
-        width: 70%;
+        width: 60%;
         height: 100%;
         @include cover(url('../../src/img/fresh-image.jpg'))
+    }
+}
+@media(max-width:540px){
+    .fresh{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__content{
+            width: 100%;
+            order:1;
+            &::before{
+                display: none;
+            }
+        }
+        &__image{
+            width: 100%;
+            order:2;
+        }
     }
 }
 
@@ -238,7 +288,7 @@ ul{
         height: 100%;
     }
     &__content{
-        width: 30%;
+        width: 40%;
         height: 100%;
         background-color: #fff;
         @include cover(url("../../src/img/backgrund-mask.png"));
@@ -246,19 +296,49 @@ ul{
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        &::before{
+            @include pseudo;
+            width: 12em;
+            height: 10em;
+            background-image: url('../../src/img/local-decor.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            top: 3em;
+        }
     }
     &__image{
-        width: 70%;
+        width: 60%;
         height: 100%;
         @include cover(url('../../src/img/local-image.jpg'))
     }
 }
-
+@media (max-width:540px){
+    .local{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__content{
+            width: 100%;
+            &::before{
+                display: none;
+            }
+        }
+        &__image{
+            width: 100%;
+        }
+    }
+}
 // === picture ===
 .picture{
     @include center;
     @include cover(url('../../src/img/picture-image.jpg'));
     height: 73rem;
+}
+@media(max-width:540px){
+    .picture{
+        display: none;
+    }
 }
 
 // === footer ===
@@ -267,21 +347,44 @@ ul{
         background-color:#fff;
         background-image: url('../../src/img/backgrund-mask.png');
         @include center;
-        height: 44rem;
+        height: 25rem;
         background-repeat: repeat;
+        padding-top: 5em;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     &__logo{
-        transform: translateX(1em);
+        margin-bottom: 3rem;
     }
-    &__wrapper{}
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
     &__contacts{
-        &-text{}
+        font-family: $font-Neutraface-Bold;
+        font-size: 1.6rem;
+        &-text{
+            padding-bottom: 1em;
+        }
     }
     &__social{
-        &-list{}
+        align-self: flex-end;
+        &-list{
+            display: flex;
+            justify-content: space-between;
+            width: 16rem;
+        }
         &-item{}
-        &-link{}
+        &-link{
+            & svg{
+                stroke: #d91f1f;
+            }
+        }
     }
 }
 
-
+@media(max-width:960px){
+    html,body{
+        font-size: 9px;
+    }
+}
