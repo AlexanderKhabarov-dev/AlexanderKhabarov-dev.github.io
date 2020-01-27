@@ -1,10 +1,10 @@
 let tlMenu = new TimelineMax({paused:true}), forward = true;
 let navItem = document.querySelectorAll('.menu-hidden__nav-item');
 let menuButton = document.querySelector('.header__menu');
-let storyLink = document.querySelectorAll('.menu-hidden__link--link');
-let freshLink = document.querySelectorAll('.menu-hidden__link--fresh');
-let localLink = document.querySelectorAll('.menu-hidden__link--local');
-let contactsLink = document.querySelectorAll('.menu-hidden__link--contacts');
+let storyLink = document.querySelector('.menu-hidden__link--link');
+let freshLink = document.querySelector('.menu-hidden__link--fresh');
+let localLink = document.querySelector('.menu-hidden__link--local');
+let contactsLink = document.querySelector('.menu-hidden__link--contacts');
 
 tlMenu.to('#hamburgerTop', .1, {
     y:92,
@@ -29,10 +29,6 @@ tlMenu.to('#hamburgerTop', .1, {
     opacity:1,
     y:0,
 })
-
-
-
-
 
 menuButton.addEventListener('click', () => {
     if(forward){
