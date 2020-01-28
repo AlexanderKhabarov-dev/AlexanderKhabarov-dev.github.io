@@ -1,6 +1,7 @@
 let tlMenu = new TimelineMax({paused:true}), forward = true;
 let navItem = document.querySelectorAll('.menu-hidden__nav-item');
 let menuButton = document.querySelector('.header__menu');
+let menuHidden = document.querySelector('.menu-hidden');
 let storyLink = document.querySelector('.menu-hidden__link--link');
 let freshLink = document.querySelector('.menu-hidden__link--fresh');
 let localLink = document.querySelector('.menu-hidden__link--local');
@@ -30,13 +31,20 @@ tlMenu.to('#hamburgerTop', .1, {
     y:0,
 })
 
+
 menuButton.addEventListener('click', () => {
+    toggleMenu();
+});
+menuHidden.addEventListener('click', () => {
+    toggleMenu();
+});
+
+function toggleMenu(){
     if(forward){
         tlMenu.play();
         }else{
         tlMenu.reverse();
         }
     forward = forward  ? false : true;
-});
-
+}
 
