@@ -12,6 +12,13 @@ html(lang="en")
         link(rel="stylesheet", href="https://unpkg.com/swiper/css/swiper.min.css")
     body
         .header
+            .scene(id="scene")
+                //.scene__layer(class="scene__layer--2" data-depth="0.1")
+                    img(src="../../src/img/scene-layer--2.png")
+                .scene__layer(class="scene__layer--1" data-depth="0.3")
+                    img(src="../../src/img/scene-layer--1.png")
+                
+                    
             .header__container
                 .header__nav
                     ul.header__nav-list
@@ -34,11 +41,7 @@ html(lang="en")
                             img(src="", alt="")
                         a.header__social-button(href="") vk
                             img(src="", alt="")
-            .line-decoration(class="line-decoration--1")
-            .line-decoration(class="line-decoration--2")
-            .line-decoration(class="line-decoration--3")
-            .line-decoration(class="line-decoration--4")
-            .text-decoration 
+           
         
         .about
             .about__container
@@ -48,9 +51,7 @@ html(lang="en")
                     +about__card("src/img/design-icon.png", "Design", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam")
                     +about__card("src/img/analysis-icon.png", "Analysis", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam")
                     +about__card("src/img/finalization-icon.png", "Finalization", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam")
-            .line-decoration(class="line-decoration--2")
-            .line-decoration(class="line-decoration--3")
-            .line-decoration(class="line-decoration--4")
+          
             
         .projects
             .projects__container
@@ -66,9 +67,6 @@ html(lang="en")
                     +projects__card("src/img/projects__card-image--6.jpg")
                     +projects__card("src/img/projects__card-image--7.jpg")
                     +projects__card("src/img/projects__card-image--8.jpg")
-            .line-decoration(class="line-decoration--2")
-            .line-decoration(class="line-decoration--3")
-            .line-decoration(class="line-decoration--4")
         
         .testimonials
             .testimonials__container
@@ -80,13 +78,25 @@ html(lang="en")
                             .testimonials__slide-position director of buttons
                             .testimonials__slide-image
                                 img(src="src/img/swiper-image--1.png", alt="")
-                            .testimonials__slide-textLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            .testimonials__slide-text(class="subtitle") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         .testimonials__slide(class="swiper-slide")
                             .testimonials__slide-name Adams Holins
                             .testimonials__slide-position director of buttons
                             .testimonials__slide-image
                                 img(src="src/img/swiper-image--1.png", alt="")
-                            .testimonials__slide-textLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            .testimonials__slide-text(class="subtitle") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        .testimonials__slide(class="swiper-slide")
+                            .testimonials__slide-name Adams Holins
+                            .testimonials__slide-position director of buttons
+                            .testimonials__slide-image
+                                img(src="src/img/swiper-image--1.png", alt="")
+                            .testimonials__slide-text(class="subtitle") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        .testimonials__slide(class="swiper-slide")
+                            .testimonials__slide-name Adams Holins
+                            .testimonials__slide-position director of buttons
+                            .testimonials__slide-image
+                                img(src="src/img/swiper-image--1.png", alt="")
+                            .testimonials__slide-text(class="subtitle") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     .testimonials__swiper-pagination(class="swiper-pagination")
 
 
@@ -107,11 +117,13 @@ html(lang="en")
                             textarea(class="textarea" name="", cols="30", rows="10" placeholder="Enter your question")
                         .contact__button
                             button.btn(class="btn-contact") Buy themo now
-            .line-decoration(class="line-decoration--2")
-            .line-decoration(class="line-decoration--3")
-            .line-decoration(class="line-decoration--4")
+           
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js")
+        script(src="src/js/parallax-init.js")
         script(src="https://unpkg.com/swiper/js/swiper.min.js")
         script(src="src/js/swiper-init.js")
+        
+        
 
             
                     

@@ -25,8 +25,9 @@
 }
 
 @mixin background{
-    background: rgb(254,186,141);
-    background: linear-gradient(90deg, rgba(254,186,141,1) 0%, rgba(254,173,145,1) 8%, rgba(254,157,150,1) 14%, rgba(255,118,164,1) 28%, rgba(255,66,186,1) 50%);
+    background: rgb(77,34,119);
+    background: linear-gradient(90deg, rgba(77,34,119,1) 0%, rgba(162,30,145,1) 38%, rgba(245,27,170,1) 72%, rgba(245,27,170,1) 89%);
+  
 }
 
 @mixin background-768px{
@@ -55,6 +56,14 @@ $transition: all .2s ease;
 
 html,body{
     font-size: 10px;
+}
+body{
+    @include background;
+}
+@media(max-width: 768px){
+    body{
+        @include background-768px()
+    }
 }
 
 a{
@@ -86,6 +95,8 @@ ul,li{
     font-family: $font-Roboto;
     font-size: 1.7rem;
     line-height: 2.8rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
     font-weight: 300;
     max-width: 68rem;
     margin: auto;
@@ -175,13 +186,30 @@ ul,li{
 
 }
 
+.scene{
+   position: absolute;
+   left: -5%;
+   bottom: -5%;
+   left: -10%;
+   &__layer--1{
+    bottom: 0;
+   
+   }
+}
+
+
 // === header ===
 .header{
-    @include cover(url("../../src/img/background.jpg"));
+    background: rgb(77,34,119);
+    background: linear-gradient(90deg, rgba(77,34,119,1) 0%, rgba(162,30,145,1) 38%, rgba(245,27,170,1) 72%, rgba(245,27,170,1) 89%);
     height: 100vh;
     position: relative;
+    overflow: hidden;
+    margin-bottom: 5rem;
+   
     &__container{
         @include center;
+        
     }
     &__nav{
         &-list{
@@ -206,6 +234,8 @@ ul,li{
         height: 80vh;
         display: flex;
         align-items: center;
+        z-index: 10;
+        position: relative;
     }
     &__content{
         max-width: 90rem;
@@ -249,14 +279,20 @@ ul,li{
         }
     }
 }
+@media(max-width:540px){
+    .header{
+        &__nav{
+            visibility: hidden;
+        }
+    }
+}
 
 // === about ===
 .about{
-    @include background;
     position: relative;
-    height: 106rem;
     padding-right: 5rem;
     padding-left: 5rem;
+    margin-bottom: 5rem;
     &__container{
         @include center;
         background-color: #fff;
@@ -291,22 +327,29 @@ ul,li{
         @include background-768px;
     }
 }
+@media(max-width:540px){
+    .about{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        &__wrapper{
+            flex-direction: column;
+        }
+    }
+}
 
-//=== projects ===
-
+//=== projects === 
 .projects{
-    @include background;
     position: relative;
-    padding-bottom: 5rem;
     padding-right: 5rem;
     padding-left: 5rem;
+    margin-bottom: 5rem;
     &__container{
         @include center;
         background-color: #fff;
         opacity: .9;
         text-align: center;
-        height: 120rem;
         margin-bottom: 5rem;
+        padding-bottom: 15rem;
     }
     &__subtitle{
         margin-bottom: 7rem;
@@ -324,6 +367,7 @@ ul,li{
         }
     }
 }
+
 @media(max-width:768px){
     .projects{
         @include background-768px;
@@ -333,40 +377,73 @@ ul,li{
     }
 }
 
+@media(max-width:540px){
+    .projects{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
 
 // === testimonials ===
 .testimonials{
-    @include background;
     padding-right: 5rem;
     padding-left: 5rem;
-    padding-bottom: 5rem;
+    margin-bottom: 5rem;
     position: relative;
     &__container{
         @include center;
         text-align: center;
         background-color: #fff;
         opacity: .9;
+        padding-bottom: 15rem;
+    }
+    &__title{}
+    &__swiper{}
+    &__wrapper{}
+    &__slide{
+        &-name{
+            font-family: $font-Roboto;
+            font-size: 2.3rem;
+            padding-bottom: .3em;
+        }
+        &-position{
+            font-family: $font-Roboto-Th;
+            font-size: 1.6rem;
+            padding-bottom: 1em;
+        }
+        &-image{
+            padding-bottom: 1rem;
+        }
+        &-text{
+            max-width: 50rem;
+            padding-bottom: 6rem;
+        }
+    }
+}
+@media(max-width:540px){
+    .testimonials{
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 // === contact ===
 .contact{
-    @include background;
     padding-right: 5rem;
     padding-left: 5rem;
-    padding-bottom: 5rem;
+    margin-bottom: 5rem;
     position: relative;
     &__container{
         @include center;
         text-align: center;
         background-color: #fff;
         opacity: .9;
-        height: 90rem;
+        padding-bottom: 15rem;
     }
     &__title{}
     &__subtitle{}
     &__form{
         display: flex;
-        width: 90rem;
+        max-width: 90rem;
         margin: auto;
         margin-top: 7rem;
     }
@@ -393,6 +470,15 @@ ul,li{
 @media(max-width:768px){
     .contact{
         @include background-768px;
+    }
+}
+@media(max-width:540px){
+    .contact{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        &__form{
+            flex-direction: column;
+        }
     }
 }
 
