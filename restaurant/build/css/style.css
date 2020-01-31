@@ -255,7 +255,11 @@ ul, li {
     padding-left: 2rem;
     padding-right: 2rem; }
     .about__wrapper {
-      flex-direction: column; } }
+      flex-direction: column; }
+    .about__card-title {
+      font-size: 4rem; }
+    .about__card-subtitle {
+      font-size: 2rem; } }
 
 .projects {
   position: relative;
@@ -285,14 +289,14 @@ ul, li {
 @media (max-width: 768px) {
   .projects {
     background: #ff68ab;
-    background: linear-gradient(90deg, #ff68ab 0%, #ff42ba 51%); }
-    .projects__container {
-      height: 105rem; } }
+    background: linear-gradient(90deg, #ff68ab 0%, #ff42ba 51%); } }
 
 @media (max-width: 540px) {
   .projects {
     padding-left: 2rem;
-    padding-right: 2rem; } }
+    padding-right: 2rem; }
+    .projects__wrapper {
+      flex-direction: column; } }
 
 .testimonials {
   padding-right: 5rem;

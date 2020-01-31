@@ -355,6 +355,14 @@ ul,li{
         &__wrapper{
             flex-direction: column;
         }
+        &__card{
+            &-title{
+                font-size: 4rem;
+            }
+            &-subtitle{
+                font-size: 2rem;
+            }
+        }
     }
 }
 
@@ -392,9 +400,6 @@ ul,li{
 @media(max-width:768px){
     .projects{
         @include background-768px;
-        &__container{
-            height: 105rem;
-        }
     }
 }
 
@@ -402,6 +407,9 @@ ul,li{
     .projects{
         padding-left: 2rem;
         padding-right: 2rem;
+        &__wrapper{
+            flex-direction: column;
+        }
     }
 }
 
