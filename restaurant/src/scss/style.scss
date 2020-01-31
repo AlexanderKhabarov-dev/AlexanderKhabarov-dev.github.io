@@ -95,11 +95,17 @@ ul,li{
     font-family: $font-Roboto;
     font-size: 1.7rem;
     line-height: 2.8rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
     font-weight: 300;
     max-width: 68rem;
     margin: auto;
+}
+@media(max-width:540px){
+    .subtitle{
+        font-size: 2.5rem;
+        
+    }
 }
 
 .btn{
@@ -129,6 +135,12 @@ ul,li{
     border: none;
     box-shadow: 0 7px 18px rgba(55, 7, 53, 0.27);
     background-color: #ffffff;
+   
+}
+@media (max-width:540px) {
+    .input {
+        font-size: 2em;
+    }
 }
 .textarea{
     font-family: $font-Roboto;
@@ -140,6 +152,11 @@ ul,li{
     padding-left: 2rem;
     padding-top: 2rem;
     resize: none;
+}
+@media (max-width:540px) {
+    .textarea {
+        font-size: 2em;
+    }
 }
 
 .line-decoration{
@@ -173,6 +190,10 @@ ul,li{
         height: 100%;
         background-color: #fff;
     }
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{
+    background-color: #FF42BA;
 }
 
 .text-decoration{
@@ -424,6 +445,18 @@ ul,li{
     .testimonials{
         padding-left: 2rem;
         padding-right: 2rem;
+        &__slide{
+            &-position{
+                padding-bottom: 3rem;
+            }
+            &-text{
+                padding-left: 0;
+                padding-right: 0;
+            }
+            &-image{
+                padding-bottom: 2rem;
+            }
+        }
     }
 }
 // === contact ===
@@ -476,9 +509,14 @@ ul,li{
     .contact{
         padding-left: 2rem;
         padding-right: 2rem;
+        &__container{
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
         &__form{
             flex-direction: column;
         }
+        &__input, &__textarea{}
     }
 }
 

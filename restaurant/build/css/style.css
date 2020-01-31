@@ -49,11 +49,15 @@ ul, li {
   font-family: "Roboto", sans-serif;
   font-size: 1.7rem;
   line-height: 2.8rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
   font-weight: 300;
   max-width: 68rem;
   margin: auto; }
+
+@media (max-width: 540px) {
+  .subtitle {
+    font-size: 2.5rem; } }
 
 .btn {
   font-family: "Roboto", sans-serif;
@@ -81,6 +85,10 @@ ul, li {
   box-shadow: 0 7px 18px rgba(55, 7, 53, 0.27);
   background-color: #ffffff; }
 
+@media (max-width: 540px) {
+  .input {
+    font-size: 2em; } }
+
 .textarea {
   font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
@@ -91,6 +99,10 @@ ul, li {
   padding-left: 2rem;
   padding-top: 2rem;
   resize: none; }
+
+@media (max-width: 540px) {
+  .textarea {
+    font-size: 2em; } }
 
 .line-decoration {
   position: absolute;
@@ -119,6 +131,9 @@ ul, li {
     width: .1rem;
     height: 100%;
     background-color: #fff; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  background-color: #FF42BA; }
 
 .text-decoration {
   position: absolute;
@@ -308,7 +323,14 @@ ul, li {
 @media (max-width: 540px) {
   .testimonials {
     padding-left: 2rem;
-    padding-right: 2rem; } }
+    padding-right: 2rem; }
+    .testimonials__slide-position {
+      padding-bottom: 3rem; }
+    .testimonials__slide-text {
+      padding-left: 0;
+      padding-right: 0; }
+    .testimonials__slide-image {
+      padding-bottom: 2rem; } }
 
 .contact {
   padding-right: 5rem;
@@ -348,6 +370,9 @@ ul, li {
   .contact {
     padding-left: 2rem;
     padding-right: 2rem; }
+    .contact__container {
+      padding-left: 3rem;
+      padding-right: 3rem; }
     .contact__form {
       flex-direction: column; } }
 
