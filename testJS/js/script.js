@@ -1,7 +1,31 @@
-let inputIn = document.querySelector('.input-in');
 let btn = document.querySelector('.btn');
-let text = document.getElementById('text');
+let text = document.querySelector('.text');
+let main = document.querySelector('.main');
+let input = document.querySelector('#inputNum');
 
 btn.onclick = () =>{
-    text.style.display = "block"
+    if(text.style.display == "block"){
+        text.style.display = "none"
+    }
+    else{
+        text.style.display = "block";
+    }
 }
+
+input.oninput = () =>{
+    console.log(input.value)
+    text.innerHTML = input.value
+}
+/*btn.addEventListener('mousedown', function(){
+    if(text.style.display == "block"){
+        text.style.display = "none"
+    }
+    else{
+        text.style.display = "block";
+    }
+})
+
+main.onclick = () =>{
+    console.log('123')
+}
+*/

@@ -25,6 +25,8 @@ ul{
     position: relative;
     z-index: 1;
 }
+
+/* === btn-1 ===*/
 .btn{
     width: 90px;
     height: 90px;
@@ -48,13 +50,13 @@ ul{
     background: brown;
     border-radius: 100px;
     z-index: -1;
-   
 }
 .btn::before{
     animation: btn-1 .9s infinite;
 }
 .btn::after{
-    animation: btn-2 1s infinite;
+    animation: btn-2 .9s infinite;
+    animation-delay: .3s;
 }
 @keyframes btn-1{
     from{
@@ -92,6 +94,78 @@ ul{
 .btn:active{
     font-size: 20px;
 }
+/* === btn-1 ===*/
+
+
+/* === btn-2 ===*/
+.btn-2{
+    font-size: 18px;
+    margin-top: 50px;
+    width: 120px;
+    height: 35px;
+    border: none;
+    background: tomato;
+    color: aqua;
+    position: relative;
+    z-index: 1;
+    transition: all .2s ease;
+    outline: none;
+}
+.btn-2:hover{
+  color: tomato;
+}
+.btn-2::before{
+    position: absolute;
+    content: "";
+    width:0%;
+    top:0;
+    bottom:0;
+    left:0;
+    background: rgb(0, 255, 149);
+    z-index: -1;
+    transition: all .3s ease-in;
+}
+.btn-2:hover:before{
+    width:100%;
+}
+/* === btn-2 ===*/
+
+/* === btn-3 ===*/
+.btn-3{
+    font-size: 18px;
+    margin-top: 50px;
+    width: 120px;
+    height: 35px;
+    border:none;
+    background: tomato;
+    color: aqua;
+    position: relative;
+    z-index: 1;
+    transition: all .2s ease;
+    outline: none;
+    overflow: hidden;
+}
+.btn-3:hover{
+  color: tomato;
+}
+.btn-3::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left:0;
+    bottom: 0;
+    transform: translate(-30%,50%);
+    background: rgb(0, 255, 149);
+    border-radius: 50%;
+    z-index: -1;
+    transition: all .3s ease-in;
+}
+.btn-3:hover:before{
+    width:200px;
+    height: 200px;
+}
+/* === btn-3 ===*/
 
 .input{
     border: 2px solid tomato;
@@ -103,7 +177,7 @@ ul{
     font-family: Arial, Helvetica, sans-serif;
     display: none;
     position: absolute;
-    bottom: -20px;
+    top:-50px;
     left:50%;
     transform: translateX(-50%);
     animation: text .5s ease-out;
