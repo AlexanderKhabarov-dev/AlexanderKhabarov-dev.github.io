@@ -1,0 +1,119 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.main{
+    background-color: aqua;
+}
+.main__container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main__content{
+    text-align: center;
+    width:300px;
+    position: relative;
+    z-index: 1;
+}
+.btn{
+    width: 90px;
+    height: 90px;
+    font-size: 20px;
+    background: tomato;
+    border: none;
+    border-radius: 100px;
+    color: aqua;
+    letter-spacing: 0.1em;
+    transition: all .3s ease;
+    outline: none;
+    margin-bottom: 50px; 
+    position: relative; 
+}
+.btn::before, .btn::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background: brown;
+    border-radius: 100px;
+    z-index: -1;
+   
+}
+.btn::before{
+    animation: btn-1 .9s infinite;
+}
+.btn::after{
+    animation: btn-2 1s infinite;
+}
+@keyframes btn-1{
+    from{
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    to{
+        width: 170px;
+        height: 170px;
+        opacity: 0;
+    }
+}
+@keyframes btn-2{
+    from{
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    to{
+        width: 170px;
+        height: 170px;
+        opacity: 0;
+    }
+}
+.btn:hover{
+    color:tomato;
+    background-color: rgb(0, 255, 149);
+    font-size: 22px;
+}
+.btn:hover:before, .btn:hover:after{
+    background-color: rgb(19, 121, 78);
+    
+}
+.btn:active{
+    font-size: 20px;
+}
+
+.input{
+    border: 2px solid tomato;
+    height: 25px;
+    padding-left: 5px;
+    outline: none;
+}
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+    position: absolute;
+    bottom: -20px;
+    left:50%;
+    transform: translateX(-50%);
+    animation: text .5s ease-out;
+}
+@keyframes text{
+    from{
+        transform: scale(0) translateX(-50%) rotate(0deg);
+    }
+    to{
+        transform: scale(1) translateX(-50%) rotate(360deg);
+    }
+}
+
