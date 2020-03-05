@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+           <div class="input-wrapper">
+               <div class="title">Выберите величину</div>
+               <div class="input-item">
+                    <label class="input-label">
+                        <input class="input-radio" type="radio" name="radio" value="bar" checked>
+                        бар
+                    </label>
+                    <label class="input-label">
+                        <input class="input-radio" type="radio" name="radio" value="mm">
+                        мм
+                    </label>
+               </div>
+               <div class="input-item">
+                   <input class="input-quantity" type="text" name="quantity" value="0">
+               </div>
+               <div class="input-button">
+                   <button class="btn">перевести</button>
+               </div>
+               <div class="text"> Значение: <span class="out">0</span></div>
+           </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
