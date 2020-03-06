@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="build/css/main.css")
+    body
+        .main
+            .container
+                .wrapper
+                    .title Перевести из
+                    label.label-input
+                        input(class="radio-in" type="radio" name="valueIn" id="radioBarIn"  value="bar" checked)
+                        span.label-text бар
+                    label.label-input
+                        input(class="radio-in" type="radio" name="valueIn" id="radioMmIn"  value="mm")
+                        span.label-text мм.рт.ст
+                    label.label-input
+                        input(class="radio-in" type="radio" name="valueIn" id="radioPsiIn"  value="psi")
+                        span.label-text psi
+                .input
+                    input(class="input-quantity" type="text" name="quantity" placeholder="Введите значение" value="0")
+                .wrapper
+                    .title Перевести в
+                    label.label-input
+                        input(class="radio-out" type="radio" name="valueOut" id="radioBarOut"  value="bar")
+                        span.label-text бар
+                    label.label-input
+                        input(class="radio-out" type="radio" name="valueOut" id="radioMmOut"  value="mm" checked)
+                        span.label-text мм.рт.ст
+                    label.label-input
+                        input(class="radio-out" type="radio" name="valueOut" id="radioPsiOut"  value="psi")
+                        span.label-text psi
+                .button
+                    button.btn(class="btn-out") Перевести
+                .text-out 0
+        script(src="src/js/script.js")
+            
