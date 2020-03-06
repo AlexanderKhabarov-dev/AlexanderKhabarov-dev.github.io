@@ -53,6 +53,9 @@ input{
     outline-style: none!important;
     box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
 }
+input::placeholder{
+    color: $color-secondary;
+}
 input[type=radio]{
     -webkit-appearance: none;
     width: 20px;
@@ -128,6 +131,9 @@ input[type=radio]{
         border: 1px solid $color-secondary;
         color: $color-secondary;
         outline: none;
+    }
+    & input[placeholder]{
+        color: $color-secondary;
     }
 }
 .button{

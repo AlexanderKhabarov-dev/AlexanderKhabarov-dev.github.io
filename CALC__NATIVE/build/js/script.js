@@ -58,7 +58,4 @@ function calc(){
         value = parseFloat(inputQuantity.value, 10);
         textOut.textContent = `${value} мм.рт.ст`
     }
-    
-
-    console.log(value.toFixed(5));
 }
