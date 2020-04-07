@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -303,7 +304,6 @@ template {
 [hidden] {
   display: none; }
 
-p {
-  color: green;
-  font-size: 30px;
-  text-align: center; }
+html, body {
+  font-size: 10px;
+  font-family: "Inter", sans-serif; }
