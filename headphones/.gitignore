@@ -1,6 +1,0 @@
-*.txt
-*.md
-*.json
-gulpfile.js
-node_modules/
-src/
