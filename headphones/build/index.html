@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css"/>
-  </head>
-  <body>
-    <div class="header">
-      <div class="header__container">
-        <div class="header__bar">
-          <div class="logo">
-            <div class="logo-image"><img src=""/></div>
-          </div>
-          <div class="header__bar-wrapper">
-            <div class="header__language"></div>
-            <div class="header__cart"></div>
-            <div class="header__menu"></div>
-          </div>
-        </div>
-        <div class="header__content">
-          <div class="header__content-overhead">award winning design</div>
-          <div class="header__content-title title">The sound of perfection</div>
-          <div class="header__content-subtitle subtitle">Some short description should be here. It shouldn’t be super long, just two or three rows will be more than enough for quickly present the product.</div>
-          <div class="header__content-cart"></div>
-          <div class="header__slider">
-            <div class="header__slider-wrapper">
-              <div class="header__slider-item">
-                <div class="header__slider-title title">Premium Materials</div>
-                <div class="header__slider-subtitle subtitle">Some short description about the feature should be here</div>
-              </div>
-              <div class="header__slider-item">
-                <div class="header__slider-title title">Top Quality Sound</div>
-                <div class="header__slider-subtitle subtitle">Some short description about the feature should be here</div>
-              </div>
-            </div>
-            <div class="header__slider-button">
-              <div class="header__slider-button--left"><</div>
-              <div class="header__slider-button--right">></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/main.css"/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"/>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header__headphones"><img src="img/headphones.png" alt=""/></div>
+			<div class="header__bar">
+				<div class="header__logo logo">
+					<div class="logo-image"><img src="img/circular-logo.svg"/></div>
+				</div>
+				<div class="header__bar-wrapper">
+					<div class="header__language"><img src="img/usa.svg" alt=""/></div>
+					<div class="header__cart"><a class="header__cart-link" href="#"></a></div>
+					<div class="header__menu"><img src="img/menu.svg" alt=""/></div>
+				</div>
+			</div>
+			<div class="header__container container">
+				<div class="header__content">
+					<div class="header__content-overhead">award winning design</div>
+					<div class="header__content-title title">The sound of perfection</div>
+					<div class="header__content-subtitle subtitle">Some short description should be here. It shouldn’t be super long, just two or three rows will be more than enough for quickly present the product.</div>
+					<div class="header__content-cart"></div>
+					<div class="header__slider">
+						<div class="header__slider-content swiper-container">
+							<div class="header__slider-wrapper swiper-wrapper">
+								<div class="header__slider-item swiper-slide">
+									<div class="header__slider-title title">Premium Materials</div>
+									<div class="header__slider-subtitle subtitle">Some short description about the feature should be here</div>
+								</div>
+								<div class="header__slider-item swiper-slide">
+									<div class="header__slider-title title">Top Quality Sound</div>
+									<div class="header__slider-subtitle subtitle">Some short description about the feature should be here</div>
+								</div>
+								<div class="header__slider-item swiper-slide">
+									<div class="header__slider-title title">Top Quality Sound</div>
+									<div class="header__slider-subtitle subtitle">Some short description about the feature should be here</div>
+								</div>
+								<div class="header__slider-item swiper-slide">
+									<div class="header__slider-title title">Top Quality Sound</div>
+									<div class="header__slider-subtitle subtitle">Some short description about the feature should be here</div>
+								</div>
+								<div class="header__slider-item swiper-slide">
+									<div class="header__slider-title title">Top Quality Sound</div>
+									<div class="header__slider-subtitle subtitle">Some short description about the feature should be here</div>
+								</div>
+								<div class="header__slider-item swiper-slide">
+									<div class="header__slider-title title">Top Quality Sound</div>
+									<div class="header__slider-subtitle subtitle">Some short description about the feature should be here</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__social">
+					<ul class="header__social-list">
+						<li class="header__social-item"><a class="header__social-link" href="#">facebook</a></li>
+						<li class="header__social-item"><a class="header__social-link" href="#">twitter</a></li>
+						<li class="header__social-item"><a class="header__social-link" href="#">instagramm</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="https://unpkg.com/swiper/js/swiper.js"> </script>
+		<script src="js/swiper-init.js"></script>
+	</body>
 </html>
