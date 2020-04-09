@@ -340,9 +340,9 @@ ul {
   position: relative; }
   .header__headphones {
     position: absolute;
-    width: 40%;
+    width: 45%;
     top: 50%;
-    right: 1%;
+    right: 5%;
     transform: translateY(-50%); }
     .header__headphones img {
       width: 100%; }
@@ -485,3 +485,125 @@ ul {
     .header__social-link {
       color: #1C2160;
       text-transform: uppercase; }
+
+.performance__container {
+  padding-top: 10rem;
+  padding-bottom: 20rem;
+  border-bottom: .1rem solid #C6D1DD; }
+
+.performance__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.performance__main_content {
+  flex-grow: 1;
+  padding-right: 10rem; }
+  .performance__main_content-title {
+    font-size: 7rem;
+    line-height: 1.2em;
+    font-weight: 200;
+    padding-bottom: 2rem; }
+
+.performance__secondary_content {
+  flex-grow: 1; }
+  .performance__secondary_content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .performance__secondary_content-wrapper :nth-child(1) {
+      padding-right: 3rem; }
+  .performance__secondary_content-row_1 {
+    padding-bottom: 8rem; }
+
+.others {
+  max-width: 117rem;
+  margin: auto;
+  padding: 0px 20px;
+  padding-bottom: 8rem;
+  padding-top: 12rem; }
+  .others .swiper-container {
+    padding-bottom: 6rem; }
+  .others__slide {
+    text-align: center; }
+    .others__slide-text {
+      max-width: 58rem;
+      margin: auto;
+      margin-top: 2rem;
+      font-size: 2.4rem;
+      line-height: 150%;
+      color: #1A1F58; }
+    .others__slide-name {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-top: 2rem; }
+    .others__slide-position {
+      font-size: 1.6rem;
+      font-weight: 200;
+      color: #898BA6;
+      margin-top: 0.5rem; }
+  .others .swiper-button-next, .others .swiper-button-prev {
+    color: #8A51FB; }
+  .others .swiper-pagination-bullet-active {
+    background: #8A51FB; }
+
+.technical {
+  background-image: url("../img/technical-background.svg");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 192rem;
+  margin: auto;
+  position: relative;
+  z-index: 1; }
+  .technical__headphones {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%; }
+    .technical__headphones-image {
+      width: 100%; }
+  .technical__container {
+    padding-top: 23rem;
+    padding-bottom: 12rem; }
+  .technical__content {
+    max-width: 47rem;
+    margin-left: auto; }
+    .technical__content-title {
+      font-size: 7rem;
+      font-weight: 200;
+      line-height: 1.2em;
+      color: #fff; }
+    .technical__content-subtitle {
+      font-size: 1.8rem;
+      line-height: 140%;
+      color: rgba(255, 255, 255, 0.5);
+      padding-top: 2rem; }
+  .technical__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8rem; }
+  .technical__card {
+    flex-grow: 1;
+    margin: 0 1rem;
+    min-height: 20rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 3%; }
+    .technical__card-title {
+      color: #1C2160;
+      font-size: 2rem; }
+    .technical__card-characteristic {
+      color: #8A51FB;
+      font-size: 5rem;
+      font-weight: 200;
+      padding-top: .5rem; }
+    .technical__card-subtitle {
+      color: #1C2160;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding-top: 2rem; }
