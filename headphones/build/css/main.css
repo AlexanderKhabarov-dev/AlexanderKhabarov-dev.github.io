@@ -375,8 +375,16 @@ ul {
     background-repeat: no-repeat;
     border-radius: 100%; }
   .header__menu-toggle {
-    background: none;
-    border: none; }
+    width: 20px; }
+    .header__menu-toggle :nth-child(1) {
+      margin-bottom: 5px; }
+    .header__menu-toggle-hamburger {
+      width: 20px;
+      height: 1px;
+      background-color: #000;
+      position: relative;
+      transition: all 0.2s ease-in;
+      border-radius: 2px; }
   .header__content {
     padding-top: 120px;
     width: 50%; }
@@ -559,7 +567,7 @@ ul {
     left: 0;
     right: 0;
     background-color: #fff;
-    z-index: 100; }
+    z-index: 200; }
   .header__content {
     margin-top: 100px; }
     .header__content-subtitle {
@@ -951,12 +959,13 @@ ul {
 
 .header__menu {
   position: fixed;
-  top: 80px;
+  top: -550px;
   left: 0;
   right: 0;
   height: 550px;
   background-color: #fff;
-  z-index: 100; }
+  z-index: 100;
+  opacity: 0; }
   .header__menu-nav-list {
     width: 90%;
     margin: auto;
@@ -965,10 +974,29 @@ ul {
     padding-bottom: 40px;
     border-bottom: 1px solid #C6D1DD; }
   .header__menu-nav-item {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    transition: all 0.2s ease-in; }
   .header__menu-nav-link {
     font-size: 40px;
-    color: #898BA6; }
+    font-weight: 300;
+    color: #898BA6;
+    position: relative;
+    display: block;
+    transition: all 0.2s ease-in; }
+    .header__menu-nav-link:hover {
+      transform: translateX(20px); }
+    .header__menu-nav-link::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      bottom: -10px;
+      left: -140px;
+      width: 100px;
+      background: linear-gradient(102.27deg, #FA594F 7.34%, rgba(138, 81, 251, 0) 91.74%);
+      opacity: 0.25;
+      transition: all .5s ease-in; }
+    .header__menu-nav-link:hover:before {
+      left: -60px; }
   .header__menu-language {
     display: flex;
     justify-content: center;
@@ -985,4 +1013,11 @@ ul {
       position: relative; }
       .header__menu-language-text::before {
         content: '';
-        position: absolute; }
+        position: absolute;
+        background-image: url("../img/arrow-drop.svg");
+        background-repeat: no-repeat;
+        width: 7px;
+        height: 5px;
+        right: -12px;
+        top: 50%;
+        transform: translateY(-50%); }
