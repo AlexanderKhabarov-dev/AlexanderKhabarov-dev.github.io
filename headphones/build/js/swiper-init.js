@@ -1,8 +1,14 @@
 var mySwiper = new Swiper ('.header__slider-content', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     autoplay: {
         delay: 3000,
       },
+      breakpoints: {
+        960: {
+          slidesPerView: 2,
+        }
+
+    }
   })
 
 var mySwiper = new Swiper ('.others__container', {
