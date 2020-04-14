@@ -721,17 +721,3 @@ ul{
     }
 }
 
-// === pop-up ===
-
-.menu-hidden{
-    position: fixed;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 10%;
-    &__nav-list{
-
-    }
-    &__nav-item{}
-    &__nav-link{}
-}
