@@ -336,7 +336,8 @@ textarea {
   padding: 10px;
   font-size: 16px;
   background: none;
-  outline: none; }
+  outline: none;
+  resize: none; }
 
 .title {
   text-align: center;
@@ -372,8 +373,17 @@ textarea {
     width: 100%;
     clear: both; }
   .keyboard .active {
-    background: tomato;
-    transition: all .1s ease-in; }
+    background-color: tomato;
+    transition: all .1s ease-in;
+    animation: active .1s 1; }
+
+@keyframes active {
+  from {
+    background-color: #fff; }
+  50% {
+    background-color: tomato; }
+  to {
+    background-color: #fff; } }
 
 @media (max-width: 768px) {
   .keyboard {
