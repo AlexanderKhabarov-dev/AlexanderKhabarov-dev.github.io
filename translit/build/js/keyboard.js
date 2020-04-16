@@ -17,15 +17,14 @@ let key = document.querySelectorAll('.keyboard__key');
 document.onkeypress = function(event){
     // console.log(event.code);
     // console.log(event.keyCode);
-    if(event.keyCode > 122 || event.keyCode == 32 ){
+    if(event.keyCode > 122  ){
         key.forEach(function(element){
             element.classList.remove('active');
         })
-        document.querySelector('.keyboard__key[data="' + event.keyCode +'"]').classList.add('active');
+        document.querySelector('.keyboard__key[data="' + event.keyCode +'"]').classList.add('active'); // Ошибка! из за того, что нету пробелла исимволов на виртуальной клавиатуре
     }
-
-    if(event.keyCode < 122 ){
-        console.log('error');
+    if(event.keyCode < 122 || event.keyCode != 32 || event.keyCode != 63 || event.keyCode != 68 ){ //Костыль! исправить
+        //console.log('error');
         errorMessage.classList.add('error__active');
         setTimeout(function() {
             errorMessage.classList.remove('error__active');
@@ -50,6 +49,6 @@ document.onkeypress = function(event){
 // let m = [];
 // document.onkeypress = function test(event){
 //     //console.log(event);
-//     m.push(event.code);
+//     m.push(event.keyCode);
 //     console.log(m);
 // }
