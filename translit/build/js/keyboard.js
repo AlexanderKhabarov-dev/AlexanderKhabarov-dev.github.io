@@ -23,13 +23,13 @@ document.onkeypress = function(event){
         })
         document.querySelector('.keyboard__key[data="' + event.keyCode +'"]').classList.add('active'); // Ошибка! из за того, что нету символов на виртуальной клавиатуре
     }
-    if(event.keyCode < 122 || event.keyCode != 32 || event.keyCode != 63 || event.keyCode != 68 ){ //Костыль! исправить(Скорее всего добавление всех клавиш на клавиатуре)
-        //console.log('error');
-        errorMessage.classList.add('error__active');
-        setTimeout(function() {
-            errorMessage.classList.remove('error__active');
-        }, 1700);
-    }
+    // else if(event.keyCode < 122 || event.keyCode != 32 || event.keyCode != 63 || event.keyCode != 68 ){ //Костыль! исправить(Скорее всего добавление всех клавиш на клавиатуре)
+    //     //console.log('error');
+    //     errorMessage.classList.add('error__active');
+    //     setTimeout(function() {
+    //         errorMessage.classList.remove('error__active');
+    //     }, 1700);
+    // }
 }
 
 
