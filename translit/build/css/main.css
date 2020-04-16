@@ -316,22 +316,27 @@ a {
 ul {
   list-style: none; }
 
-.container {
-  margin: auto;
-  max-width: 800px; }
-
 .container__outer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   padding-right: 20px;
-  padding-left: 20px; }
+  padding-left: 20px;
+  background-color: #191919;
+  color: #E1E2E6; }
+
+.container {
+  margin: auto;
+  width: 800px; }
 
 textarea {
+  font-family: "Inter", sans-serif;
   width: 100%;
   height: 100px;
-  border: 1px solid #000;
+  border: 1px solid #E1E2E6;
+  border-radius: 4px;
+  color: #E1E2E6;
   border-radius: 5px;
   padding: 10px;
   font-size: 16px;
@@ -341,49 +346,60 @@ textarea {
 
 .title {
   text-align: center;
-  padding-bottom: 30px;
   font-size: 30px; }
+
+.error {
+  text-align: center;
+  padding: 10px 0px;
+  margin-bottom: 20px;
+  width: 200px;
+  border: 1px solid #6FAAEA;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  opacity: 0; }
+  .error__active {
+    opacity: 1; }
 
 .translit__in {
   text-align: center;
-  margin-bottom: 50px; }
+  margin-bottom: 20px; }
 
 .translit__out {
-  padding-bottom: 50px; }
+  padding-bottom: 20px; }
 
 .keyboard {
   padding-top: 20px;
   padding-bottom: 20px; }
   .keyboard__btn {
+    width: 720px;
     display: flex;
     flex-wrap: wrap; }
   .keyboard__wrapper {
     display: flex;
     justify-content: center;
     align-items: center; }
-  .keyboard .k-key {
+  .keyboard__key {
     display: block;
     width: 50px;
     height: 50px;
-    border: 1px solid #000;
+    border: 1px solid #6FAAEA;
+    border-radius: 4px;
     padding: 5px;
     margin: 5px; }
+    .keyboard__key:nth-child(14) {
+      margin-left: 30px; }
+    .keyboard__key:nth-child(26) {
+      margin-left: 60px; }
   .keyboard .clearfix {
     display: block;
     width: 100%;
     clear: both; }
   .keyboard .active {
-    background-color: tomato;
-    transition: all .1s ease-in;
+    border: 1px solid #E1E2E6;
+    border-radius: 4px;
+    background-color: #6FAAEA;
+    transition: all 0.2s ease-in;
     animation: active .1s 1; }
-
-@keyframes active {
-  from {
-    background-color: #fff; }
-  50% {
-    background-color: tomato; }
-  to {
-    background-color: #fff; } }
 
 @media (max-width: 768px) {
   .keyboard {
@@ -392,3 +408,44 @@ textarea {
     width: 300px; }
   textarea {
     height: 200px; } }
+
+.copy {
+  text-align: center; }
+  .copy__button {
+    font-family: "Inter", sans-serif;
+    width: 200px;
+    height: 50px;
+    background: none;
+    border: none;
+    box-shadow: 0px 0px 0px 1px #E1E2E6;
+    border-radius: 4px;
+    color: #E1E2E6;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; }
+    .copy__button::before {
+      position: absolute;
+      content: '';
+      left: -100%;
+      bottom: 0;
+      transform: scale(0);
+      border-radius: 4px;
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      background-color: #6FAAEA;
+      z-index: -1;
+      transition: all 0.2s ease-in; }
+    .copy__button:hover {
+      box-shadow: none; }
+    .copy__button:hover:before {
+      transform: scale(2); }
+  .copy__complete {
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    margin-bottom: 10px; }
+    .copy__complete-active {
+      opacity: 1; }

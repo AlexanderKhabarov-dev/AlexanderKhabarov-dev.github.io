@@ -1,10 +1,6 @@
 input = document.querySelector('.translit__in-input');
 output = document.querySelector('.translit__out-textarea');
-
-// input.addEventListener('input',()=> {
-//     input.value = input.value.replace(/[^а-я]/,'');
-// });
-	
+errorMessage = document.querySelector('.error');
 
 function ruToLate(event){
     const ru = {
@@ -18,8 +14,6 @@ function ruToLate(event){
             
         ',':',', '!':'!', '?':'?', ' ':' ', '.':'.',
     }
-    
-    
 
     let text = input.value;
     let str = '';
