@@ -21,9 +21,9 @@ document.onkeypress = function(event){
         key.forEach(function(element){
             element.classList.remove('active');
         })
-        document.querySelector('.keyboard__key[data="' + event.keyCode +'"]').classList.add('active'); // Ошибка! из за того, что нету пробелла исимволов на виртуальной клавиатуре
+        document.querySelector('.keyboard__key[data="' + event.keyCode +'"]').classList.add('active'); // Ошибка! из за того, что нету символов на виртуальной клавиатуре
     }
-    if(event.keyCode < 122 || event.keyCode != 32 || event.keyCode != 63 || event.keyCode != 68 ){ //Костыль! исправить
+    if(event.keyCode < 122 || event.keyCode != 32 || event.keyCode != 63 || event.keyCode != 68 ){ //Костыль! исправить(Скорее всего добавление всех клавиш на клавиатуре)
         //console.log('error');
         errorMessage.classList.add('error__active');
         setTimeout(function() {

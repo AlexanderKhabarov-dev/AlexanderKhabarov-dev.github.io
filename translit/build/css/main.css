@@ -405,7 +405,15 @@ textarea {
   .keyboard {
     display: none; }
   .container {
-    width: 300px; }
+    max-width: 600px; }
+  textarea {
+    height: 200px; } }
+
+@media (max-width: 540px) {
+  .keyboard {
+    display: none; }
+  .container {
+    max-width: 350px; }
   textarea {
     height: 200px; } }
 
