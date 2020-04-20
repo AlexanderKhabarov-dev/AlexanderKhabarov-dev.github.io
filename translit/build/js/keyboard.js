@@ -1,4 +1,5 @@
 const keyboard = [1081, 1094, 1091, 1082, 1077, 1085, 1075, 1096, 1097, 1079, 1093, 1098, 1092, 1099, 1074, 1072, 1087, 1088, 1086, 1083, 1076, 1078, 1101, 1103, 1095, 1089, 1084, 1080, 1090, 1100, 1073, 1102, 46]
+const keyboardEng = [113, 119, 101, 114, 116, 121, 117, 105, 111, 112, 91, 93, 97, 115, 100, 102, 103, 104, 106, 107, 108, 59, 39, 122, 120, 99, 118, 98, 110, 109, 44, 46, 47];
 
 function init(){
     let out = '';
@@ -12,38 +13,20 @@ function init(){
 }
 init();
 
-let key = document.querySelectorAll('.keyboard__key');
+
 
 document.onkeypress = function(event){
-    // console.log(event.code);
-    // console.log(event.keyCode);
+    
     if(event.keyCode > 122  ){
-        key.forEach(function(element){
-            element.classList.remove('active');
-        })
-        document.querySelector('.keyboard__key[data="' + event.keyCode +'"]').classList.add('active'); // Ошибка! из за того, что нету символов на виртуальной клавиатуре
+        let key = document.querySelector('.keyboard__key[data="' + event.keyCode +'"]');
+
+        key.classList.add('active'); 
+
+        setTimeout(function() {
+            key.classList.remove('active');
+        }, 300);
     }
-    // else if(event.keyCode < 122 || event.keyCode != 32 || event.keyCode != 63 || event.keyCode != 68 ){ //Костыль! исправить(Скорее всего добавление всех клавиш на клавиатуре)
-    //     //console.log('error');
-    //     errorMessage.classList.add('error__active');
-    //     setTimeout(function() {
-    //         errorMessage.classList.remove('error__active');
-    //     }, 1700);
-    // }
 }
-
-
-// === for click ===
-// key.forEach(function(element){
-//     element.onclick = function(event){
-//         document.querySelectorAll('.keyboard__key').forEach(function(element){
-//             element.classList.remove('active');
-//         });
-//         let code = this.getAttribute('data');
-//         this.classList.add('active');
-//         //console.log(code);
-//     }
-// });
 
 // === test ===
 // let m = [];

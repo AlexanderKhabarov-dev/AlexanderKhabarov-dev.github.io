@@ -371,7 +371,7 @@ textarea {
   padding-top: 20px;
   padding-bottom: 20px; }
   .keyboard__btn {
-    width: 720px;
+    width: 600px;
     display: flex;
     flex-wrap: wrap; }
   .keyboard__wrapper {
@@ -380,16 +380,20 @@ textarea {
     align-items: center; }
   .keyboard__key {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: 1px solid #6FAAEA;
     border-radius: 4px;
-    padding: 5px;
+    padding: 6px;
     margin: 5px; }
     .keyboard__key:nth-child(14) {
       margin-left: 30px; }
     .keyboard__key:nth-child(26) {
-      margin-left: 60px; }
+      margin-left: 55px; }
+    .keyboard__key:nth-child(37) {
+      margin: auto;
+      width: 290px;
+      margin-top: 5px; }
   .keyboard .clearfix {
     display: block;
     width: 100%;
@@ -399,7 +403,7 @@ textarea {
     border-radius: 4px;
     background-color: #6FAAEA;
     transition: all 0.2s ease-in;
-    animation: active .1s 1; }
+    animation: active .1s ease-out; }
 
 @media (max-width: 768px) {
   .keyboard {
