@@ -42,7 +42,6 @@ body, html{
     border-radius: .2rem;
     margin-top: 1rem;
     padding-left: 0.5rem;
-    padding-right: 0.5rem;
     position: relative;
     flex-grow: 0;
 }
@@ -77,6 +76,7 @@ body, html{
     margin-left: .1rem;
     border-left: .1rem solid black;
     padding-left: .4rem;
+    padding-right: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -99,7 +99,7 @@ body, html{
 form{
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .input, .output{
     display: block;
@@ -127,11 +127,14 @@ form{
     padding: .1rem;
     border: 1px solid black;
     border-radius: .1rem;
+    margin-right: 2px;
+    margin-left: 3px;
 }
 .input{
-    width: .8rem;
+    width: .7rem;
     height: .6rem;
     text-align: center;
+    
 }
 
 @media(max-width: 540px){
