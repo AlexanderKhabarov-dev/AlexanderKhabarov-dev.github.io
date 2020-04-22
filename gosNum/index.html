@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-inner">
+            <div class="title">Введите номер</div>
+            <form action="">
+                <div class="form-input">
+                    <input type="text" class="input" autocomplete="off" id="input_1" placeholder="A">
+                </div>
+                <div class="form-input">
+                    <input type="text" oninput="f_Date(this,1)" class="input"  autocomplete="off" id="input_2" placeholder="1">
+                    <input type="text" oninput="f_Date(this,1)" class="input" autocomplete="off" id="input_3" placeholder="7">
+                    <input type="text" class="input" autocomplete="off" id="input_4" placeholder="3">
+                </div>
+                <div class="form-input">
+                    <input type="text" oninput="f_Date(this,1)" class="input" autocomplete="off" id="input_5" placeholder="x">
+                    <input type="text" class="input" autocomplete="off" id="input_6" placeholder="p">
+                </div>
+                <div class="form-input">
+                    <input type="text" oninput="f_Date(this,1)" class="input" autocomplete="off" id="input_7" placeholder="p">
+                    <input type="text" class="input" autocomplete="off" id="input_8" placeholder="p">
+                </div>
+            </form>
+            <div class="num" id="capture">
+                <div class="num-wrapper">
+                    <div class="num-text" id="output_1" id="w1">T</div>
+                    <div class="num-text" id="output_2" id="n1">1</div>
+                    <div class="num-text" id="output_3" id="n1">7</div>
+                    <div class="num-text" id="output_4" id="n1">3</div>
+                    <div class="num-text" id="output_5" id="w2">T</div>
+                    <div class="num-text" id="output_6" id="w2">A</div>
+                </div>
+                <div class="num-region">
+                    <div class="num-index">
+                        <div id="output_7">7</div>
+                        <div id="output_8">3</div>
+                    </div>
+                    <div class="num-country">RUS</div>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/html2canvas.min.js"></script>
+    <script src="js/canvas-toBlob.js"></script>
+</body>
+</html>

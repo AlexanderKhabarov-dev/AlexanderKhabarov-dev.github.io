@@ -1,0 +1,144 @@
+@font-face {
+    font-family: RoadNum;
+    font-weight: normal;
+    font-style: normal;
+    src:url('../fonts/RoadNumbers2.0.ttf');
+}
+
+body, html{
+    font-size: 50px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      padding-left: .4rem;
+    padding-right: .4rem;
+}
+.container-inner{
+    margin: auto;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: .1rem;
+}
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-size: .8rem;
+    text-align: center;
+    margin-bottom: .3rem;
+}
+.num{
+    display: flex;
+    margin: auto;
+    font-family: RoadNum;
+    font-size: 2rem;
+    border: .1rem solid black;
+    border-radius: .2rem;
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    position: relative;
+    flex-grow: 0;
+}
+.num::before, .num::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: .2rem;
+    height: .2rem;
+    border-radius: 100%;
+    top: 50%;
+    transform: translateY(-40%);
+}
+.num::before{
+    left: .1rem;
+}
+.num::after{
+    right: .1rem;
+}
+.num-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.num-text{
+    margin-right: 2px;
+    font-family: RoadNum;
+    font-size: 2rem;
+}
+.num-region{
+    text-align: center;
+    margin-left: .1rem;
+    border-left: .1rem solid black;
+    padding-left: .4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.num-index{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 1.3rem;
+    
+}
+.num-country{
+    font-family: 'Roboto', sans-serif;
+    font-size: .5rem;
+    font-weight: bold;
+}
+
+/* === form === */
+
+form{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.input, .output{
+    display: block;
+    margin: auto;
+}
+
+.output{
+    display:flex;
+}
+.form-wrapper{
+    padding: .2rem;
+    border: solid 1px black;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .1rem;
+}
+.form-wrapper input{
+    display: block;
+    margin: .1rem;
+    padding-left: .2rem;
+}
+.form-input{
+    display: flex;
+    padding: .1rem;
+    border: 1px solid black;
+    border-radius: .1rem;
+}
+.input{
+    width: .8rem;
+    height: .6rem;
+    text-align: center;
+}
+
+@media(max-width: 540px){
+    html, body{
+        font-size: 40px;
+    }
+    .container-inner{
+        border: none;
+    }
+}

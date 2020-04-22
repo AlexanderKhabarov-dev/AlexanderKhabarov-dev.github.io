@@ -1027,3 +1027,10 @@ ul {
         right: -12px;
         top: 50%;
         transform: translateY(-50%); }
+
+img {
+  opacity: 1;
+  transition: all .4s ease; }
+
+img[data-src] {
+  opacity: 0; }
