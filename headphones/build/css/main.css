@@ -717,7 +717,7 @@ ul {
     padding-top: 230px;
     padding-bottom: 120px; }
   .technical__content {
-    max-width: 50%;
+    width: 50%;
     margin-left: auto; }
     .technical__content-title {
       font-size: 70px;
