@@ -4,5 +4,6 @@ window.onload = () =>{
     TweenMax.to(preloader, 1, {
         display: 'none', 
         opacity: 0,
+        delay: 1000,
     })   
 }

@@ -1120,7 +1120,7 @@ img[data-src] {
   100% {
     transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.9); } }
 
-@keyframes item4 {
+@keyframes item3 {
   from {
     transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.8); }
   50% {
@@ -1201,7 +1201,7 @@ img[data-src] {
   100% {
     transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.9); } }
 
-@keyframes item4 {
+@keyframes item3 {
   from {
     transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.8); }
   50% {
