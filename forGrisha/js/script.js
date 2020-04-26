@@ -16,5 +16,8 @@ let image = document.querySelector('.content-img');
 window.addEventListener('devicemotion', rotate)
 
 function rotate(e){
+    let text = document.querySelector('.content-text');
+    text.innerHTML = e.acceleration.x;
     image.style.transform = `translateX(${e.acceleration.x}px) translateY(${e.acceleration.y}px)`
+
 }
