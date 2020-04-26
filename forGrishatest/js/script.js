@@ -40,5 +40,9 @@ var nodeAG = document.getElementById('accelerationIncludingGravity');
      if(ag.x > ag.y && ag.x > ag.z){ nodeAG.innerHTML += '<span>Горизонтально перед собой</span>';}
      if(ag.y > ag.x && ag.y > ag.z){ nodeAG.innerHTML += '<span>Вертикально перед собой</span>';}
      if(ag.z > ag.x && ag.z > ag.y){ nodeAG.innerHTML += '<span>На столе</span>';}
+
+     let text = document.querySelector('.test')
+
+     text.style.transform = `translateX${ag.x*3}px translateY${ag.y*3}px`
   }
   window.addEventListener('devicemotion', onMotionChange, true);

@@ -49,3 +49,10 @@ div {
   div span{
      color:blue;  
   }
+  .test{
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      margin: auto;
+      background-color: aquamarine;
+  }
