@@ -55,5 +55,7 @@ div {
       padding: 20px;
       margin: auto;
       background-color: aquamarine;
+      perspective: 1000px;
+      transform-style: preserve-3d;
       transition: all .2s linear;
   }
