@@ -54,11 +54,11 @@ div {
     transform-style: preserve-3d;
   }
   .test{
-      width: 100px;
-      height: 100px;
+      width: 250px;
       padding: 20px;
       margin: auto;
-      background-color: aquamarine;
-      
       transition: all .2s linear;
+  }
+  .test img{
+      width: 100%;
   }

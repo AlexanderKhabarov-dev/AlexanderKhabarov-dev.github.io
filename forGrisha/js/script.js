@@ -41,7 +41,7 @@ var nodeAG = document.getElementById('accelerationIncludingGravity');
 
      text.style.transform = ` translateX(${ag.x*7}px)
                               translateY(${ag.z*7}px) 
-                              rotateX(${ag.z*7}deg)
-                              rotateY(${ag.x*7}deg)`
+                              rotateX(${ag.z*5}deg)
+                              rotateY(${ag.x*5}deg)`
   }
   window.addEventListener('devicemotion', onMotionChange, true);
