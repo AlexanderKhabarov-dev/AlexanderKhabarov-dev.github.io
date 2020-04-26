@@ -43,6 +43,6 @@ var nodeAG = document.getElementById('accelerationIncludingGravity');
 
      let text = document.querySelector('.test')
 
-     text.style.transform = `translateX${ag.x*3}px translateY${ag.y*3}px`
+     text.style.transform = `translateX(${ag.x*7}px) translateY(${ag.y*7}px)`
   }
   window.addEventListener('devicemotion', onMotionChange, true);
