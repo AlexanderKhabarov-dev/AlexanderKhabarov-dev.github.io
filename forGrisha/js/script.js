@@ -36,10 +36,6 @@ var nodeAG = document.getElementById('accelerationIncludingGravity');
           maxAG = ag[i];
         }
      }
-     nodeAG.innerHTML += '<strong>MAX = '+maxAG.toFixed(2)+'</strong></br>';
-     if(ag.x > ag.y && ag.x > ag.z){ nodeAG.innerHTML += '<span>Горизонтально перед собой</span>';}
-     if(ag.y > ag.x && ag.y > ag.z){ nodeAG.innerHTML += '<span>Вертикально перед собой</span>';}
-     if(ag.z > ag.x && ag.z > ag.y){ nodeAG.innerHTML += '<span>На столе</span>';}
 
      let text = document.querySelector('.test')
 
