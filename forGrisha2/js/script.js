@@ -1,6 +1,6 @@
 let content = document.querySelector('.content');
 
-window.addEventListener('mousemove', rotate)
+window.addEventListener('orientationchange', rotate)
 
 function rotate(event){
     const image = document.querySelector('.content-img');
