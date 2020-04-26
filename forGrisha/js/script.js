@@ -9,4 +9,5 @@ function rotate(event){
     image.style.transform =`rotateX(${+ -(event.offsetY - halfHeight)/10}deg)  rotateY(${(event.offsetX - halfWidth)/10}deg)`
     // image.style.transform = `rotateX${event.orentation}deg rotateY${event.orentation}deg`
     // console.log(event.orentation)
+    //
 }
