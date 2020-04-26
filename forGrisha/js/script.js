@@ -24,24 +24,18 @@
 // }
 
 
-var nodeAG = document.getElementById('accelerationIncludingGravity');
-   var maxAG = 0;
+
    function onMotionChange(e) {
-     // покажем значения параметров в реальном времени
-     var ag = e.accelerationIncludingGravity;
-     nodeAG.innerHTML = '';
-     for(var i in ag){
-        nodeAG.innerHTML += i + ' = ' + ag[i].toFixed(2) + '</br>';
-        if(Math.abs(maxAG) < Math.abs(ag[i])){
-          maxAG = ag[i];
-        }
-     }
 
-     let text = document.querySelector('.test')
+      let agZ = e.accelerationIncludingGravity.z - 5;
+      let agX = e.accelerationIncludingGravity.x;
+      
+      let text = document.querySelector('.test')
 
-     text.style.transform = ` translateX(${ag.x*7}px)
-                              translateY(${ag.z*7}px) 
-                              rotateX(${ag.z*5}deg)
-                              rotateY(${ag.x*5}deg)`
+      text.style.transform = ` translateX(${agX*7}px)
+                              translateY(${agZ*7}px) 
+                              rotateX(${agZ*5}deg)
+                              rotateY(${agX*5}deg)`
   }
+
   window.addEventListener('devicemotion', onMotionChange, true);
