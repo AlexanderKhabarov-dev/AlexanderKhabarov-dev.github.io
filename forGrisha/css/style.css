@@ -49,13 +49,16 @@ div {
   div span{
      color:blue;  
   }
+  .test-3d{
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
   .test{
       width: 100px;
       height: 100px;
       padding: 20px;
       margin: auto;
       background-color: aquamarine;
-      perspective: 1000px;
-      transform-style: preserve-3d;
+      
       transition: all .2s linear;
   }
