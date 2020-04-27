@@ -5,7 +5,7 @@ let bolt = document.querySelector('.main__decoration-bolt');
 
 function onMotionChange(e) {
 
-    let agZ = e.accelerationIncludingGravity.z -5;
+    let agZ = e.accelerationIncludingGravity.z + 1;
     let agX = e.accelerationIncludingGravity.x;
 
     bolt.style.transform = `translateX(${agX*13}px)
