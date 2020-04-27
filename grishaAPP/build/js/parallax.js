@@ -14,9 +14,8 @@ function onMotionChange(e) {
                             rotateY(${agX*13}deg)`
 
     circle.style.transform = `translateX(${agX*7}px)
-                            translateY(${agZ*5}px) 
-                            rotateX(${agZ*5}deg)
-                            rotateY(${agX*13}deg)`
+                              translateY(${agZ*5}px) 
+                             `
 
 }
 
