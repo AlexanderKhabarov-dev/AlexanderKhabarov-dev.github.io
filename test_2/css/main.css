@@ -338,7 +338,7 @@ img {
 
 .main__decoration {
   position: relative;
-  height: 50vh;
+  height: 40vh;
   width: 100%;
   perspective: 1000px;
   transform-style: preserve-3d; }
