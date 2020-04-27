@@ -19,3 +19,5 @@ function onMotionChange(e) {
                             rotateY(${agX*13}deg)`
 
 }
+
+window.addEventListener('devicemotion', onMotionChange, true);
