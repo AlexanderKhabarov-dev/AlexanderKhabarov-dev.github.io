@@ -2919,8 +2919,6 @@ img {
 
 .main__container {
   max-width: 360px;
-  padding-right: 10px;
-  padding-left: 10px;
   margin: auto;
   padding-bottom: 10px;
   padding-top: 20px; }
@@ -2937,23 +2935,9 @@ img {
     background: #FECD00;
     position: absolute;
     margin-left: -15%;
-    z-index: -100;
-    animation: circle 10s infinite;
-    transition: all 1s ease-in; }
-
-@keyframes circle {
-  from {
-    background: #FECD00; }
-  25% {
-    background: #fe9800; }
-  50% {
-    background: #FF5753; }
-  75% {
-    background: #fe9800; }
-  to {
-    background: #FECD00; } }
+    z-index: -100; }
   .main__decoration-bolt {
-    width: 90%;
+    width: 85%;
     position: absolute;
     top: 15%;
     left: 50%;
@@ -3120,3 +3104,90 @@ img {
     animation-delay: .8s;
     z-index: 3;
     transform: scale(0.2); }
+
+@keyframes item1 {
+  from {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg); }
+  50% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg); } }
+
+@keyframes item2 {
+  from {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.9); }
+  50% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg) scale(0.9);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.9); } }
+
+@keyframes item3 {
+  from {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.8); }
+  50% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg) scale(0.8);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.8); } }
+
+@keyframes item4 {
+  from {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.7); }
+  50% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg) scale(0.7);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.7); } }
+
+@keyframes item5 {
+  from {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.6); }
+  50% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg) scale(0.6);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.6); } }
+
+@keyframes item6 {
+  from {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.5); }
+  50% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg) scale(0.5);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.5); } }
+
+@keyframes item7 {
+  from {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.4); }
+  50% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg) scale(0.4);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.4); } }
+
+@keyframes item8 {
+  from {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.3); }
+  50% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg) scale(0.3);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.3); } }
+
+@keyframes item9 {
+  from {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.2); }
+  50% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg) scale(0.2);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg) scale(0.2); } }
+
+@keyframes circle {
+  from {
+    transform: rotate(0deg) translateX(10px) rotate(0deg); }
+  to {
+    transform: rotate(360deg) translateX(10px) rotate(-360deg); } }
