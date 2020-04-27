@@ -13,8 +13,8 @@ function onMotionChange(e) {
                             rotateX(${agZ*5}deg)
                             rotateY(${agX*13}deg)`
 
-    circle.style.transform = `translateX(${agX*7}px)
-                              translateY(${agZ*5}px) 
+    circle.style.transform = `translateX(${agX*2}px)
+                              translateY(${agZ*2}px) 
                              `
 
 }
