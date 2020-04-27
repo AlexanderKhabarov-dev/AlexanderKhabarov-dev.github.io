@@ -350,7 +350,7 @@ img {
     position: absolute;
     top: 10%;
     left: 3%;
-    transition: all .2s linear;
+    transition: all 1s linear;
     z-index: -2; }
   .main__decoration-bolt {
     width: 60%;
@@ -358,7 +358,7 @@ img {
     top: 15%;
     left: 50%;
     margin-left: -30%;
-    transition: all .2s linear;
+    transition: all 1s linear;
     z-index: 99; }
     .main__decoration-bolt img {
       width: 100%;
