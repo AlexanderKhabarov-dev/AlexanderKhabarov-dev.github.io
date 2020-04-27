@@ -2956,7 +2956,7 @@ img {
   position: relative; }
   .main__text_1 {
     z-index: 1;
-    transform: translateY(15px); }
+    margin-bottom: -10px; }
   .main__text_2 {
     height: 63px; }
   .main__text_3 {
@@ -2972,8 +2972,8 @@ img {
   padding-top: 40px;
   position: relative; }
   .main__pagination-dot {
-    width: px;
-    height: px;
+    width: 5px;
+    height: 5px;
     border-radius: 100%;
     background-color: black; }
     .main__pagination-dot_active {
