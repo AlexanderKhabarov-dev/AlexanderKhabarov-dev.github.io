@@ -350,15 +350,15 @@ img {
     position: absolute;
     top: 10%;
     left: 3%;
-    transition: all 2s linear;
-    z-index: -5; }
+    transition: all .4s ease-in;
+    z-index: -100; }
   .main__decoration-bolt {
     width: 60%;
     position: absolute;
     top: 15%;
     left: 50%;
     margin-left: -30%;
-    transition: all 2s linear;
+    transition: all .4s ease-in;
     z-index: 100; }
     .main__decoration-bolt img {
       width: 100%;
@@ -372,7 +372,10 @@ img {
   color: #3A3945;
   position: relative; }
   .main__text_1 {
-    z-index: 1; }
+    z-index: 1;
+    transform: translateY(10px); }
+  .main__text_2 {
+    height: 63px; }
   .main__text_3 {
     color: #fff;
     text-shadow: -0   -1px 0   #3A3945, 0   -1px 0   #3A3945, -0    1px 0   #3A3945, 0    1px 0   #3A3945, -1px -0   0   #3A3945, 1px -0   0   #3A3945, -1px  0   0   #3A3945, 1px  0   0   #3A3945, -1px -1px 0   #3A3945, 1px -1px 0   #3A3945, -1px  1px 0   #3A3945, 1px  1px 0   #3A3945, -1px -1px 0   #3A3945, 1px -1px 0   #3A3945, -1px  1px 0   #3A3945, 1px  1px 0   #3A3945; }
