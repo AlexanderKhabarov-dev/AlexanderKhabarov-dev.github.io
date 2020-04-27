@@ -2933,7 +2933,7 @@ img {
     width: 178px;
     height: 178px;
     border-radius: 100%;
-    background: #FECD00;
+    background: linear-gradient(203.01deg, #FECD00 26.37%, #FF8200 198.21%), #C4C4C4;
     position: absolute;
     margin-left: -15%;
     z-index: -100; }
