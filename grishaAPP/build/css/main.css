@@ -2930,23 +2930,17 @@ img {
     position: relative;
     height: 45vh;
     width: 75%;
-    margin: auto;
-    transform: translateY(100px); }
+    margin: auto; }
     .main__decoration-circle {
       width: 178px;
       height: 178px;
       border-radius: 100%;
       background: linear-gradient(203.01deg, #FECD00 26.37%, #FF8200 198.21%), #C4C4C4;
       position: absolute;
-      margin-left: -8%;
-      z-index: -100; }
+      margin-left: 0; }
     .main__decoration-bolt {
       width: 90%;
-      position: absolute;
-      top: 15%;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 100; }
+      margin-left: 5%; }
       .main__decoration-bolt img {
         width: 100%;
         display: block; }
