@@ -2938,7 +2938,7 @@ img {
       border-radius: 100%;
       background: linear-gradient(203.01deg, #FECD00 26.37%, #FF8200 198.21%), #C4C4C4;
       position: absolute;
-      margin-left: -15%;
+      margin-left: -8%;
       z-index: -100; }
     .main__decoration-bolt {
       width: 90%;
@@ -2977,7 +2977,8 @@ img {
     width: 80px;
     margin: auto;
     padding-top: 40px;
-    position: relative; }
+    position: relative;
+    z-index: -1; }
     .main__pagination-dot {
       width: 5px;
       height: 5px;
@@ -2989,7 +2990,8 @@ img {
   .main__logo {
     position: absolute;
     left: 0;
-    transform: translateX(-100%); }
+    transform: translateX(-100%);
+    z-index: -1; }
   .main__buttons {
     width: 85%;
     margin: auto;
