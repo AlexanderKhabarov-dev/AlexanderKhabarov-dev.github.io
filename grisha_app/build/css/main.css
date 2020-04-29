@@ -350,9 +350,7 @@ img {
   max-width: 380px;
   margin: auto;
   padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 0px;
-  border: 1px solid black; }
+  padding-left: 20px; }
 
 /*!
  * animate.css -https://daneden.github.io/animate.css/
@@ -3090,7 +3088,7 @@ img {
     background-color: #3A3945;
     padding: 50px 20px 25px 20px;
     border-radius: 40px;
-    width: 335px;
+    max-width: 335px;
     margin: auto;
     position: relative; }
     .welcome__content-overhead {
