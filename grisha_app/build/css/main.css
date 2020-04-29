@@ -348,9 +348,7 @@ img {
 .container {
   position: relative;
   max-width: 380px;
-  margin: auto;
-  padding-right: 20px;
-  padding-left: 20px; }
+  margin: auto; }
 
 /*!
  * animate.css -https://daneden.github.io/animate.css/
@@ -2947,8 +2945,7 @@ img {
   height: 100vh;
   background-color: #fff;
   position: absolute;
-  transition: all .1s ease-in;
-  display: none; }
+  transition: all .1s ease-in; }
   .main__container {
     max-width: 380px;
     margin: auto;
@@ -3047,10 +3044,12 @@ img {
   height: 100vh;
   background-color: #fff;
   transition: all .1s ease-in;
-  display: block; }
+  display: none; }
   .welcome__container {
     max-width: 380px;
-    margin: auto; }
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px; }
   .welcome__button {
     position: relative;
     z-index: 10;
@@ -3150,7 +3149,7 @@ img {
   font-family: Eurostile Extended-Medium;
   color: #67676b;
   width: 126px;
-  height: 33px;
+  height: 34px;
   border: none;
   background-color: #F1EAE8;
   font-size: 13px;
