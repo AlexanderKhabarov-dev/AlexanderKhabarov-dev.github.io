@@ -1,7 +1,7 @@
-// var scene = document.getElementById('scene');
-// var parallaxInstance = new Parallax(scene,{
-//     relativeInput: true
-// });
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene,{
+    relativeInput: true
+});
 
 
 var scene_2 = document.getElementById('scene_2');

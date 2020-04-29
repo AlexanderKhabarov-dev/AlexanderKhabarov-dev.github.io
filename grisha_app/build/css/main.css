@@ -345,6 +345,11 @@ ul {
 img {
   display: block; }
 
+.container {
+  position: relative;
+  max-width: 380px;
+  margin: auto; }
+
 /*!
  * animate.css -https://daneden.github.io/animate.css/
  * Version - 3.7.2
@@ -2937,11 +2942,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; }
+  height: 100vh;
+  background-color: #fff;
+  position: absolute; }
   .main__container {
     max-width: 380px;
     margin: auto;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    z-index: 2; }
   .main__decoration {
     position: relative;
     height: 45vh;
@@ -3032,10 +3040,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; }
+  height: 100vh;
+  background-color: #fff;
+  display: none; }
   .welcome__container {
-    margin: auto;
-    max-width: 380px; }
+    max-width: 380px;
+    margin: auto; }
   .welcome__decoration {
     height: 50vh;
     position: relative; }
