@@ -88,3 +88,14 @@ let othersWrapper = document.querySelector(".section-others__wrapper");
 othersWrapper.classList.add("swiper-wrapper");
 
 
+
+
+
+
+
+
+
+
+
+
+
