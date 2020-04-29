@@ -18,3 +18,24 @@ function linkBolt (){
     welcome.style.display = "none";
 }
 console.log('ok')
+
+
+
+// function linkWelcome(){
+//     main.style.opacity = 0;
+//     welcome.style.opacity = 1;
+//     setTimeout(function(){
+//         main.style.display = "none";
+//         welcome.style.display = "block";
+//     }, 300 )
+// }
+
+// function linkBolt (){
+//     welcome.style.opacity = 0;
+//     main.style.opacity= 1; 
+//     setTimeout(function(){
+//         main.style.display = "block";
+//         welcome.style.display = "none";
+//     }, 300 )
+    
+// }
