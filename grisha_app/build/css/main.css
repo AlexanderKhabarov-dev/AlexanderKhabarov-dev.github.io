@@ -3042,14 +3042,14 @@ img {
     .welcome__decoration-circle, .welcome__decoration-girl, .welcome__decoration-three, .welcome__decoration-flower, .welcome__decoration-note_1, .welcome__decoration-note_2, .welcome__decoration-note_3, .welcome__decoration-note_4 {
       position: absolute; }
     .welcome__decoration-girl {
-      margin-top: 33%;
+      margin-top: 15%;
       margin-left: -3%;
       z-index: 0; }
     .welcome__decoration-three {
-      margin-top: 58%;
+      margin-top: 43%;
       margin-left: 45%; }
     .welcome__decoration-flower {
-      margin-top: 95%;
+      margin-top: 80%;
       margin-left: 75%; }
     .welcome__decoration-note_1 {
       margin-left: 25%;
