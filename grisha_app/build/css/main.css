@@ -2945,7 +2945,8 @@ img {
   height: 100vh;
   background-color: #fff;
   position: absolute;
-  transition: all .1s ease-in; }
+  transition: all .1s ease-in;
+  display: none; }
   .main__container {
     max-width: 380px;
     margin: auto;
@@ -3043,8 +3044,7 @@ img {
   align-items: center;
   height: 100vh;
   background-color: #fff;
-  transition: all .1s ease-in;
-  display: none; }
+  transition: all .1s ease-in; }
   .welcome__container {
     max-width: 380px;
     margin: auto;
