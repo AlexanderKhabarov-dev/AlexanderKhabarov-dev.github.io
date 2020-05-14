@@ -402,42 +402,20 @@ img {
     display: flex;
     justify-content: center;
     transform: translate(0px, 220px); }
-  .header .card-item {
-    background: linear-gradient(180deg, #FEE7E4 0%, #FFFFFF 98.04%);
-    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    padding: 20px;
-    margin-right: 20px; }
-  .header .card-image {
-    padding: 0;
-    height: 140px; }
-    .header .card-image img {
-      width: 140px;
-      margin: auto; }
-  .header .card-from {
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 14px;
-    color: #5B5D7E;
-    padding-top: 10px;
-    border-top: 1px solid rgba(182, 182, 182, 0.3); }
-  .header .card-title {
-    text-align: center;
-    max-width: 160px;
-    margin: auto;
-    padding-bottom: 10px; }
-  .header .card-wrapper {
-    display: flex;
-    justify-content: space-between; }
   .header__coast {
+    color: #6347FB;
+    font-weight: 500;
+    font-size: 30px;
     padding-top: 300px;
     padding-bottom: 50px;
     text-align: center;
     font-size: 35px;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
     .header__coast-num {
+      position: relative;
       padding: 15px 20px;
       border-radius: 8px;
       background-color: rgba(99, 71, 251, 0.1);
@@ -445,6 +423,67 @@ img {
       font-weight: 500;
       font-size: 30px;
       margin-right: 5px; }
+      .header__coast-num:nth-child(1):before {
+        position: absolute;
+        content: '$';
+        left: -30px; }
+    .header__coast-dot {
+      transform: translateY(20px);
+      margin-right: 5px; }
+
+.chasing {
+  padding-top: 120px;
+  padding-bottom: 160px; }
+  .chasing__container {
+    max-width: 1170px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px; }
+  .chasing__wrapper {
+    display: flex; }
+  .chasing__preview {
+    width: 50%;
+    display: flex;
+    position: relative; }
+    .chasing__preview-circle_1 {
+      position: absolute;
+      width: 370px;
+      height: 370px;
+      border-radius: 1000%;
+      background: #FA7D61;
+      opacity: 0.1; }
+    .chasing__preview-circle_2 {
+      position: absolute;
+      width: 270px;
+      height: 270px;
+      background: #6347FB;
+      opacity: 0.1;
+      right: 50px;
+      bottom: -80px;
+      border-radius: 100%; }
+    .chasing__preview-circle_3 {
+      position: absolute; }
+    .chasing__preview-card:nth-child(3) {
+      align-self: flex-end; }
+  .chasing__content {
+    width: 50%; }
+    .chasing__content-title {
+      color: #090B27;
+      font-weight: 300;
+      font-size: 50px;
+      line-height: 120%; }
+    .chasing__content-subtitle {
+      color: #5B5D7E;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 180%;
+      margin-top: 40px; }
+    .chasing__content-link {
+      color: #6347FB;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      margin-top: 40px; }
 
 .header__download-button {
   width: 120px;
@@ -484,3 +523,68 @@ img {
     left: 0;
     top: 50%;
     transform: translateY(-50%); }
+
+.card-item {
+  background: linear-gradient(180deg, #FEE7E4 0%, #FFFFFF 98.04%);
+  box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 20px;
+  max-width: 200px;
+  min-height: 270px;
+  position: relative; }
+
+.card-image {
+  padding: 0;
+  height: 140px;
+  position: relative; }
+  .card-image img {
+    margin: auto; }
+
+.card-sell_1 {
+  background-image: url("../img/sell-background.svg"); }
+
+.card-sell_2 {
+  background-image: url("../img/sell-background-2.svg"); }
+
+.card-sell {
+  background-repeat: no-repeat;
+  height: 160px;
+  width: 130px;
+  position: absolute;
+  top: -60px;
+  right: 5px;
+  text-align: right;
+  padding-right: 20px;
+  color: #fff; }
+  .card-sell_title {
+    font-weight: 300;
+    font-size: 12px;
+    padding-top: 20px; }
+  .card-sell_percent {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px; }
+
+.card-from {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: #5B5D7E;
+  padding-top: 10px;
+  border-top: 1px solid rgba(182, 182, 182, 0.1);
+  text-decoration: line-through; }
+
+.card-title {
+  text-align: center;
+  max-width: 160px;
+  min-height: 47px;
+  margin: auto;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-between; }
