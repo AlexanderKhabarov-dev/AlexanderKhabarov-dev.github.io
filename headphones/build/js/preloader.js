@@ -1,9 +1,6 @@
 window.onload = () =>{
-    let preloader = document.querySelector('.preloader');
-
-    TweenMax.to(preloader, 1, {
-        display: 'none', 
-        opacity: 0,
-        // delay: 1000,
-    })   
+    setTimeout(() =>{
+        let preloader = document.querySelector('.preloader');
+        preloader.style.display = "none";
+    }, 1000)
 }
