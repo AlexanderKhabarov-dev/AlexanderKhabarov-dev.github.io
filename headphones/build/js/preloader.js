@@ -1,6 +1,9 @@
 window.onload = () =>{
+    let preloader = document.querySelector('.preloader');
     setTimeout(() =>{
-        let preloader = document.querySelector('.preloader');
-        preloader.style.display = "none";
+        preloader.style.opacity = 0;
     }, 1000)
+    setTimeout(() =>{
+        preloader.style.display = "none";
+    }, 1300)
 }
