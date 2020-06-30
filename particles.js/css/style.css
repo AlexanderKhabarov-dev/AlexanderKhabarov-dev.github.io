@@ -5,9 +5,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
+/* === container top ===*/
+
 .container{
     background-color: rgb(44, 44, 44);
     height: 100vh;
+}
+.container-top{
+    position: relative;
 }
 
 .particles{
@@ -17,7 +23,7 @@
 .title{
     width: 100%;
     text-align: center;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -45,4 +51,14 @@
     to{
         opacity: 0;
     }
+}
+
+/* === form ===*/
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .6s ease-in;
 }

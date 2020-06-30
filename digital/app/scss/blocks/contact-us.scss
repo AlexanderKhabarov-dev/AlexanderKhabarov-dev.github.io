@@ -1,0 +1,37 @@
+.contact-us{
+    background-color: $color-main;
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 190px;
+    }
+    &__wrp{
+        position: relative;
+        margin: auto;
+        transform: translateX(120px);
+        &::before{
+            position: absolute;
+            content: '';
+            width: 80px;
+            height: 80px;
+            background-image: url("../img/blocks/contact-us/svg/mail-icon.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__title{
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 180%;
+        text-transform: uppercase;
+    }
+    &__email{
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 180%;
+    }
+}

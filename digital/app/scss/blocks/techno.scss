@@ -1,0 +1,45 @@
+.techno{
+    background-color: $color-secondary;
+    padding-top: 110px;
+    padding-bottom: 100px;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title{
+        color: $color-white;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 180%;
+        padding-left: 40px;
+        position: relative;
+        text-transform: uppercase;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 137px;
+            border-left: 2px solid $color-white;
+            border-right: 2px solid $color-white;
+            left: 0px;
+            bottom: 14px;
+        }
+    }
+    &__wrp{
+        width: 60%;
+    }
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--first{
+            margin-bottom: 60px;
+        }
+    }
+    &__card{
+        &-icon{
+            & img{}
+        }
+    }
+}

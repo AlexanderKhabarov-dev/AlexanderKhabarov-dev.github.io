@@ -1,0 +1,166 @@
+.feedback{
+    padding: 200px 0 195px 0;
+    background-color: $color-white;
+    @media(max-width: 1280px){
+        padding: 145px 0 150px 0;
+    }
+    &__title{
+        position: relative;
+        padding-left: 45px;
+        h2{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 30px;
+            text-transform: uppercase;
+            color: $color-secondary;
+            margin-bottom: 10px;
+            padding-top: 45px;
+        }
+        p{
+            font-weight: 300;
+            font-style: normal;
+            font-size: 20px;
+            color: $color-secondary;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 100%;
+            border-left: 2px solid $color-secondary;
+            border-right: 2px solid $color-secondary;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    &__content{
+        margin-top: 70px;
+    }
+    &__form{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__inputs{
+        max-width: 59.5%;
+        flex-basis: 59.18%;
+        @media(max-width: 1280px){
+            flex-basis: 54.83%;
+            max-width: 54.83%;
+        }
+    }
+    &__labels{
+        max-width: 32.9%;
+        flex-basis: 32.9%;
+    }
+    &__input-wrp{
+        &:not(:last-child){
+            margin-bottom: 40px;
+        }
+    }
+    &__input-name{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        color: $color-secondary;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    &__input{
+        color: $color-secondary;
+        font: inherit;
+        border: 1px solid $color-grayE4;
+        padding: 20px;
+        width: 100%;
+        height: 70px;
+        &::placeholder{
+            color: $color-black61;
+        }
+    }
+    &__comment{
+        resize: none;
+        height: 250px;
+    }
+    &__btn{
+        font: inherit;
+        color: $color-white;
+        border: 2px solid $color-secondary;
+        width: 253px;
+        height: 65px;
+        background-color: $color-secondary;
+        transition: all 0.3s ease;
+        &:hover, &:focus{
+            background-color: $color-white;
+            color: $color-black;
+        }
+    }
+    &__check-box{
+        position: relative;
+        input{
+            display: none;
+        }
+        label{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-weight: 600;
+            font-size: 20px;
+            color: $color-secondary;
+            padding: 30px 0 30px 95px;
+            cursor: pointer;
+            &::before{
+                position: absolute;
+                top: 26%;
+                left: 30px;
+                content: "";
+                height: 35px;
+                width: 35px;
+                background-color: $color-white;
+                border: 1px solid $color-secondary;
+                border-radius: 5px;
+            }
+        }
+        &:not(:last-child){
+            label{
+                border-bottom: 1px solid rgba($color-secondary, 0.1);
+            }
+        }
+    }
+    &__check-box-input:checked+label{
+        background-color: $color-main;
+        border-color: $color-main;
+    }
+    &__check-box-input:checked{
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: black;
+    }
+    &__check-box-input:checked+label::after{
+        content: "";
+        height: 10px;
+        width: 15px;
+        border-bottom: 2px solid $color-black;
+        border-left: 2px solid $color-black;
+        position: absolute;
+        top: 40%;
+        left: 40px;
+        transform: rotate(-45deg);
+    }
+    &__checked{
+        display: none;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: $color-black;
+        z-index: 10;
+        &--show{
+            display: block;
+        }
+    }
+}

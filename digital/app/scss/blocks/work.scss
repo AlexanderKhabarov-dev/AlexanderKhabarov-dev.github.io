@@ -1,0 +1,128 @@
+.work{
+    
+    &__title{
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 180%;
+        padding-left: 40px;
+        margin-bottom: 45px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 83px;
+            border-left: 2px solid $color-secondary;
+            border-right: 2px solid $color-secondary;
+            left: 0px;
+            bottom: 0;
+        }
+    }
+    &__wrp{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &__card{
+        color: $color-white;
+        &-wrp{
+            width: 41%;
+        }
+    }
+    .card{
+        &__car{
+            background-color: $color-blue49;
+            width: 57%;
+            padding-right: 30px;
+            padding-top: 80px;
+            padding-bottom: 110px;
+            position: relative;
+            height: 700px;
+            
+            &-image{
+                width: 80%;
+                &--notebook{
+                    transform: translateX(20%);
+                    & img{
+                        width: 100%;
+                    }
+                }
+                &--car{
+                    position: absolute;
+                    right: 0;
+                    bottom: 6%;
+                    width: 47%;
+                    & img{
+                        width: 100%;
+                    }
+                }
+            }
+            &-title{
+                padding-left: 60px;
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 180%;
+            }
+            &-subtitle{
+                padding-left: 60px;
+                font-size: 20px;
+                line-height: 180%;
+                letter-spacing: 0.1em;
+            }
+        }
+        &__event{
+            position: relative;
+            padding-left: 40px;
+            background-color: $color-green53;
+            min-height: 335px;
+            margin-bottom: 30px;
+            &-image{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 60%;
+                img{
+                    width: 100%;
+                }
+            }
+            &-title{
+                font-size: 30px;
+                font-weight: bold;
+                padding-top: 112px;
+                margin-bottom: 10px;
+            }
+            &-subtitle{
+                font-size: 20px;
+                line-height: 180%;
+                letter-spacing: 0.1em;
+            }
+        }
+        &__eventhire{
+            background-color: $color-orange27;
+            position: relative;
+            padding-left: 30px;
+            min-height: 335px;
+            margin-bottom: 30px;
+            display: flex;
+            &-image{
+                align-self: flex-end;
+                width: 50%;
+                margin-right: 20px;
+                img{
+                    width: 100%;
+                }
+            }
+            &-title{
+                font-size: 30px;
+                font-weight: bold;
+                padding-top: 90px;
+                margin-bottom: 10px;
+            }
+            &-subtitle{
+                font-size: 20px;
+                line-height: 180%;
+                letter-spacing: 0.1em;
+            }
+        }
+    }
+}
