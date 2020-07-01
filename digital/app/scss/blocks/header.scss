@@ -14,6 +14,9 @@
         padding-left: 50px;
     }
 }
+.bold{
+    font-weight: bold;
+}
 .header{
     position: relative;
     z-index: 1;
@@ -55,7 +58,12 @@
             align-items: center;
         }
     }
-    &__logo{}
+    &__logo{
+        & a{
+            color: $color-black1D;
+            font-size: 24px;
+        }
+    }
     &__estimate{}
     &__button{
         width: 210px;
@@ -192,18 +200,30 @@
         @media (max-width:1280px) {
             margin-right: 0px;
         }
-        &-wrp--marginRight{
-            margin-right: 80px;
+        &--blockHeight{
+            height: 100px;
             @media (max-width:1280px) {
-                margin-right: 50px;
+                height: 80px;
+            }
+        }
+        &-wrp{
+            width: 50%;
+        }
+        &-wrp--marginRight{
+            margin-right: 60px;
+            @media (max-width:1280px) {
+                margin-right: 0px;
             }
         }
         &-icon{
-            height: 100px;
-            & svg{
-                height: 65px;
+            margin-right: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;    
+            & img{
+                width: 90%;
                 @media (max-width:1280px) {
-                    width: 240px;
+                    width: 70%;
                 }
             }
         }

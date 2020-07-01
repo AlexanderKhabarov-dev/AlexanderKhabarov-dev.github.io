@@ -27,7 +27,10 @@
         }
     }
     &__wrp{
-        width: 60%;
+        width: 65%;
+        @media (max-width:1280px) {
+            width: 60%;
+        }
     }
     &__cards{
         display: flex;
@@ -38,8 +41,22 @@
         }
     }
     &__card{
-        &-icon{
-            & img{}
-        }
+       width: 25%;
+       &--firstRow{
+            & img{
+                width: 100%;
+                @media (max-width:1280px) {
+                        width: 90%;
+                }
+            }
+       }
+       &--secondRow{
+            img{
+                width: 100%;
+                @media (max-width:1280px) {
+                    width: 90%;
+                }
+            }
+       }
     }
 }

@@ -70,3 +70,15 @@
         }
     }
 }
+.footer-bottom{
+    background-color: $color-black1D;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &__email{
+        color: $color-white;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 180%;
+        letter-spacing: 0.1em;
+    }
+}
